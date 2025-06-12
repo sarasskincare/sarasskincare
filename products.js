@@ -123,7 +123,8 @@ const products = [
     whatCustomersSay: [
       "Melts away makeup and sunscreen effortlessly, leaving skin feeling soft and clean without dryness.",
       "Gentle on sensitive skin and doesn’t irritate or cause breakouts.",
-      "Luxurious balm texture feels soothing during use."
+      "Luxurious balm texture feels soothing during use.",
+      "in some cases doesnt take eye makeup off"
     ],
     benefits: [
       "melts makeup and impurities",
