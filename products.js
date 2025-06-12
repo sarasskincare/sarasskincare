@@ -93,15 +93,20 @@ const products = [
     "Loved by users with dry and sensitive skin for its creamy texture and moisturizing feel. Leaves skin clean but never tight or dry.",
     "Great for removing dirt while maintaining skin's natural moisture barrier."
   ],
-  benefits: ["hydrating", "non-foaming", "restores skin barrier", "fragrance-free", "gentle","NEA Seal of Acceptance™","MVE® Delivery Technology","Non-Comedogenic"
-
-"
-"],
+  benefits: [
+    "hydrating",
+    "non-foaming",
+    "restores skin barrier",
+    "fragrance-free",
+    "gentle",
+    "NEA Seal of Acceptance™",
+    "MVE® Delivery Technology",
+    "Non-Comedogenic"
+  ],
   description:
     "A creamy, hydrating cleanser designed to cleanse without stripping moisture. Ideal for dry and sensitive skin types. Contains ceramides and hyaluronic acid to help restore and maintain the skin’s natural barrier.",
   pH: 5.5,
   link: "https://www.cerave.com/our-products/cleansers/hydrating-facial-cleanser",
   image: "images/cerave-hydrating-cleanser.jpg"
 }
-  }
-];
+
