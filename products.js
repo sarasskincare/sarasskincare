@@ -9,7 +9,9 @@ const products = [
     allergies: ["Cocamidopropyl Betaine","Disodium EDTA"],
     pH: 5.5,
     fragrenceType: ["fragrencefree"]
-    benefits: ["foaming action", "Non-Comedogenic","gentle on skin"]
+    whatCustomersSay: ["Customers find this facial cleanser excellent for oily skin, effectively removing dirt and leaving skin soft after makeup removal. The product retains moisture without causing dryness or breakouts, and customers appreciate its refreshing foaming texture. They like that it has no strong scent and consider it good value for money.
+"]
+    benefits: ["foaming action", "Non-Comedogenic","gentle on skin", "helps with oil control"]
     description: "A gentle foaming cleanser ideal for removing excess oil without stripping the skin. Fragrance-free and non-comedogenic.",
     link: "https://www.cerave.com/our-products/cleansers/foaming-facial-cleanser",
     image: "images/cerave-cleanser.jpg"
