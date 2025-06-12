@@ -9,6 +9,7 @@ const products = [
     allergies: ["Cocamidopropyl Betaine","Disodium EDTA"],
     pH: 5.5,
     fragrenceType: ["fragrencefree"]
+    benefits: ["foaming action", "Non-Comedogenic","gentle on skin"]
     description: "A gentle foaming cleanser ideal for removing excess oil without stripping the skin. Fragrance-free and non-comedogenic.",
     link: "https://www.cerave.com/our-products/cleansers/foaming-facial-cleanser",
     image: "images/cerave-cleanser.jpg"
