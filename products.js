@@ -93,6 +93,10 @@ const products = [
       "Non-Comedogenic"
     ],
     description:
-      "A creamy, hydrating cleanser designed to cleanse without stripping moisture. Ideal for dry and sensitive skin types. Contains ceramides and hyaluronic acid to
-
+      "A creamy, hydrating cleanser designed to cleanse without stripping moisture. Ideal for dry and sensitive skin types. Contains ceramides and hyaluronic acid to help restore and maintain the skin’s natural barrier.",
+    pH: 5.5,
+    link: "https://www.cerave.com/our-products/cleansers/hydrating-facial-cleanser",
+    image: "images/cerave-hydrating-cleanser.jpg"
+  }
+];
 
