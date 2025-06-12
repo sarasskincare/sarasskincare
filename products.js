@@ -58,3 +58,50 @@ const products = [
     image: "images/cerave-cleanser.jpg"
   }
 ];
+{
+{
+  name: "CeraVe Hydrating Facial Cleanser",
+  brand: "CeraVe",
+  skinTypes: ["dry", "normal", "sensitive"],
+  whenToNotUse: [
+    "Oily or acne-prone skin (may feel heavy or leave residue)",
+    "Allergy or sensitivity to ingredients like ceramides or hyaluronic acid"
+  ],
+  ingredients: [
+    "AQUA / WATER / EAU",
+    "GLYCERIN",
+    "CERAMIDE NP",
+    "CERAMIDE AP",
+    "CERAMIDE EOP",
+    "HYALURONIC ACID",
+    "CHOLINE STEARATE",
+    "STEARIC ACID",
+    "PEG-40 STEARATE",
+    "BEHENYL ALCOHOL",
+    "PHYTOSPHINGOSINE",
+    "CARBOMER",
+    "SODIUM LAUROYL LACTYLATE",
+    "METHYLPARABEN",
+    "PROPYLPARABEN",
+    "DISODIUM EDTA",
+    "SODIUM HYDROXIDE",
+    "XANTHAN GUM"
+  ],
+  allergies: ["Methylparaben", "Propylparaben", "Disodium EDTA"],
+  fragranceType: ["fragrancefree"],
+  whatCustomersSay: [
+    "Loved by users with dry and sensitive skin for its creamy texture and moisturizing feel. Leaves skin clean but never tight or dry.",
+    "Great for removing dirt while maintaining skin's natural moisture barrier."
+  ],
+  benefits: ["hydrating", "non-foaming", "restores skin barrier", "fragrance-free", "gentle","NEA Seal of Acceptance™","MVE® Delivery Technology","Non-Comedogenic"
+
+"
+"],
+  description:
+    "A creamy, hydrating cleanser designed to cleanse without stripping moisture. Ideal for dry and sensitive skin types. Contains ceramides and hyaluronic acid to help restore and maintain the skin’s natural barrier.",
+  pH: 5.5,
+  link: "https://www.cerave.com/our-products/cleansers/hydrating-facial-cleanser",
+  image: "images/cerave-hydrating-cleanser.jpg"
+}
+  }
+];
