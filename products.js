@@ -3,7 +3,7 @@ const products = [
     name: "CeraVe Foaming Facial Cleanser",
     brand: "CeraVe",
     skinTypes: ["oily", "combination","normal"],
-    concerns: ["acne", "clogged pores"],
+    whenToNotUse: ["Very dry or dehydrated skin ", "Sensitive or reactive skin prone to irritation", "Eczema (Atopic Dermatitis)","Rosacea","Broken or compromised skin barrier","Allergy or sensitivity to ingredients like cocamidopropyl betaine or phenoxyethanol"],
     ingredients: ["AQUA / WATER / EAU", "COCAMIDOPROPYL HYDROXYSULTAINE", "GLYCERIN", "SODIUM LAUROYL SARCOSINATE", "PEG-150 PENTAERYTHRITYL TETRASTEARATE", "NIACINAMIDE", "PEG-6 CAPRYLIC/CAPRIC GLYCERIDES", "SODIUM METHYL COCOYL TAURATE", "PROPYLENE GLYCOL", "CERAMIDE NP", "CERAMIDE AP", "CERAMIDE EOP"," CARBOMER", "METHYLPARABEN", "SODIUM CHLORIDE", "SODIUM LAUROYL LACTYLATE", "CHOLESTEROL", "DISODIUM EDTA", "PROPYLPARABEN", "CITRIC ACID"," TETRASODIUM EDTA", "HYDROLYZED HYALURONIC ACID", "PHYTOSPHINGOSINE", "XANTHAN GUM".
 "],
     allergies: ["Cocamidopropyl Betaine","Disodium EDTA"],
