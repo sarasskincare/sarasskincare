@@ -3,7 +3,6 @@ const products = [
     name: "CeraVe Foaming Facial Cleanser",
     brand: "CeraVe",
     skinTypes: ["oily", "combination", "normal"],
-
     whenToNotUse: [
       "Very dry or dehydrated skin",
       "Sensitive or reactive skin prone to irritation",
@@ -12,7 +11,6 @@ const products = [
       "Broken or compromised skin barrier",
       "Allergy or sensitivity to ingredients like cocamidopropyl betaine or phenoxyethanol"
     ],
-
     ingredients: [
       "AQUA / WATER / EAU",
       "COCAMIDOPROPYL HYDROXYSULTAINE",
@@ -39,74 +37,62 @@ const products = [
       "PHYTOSPHINGOSINE",
       "XANTHAN GUM"
     ],
-
     allergies: ["Cocamidopropyl Betaine", "Disodium EDTA"],
-
-    fragranceType: ["fragrancefree"], // fixed spelling and added comma below
-
+    fragranceType: ["fragrancefree"],
     whatCustomersSay: [
       "Customers find this facial cleanser excellent for oily skin, effectively removing dirt and leaving skin soft after makeup removal. The product retains moisture without causing dryness or breakouts, and customers appreciate its refreshing foaming texture. They like that it has no strong scent and consider it good value for money."
     ],
-
     benefits: ["foaming action", "Non-Comedogenic", "gentle on skin", "helps with oil control"],
-
     description:
       "A gentle foaming cleanser ideal for removing excess oil without stripping the skin. Fragrance-free and non-comedogenic.",
-
     link: "https://www.cerave.com/our-products/cleansers/foaming-facial-cleanser",
-
     image: "images/cerave-cleanser.jpg"
-  }
-];
-{
-{
-  name: "CeraVe Hydrating Facial Cleanser",
-  brand: "CeraVe",
-  skinTypes: ["dry", "normal", "sensitive"],
-  whenToNotUse: [
-    "Oily or acne-prone skin (may feel heavy or leave residue)",
-    "Allergy or sensitivity to ingredients like ceramides or hyaluronic acid"
-  ],
-  ingredients: [
-    "AQUA / WATER / EAU",
-    "GLYCERIN",
-    "CERAMIDE NP",
-    "CERAMIDE AP",
-    "CERAMIDE EOP",
-    "HYALURONIC ACID",
-    "CHOLINE STEARATE",
-    "STEARIC ACID",
-    "PEG-40 STEARATE",
-    "BEHENYL ALCOHOL",
-    "PHYTOSPHINGOSINE",
-    "CARBOMER",
-    "SODIUM LAUROYL LACTYLATE",
-    "METHYLPARABEN",
-    "PROPYLPARABEN",
-    "DISODIUM EDTA",
-    "SODIUM HYDROXIDE",
-    "XANTHAN GUM"
-  ],
-  allergies: ["Methylparaben", "Propylparaben", "Disodium EDTA"],
-  fragranceType: ["fragrancefree"],
-  whatCustomersSay: [
-    "Loved by users with dry and sensitive skin for its creamy texture and moisturizing feel. Leaves skin clean but never tight or dry.",
-    "Great for removing dirt while maintaining skin's natural moisture barrier."
-  ],
-  benefits: [
-    "hydrating",
-    "non-foaming",
-    "restores skin barrier",
-    "fragrance-free",
-    "gentle",
-    "NEA Seal of Acceptance™",
-    "MVE® Delivery Technology",
-    "Non-Comedogenic"
-  ],
-  description:
-    "A creamy, hydrating cleanser designed to cleanse without stripping moisture. Ideal for dry and sensitive skin types. Contains ceramides and hyaluronic acid to help restore and maintain the skin’s natural barrier.",
-  pH: 5.5,
-  link: "https://www.cerave.com/our-products/cleansers/hydrating-facial-cleanser",
-  image: "images/cerave-hydrating-cleanser.jpg"
-}
+  },
+  {
+    name: "CeraVe Hydrating Facial Cleanser",
+    brand: "CeraVe",
+    skinTypes: ["dry", "normal", "sensitive"],
+    whenToNotUse: [
+      "Oily or acne-prone skin (may feel heavy or leave residue)",
+      "Allergy or sensitivity to ingredients like ceramides or hyaluronic acid"
+    ],
+    ingredients: [
+      "AQUA / WATER / EAU",
+      "GLYCERIN",
+      "CERAMIDE NP",
+      "CERAMIDE AP",
+      "CERAMIDE EOP",
+      "HYALURONIC ACID",
+      "CHOLINE STEARATE",
+      "STEARIC ACID",
+      "PEG-40 STEARATE",
+      "BEHENYL ALCOHOL",
+      "PHYTOSPHINGOSINE",
+      "CARBOMER",
+      "SODIUM LAUROYL LACTYLATE",
+      "METHYLPARABEN",
+      "PROPYLPARABEN",
+      "DISODIUM EDTA",
+      "SODIUM HYDROXIDE",
+      "XANTHAN GUM"
+    ],
+    allergies: ["Methylparaben", "Propylparaben", "Disodium EDTA"],
+    fragranceType: ["fragrancefree"],
+    whatCustomersSay: [
+      "Loved by users with dry and sensitive skin for its creamy texture and moisturizing feel. Leaves skin clean but never tight or dry.",
+      "Great for removing dirt while maintaining skin's natural moisture barrier."
+    ],
+    benefits: [
+      "hydrating",
+      "non-foaming",
+      "restores skin barrier",
+      "fragrance-free",
+      "gentle",
+      "NEA Seal of Acceptance™",
+      "MVE® Delivery Technology",
+      "Non-Comedogenic"
+    ],
+    description:
+      "A creamy, hydrating cleanser designed to cleanse without stripping moisture. Ideal for dry and sensitive skin types. Contains ceramides and hyaluronic acid to
+
 
