@@ -97,6 +97,47 @@ const products = [
     pH: 5.5,
     link: "https://www.cerave.com/our-products/cleansers/hydrating-facial-cleanser",
     image: "images/cerave-hydrating-cleanser.jpg"
+  },
+  {
+    name: "Clinique Take The Day Off Cleansing Balm",
+    brand: "Clinique",
+    skinTypes: ["dry", "sensitive", "normal", "combination"],
+    whenToNotUse: [
+      "Very oily or acne-prone skin (may feel heavy or leave residue)",
+      "Allergy or sensitivity to any ingredients"
+    ],
+    ingredients: [
+      "ISODECYL NEOPENTANOATE",
+      "PEG-20 GLYCERYL TRIISOSTEARATE",
+      "SYNTHETIC WAX",
+      "ZEA MAYS (CORN) STARCH",
+      "POLYETHYLENE",
+      "TOCOPHEROL (VITAMIN E)",
+      "CAPRYLIC/CAPRIC TRIGLYCERIDE",
+      "SILICA",
+      "ALOE BARBADENSIS LEAF JUICE",
+      "FRAGRANCE (PARFUM)"
+    ],
+    allergies: ["Fragrance"],
+    fragranceType: ["light fragrance"],
+    whatCustomersSay: [
+      "Melts away makeup and sunscreen effortlessly, leaving skin feeling soft and clean without dryness.",
+      "Gentle on sensitive skin and doesn’t irritate or cause breakouts.",
+      "Luxurious balm texture feels soothing during use."
+    ],
+    benefits: [
+      "melts makeup and impurities",
+      "non-drying",
+      "soothing",
+      "gentle",
+      "easy to rinse",
+      "makes skin feel soft and smooth"
+    ],
+    description:
+      "A luxurious cleansing balm that dissolves makeup, dirt, and sunscreen without stripping skin’s natural moisture. Suitable for most skin types except very oily or acne-prone skin. Contains soothing aloe and vitamin E.",
+    pH: 6.5,
+    link: "https://www.clinique.com/product/1624/5806/skin-care/cleansers/take-the-day-off-cleansing-balm",
+    image: "images/clinique-cleansing-balm.jpg"
   }
 ];
 
