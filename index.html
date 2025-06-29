@@ -3,9 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sara's Skincare ✨</title>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet" />
+  <title>Sara's Skincare</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600&display=swap" rel="stylesheet" />
   <style>
+    :root {
+      --mauve: #b798d6;
+      --blush: #fdecef;
+      --neutral: #fffafc;
+      --text: #2f2f2f;
+      --accent: #e8d4f2;
+    }
+
     * {
       margin: 0;
       padding: 0;
@@ -14,57 +22,24 @@
 
     body {
       font-family: 'DM Sans', sans-serif;
-      background-color: #fff7fb;
-      color: #333;
-    }
-
-    header {
-      background-color: #fdf3fa;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      position: relative;
-      border-bottom: 6px dotted #e7baff;
-    }
-
-    header h1, header p {
-      position: relative;
-      background: rgba(255, 255, 255, 0.6);
-      padding: 1rem 2rem;
-      border-radius: 1rem;
-      color: #5a2a74;
-      backdrop-filter: blur(6px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    }
-
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
-
-    header p {
-      font-size: 1.2rem;
+      background-color: var(--neutral);
+      color: var(--text);
+      line-height: 1.6;
     }
 
     nav {
-      position: absolute;
-      top: 20px;
-      left: 0;
-      width: 100%;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 0 2rem;
-      z-index: 10;
+      background-color: var(--blush);
+      padding: 1rem 2rem;
+      border-bottom: 2px solid var(--mauve);
     }
 
     nav .logo {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: #b569d4;
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: var(--mauve);
     }
 
     nav ul {
@@ -75,80 +50,99 @@
 
     nav ul li a {
       text-decoration: none;
-      color: #b569d4;
+      color: var(--mauve);
       font-weight: 600;
-      transition: color 0.3s ease;
     }
 
     nav ul li a:hover {
-      color: #ff94c2;
+      color: #ac7cc9;
+    }
+
+    header {
+      background-color: var(--accent);
+      padding: 6rem 2rem;
+      text-align: center;
+      border-bottom: 3px solid var(--mauve);
+    }
+
+    header h1 {
+      font-size: 3rem;
+      color: var(--mauve);
+      margin-bottom: 1rem;
+    }
+
+    header p {
+      font-size: 1.25rem;
+      color: #5f4b78;
     }
 
     .cta {
-      background: #fff0f9;
+      background-color: white;
       padding: 4rem 2rem;
       text-align: center;
-      border-top: 6px dotted #e7baff;
+      border-radius: 1rem;
+      margin: 2rem auto;
+      max-width: 700px;
+      border: 2px dashed var(--blush);
     }
 
     .cta h2 {
       font-size: 2rem;
-      color: #a35bb3;
+      color: var(--mauve);
       margin-bottom: 1rem;
     }
 
     .cta a {
       display: inline-block;
-      background-color: #eecbff;
-      color: #5a2a74;
+      background-color: var(--mauve);
+      color: white;
       padding: 0.75rem 1.5rem;
       border-radius: 999px;
       text-decoration: none;
       font-weight: 600;
       font-size: 1rem;
-      border: 2px solid #cfa6e8;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
       transition: all 0.3s ease;
     }
 
     .cta a:hover {
-      background-color: #f8e6ff;
-      transform: translateY(-2px);
+      background-color: #ac7cc9;
     }
 
     footer {
-      background: #f3e8ff;
+      background: var(--blush);
       text-align: center;
       padding: 1rem;
       font-size: 0.9rem;
       color: #775f8e;
-      border-top: 4px dashed #e7baff;
+      border-top: 2px solid var(--mauve);
     }
   </style>
 </head>
 <body>
   <nav>
-    <div class="logo">Glow Guide 🧴</div>
+    <div class="logo">Glow Guide</div>
     <ul>
-      <li><a href="#"> Home</a></li>
-      <li><a href="#"> Search</a></li>
-      <li><a href="#"> About</a></li>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Search</a></li>
+      <li><a href="#">About</a></li>
     </ul>
   </nav>
 
   <header>
-    <h1>Ready to Glow? ✨</h1>
-    <p>Find the cleanser your skin has been dreaming of </p>
+    <h1>Ready to Glow?</h1>
+    <p>Find the skincare routine your skin has been dreaming of</p>
   </header>
 
   <section class="cta">
-    <h2>Want dewy glass skin? Take our quiz! </h2>
-    <a href="quiz.html">Find My Cleanser </a>
+    <h2>Want dewy glass skin? Take our quiz</h2>
+    <a href="quiz.html">Find My Cleanser</a>
   </section>
 
   <footer>
-    <p>© 2025 Sara's Skincare.💕</p>
+    <p>© 2025 Sara's Skincare.</p>
   </footer>
 </body>
 </html>
+
 
