@@ -1,116 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <link rel="stylesheet" href="styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sara’s Skincare</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <section class="hero">
+      <div class="hero-content">
+        <h1 class="tagline">Ready to Glow?</h1>
+        <a href="quiz.html" class="cta-button">YES I AM READY GURLLL</a>
+      </div>
+    </section>
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sara’s Skincare</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <section class="intro">
+      <h2>Personalized skincare backed by science</h2>
+      <p>Let your skin speak for itself. Discover cleansers made for you, based on your skin type, goals, and sensitivities. </p>
+      <a href="quiz.html" class="quiz-link">✨ Find Your Cleanser ✨</a>
+    </section>
 
-  <!-- HERO SECTION -->
-  <section class="hero">
-    <div class="hero-text">
-      <h1>Ready to glow?</h1>
-      <a href="quiz.html" class="cta-button">Take the quiz</a>
-    </div>
-  </section>
-
-  <!-- PRODUCT SECTION -->
-  <section class="product-section">
-    <h2>Explore the Products</h2>
-    <p>Learn the chemistry, the benefits, the do’s and don’ts. Your skincare, decoded.</p>
-  </section>
-
-</body>
-</html>
-<form id="quiz">
-  <label>What is your skin type?</label><br>
-  <select id="skinType">
-    <option value="dry">Dry</option>
-    <option value="oily">Oily</option>
-    <option value="combination">Combination</option>
-    <option value="sensitive">Sensitive</option>
-    <option value="normal">Normal</option>
-  </select><br><br>
-
-  <!-- 👇 INSERT HERE 👇 -->
-</form>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sara's Skincare Quiz</title>
-</head>
-<body>
-  <h1>Welcome to Sara's Skincare Quiz!</h1>
-  <p>Get ready to glow with personalized product recommendations.</p>
-<script src="script.js"></script>
-</body>
-  <div id="cleanser-quiz">
-  <h2>Cleanser Finder 🧴</h2>
-
-  <label for="skinType">What's your skin type?</label>
-  <select id="skinType">
-    <option value="oily">Oily</option>
-    <option value="dry">Dry</option>
-    <option value="combination">Combination</option>
-    <option value="normal">Normal</option>
-    <option value="sensitive">Sensitive</option>
-  </select>
-
-  <label for="skinGoal">What's your main skin goal?</label>
-  <select id="skinGoal">
-    <option value="acne">Acne</option>
-    <option value="hydration">Hydration</option>
-    <option value="aging">Aging</option>
-    <option value="barrier repair">Barrier Repair</option>
-    <option value="eczema">Eczema-friendly</option>
-  </select>
-
-  <label for="fragrance">Fragrance preference?</label>
-  <select id="fragrance">
-    <option value="fragrancefree">Fragrance-Free</option>
-    <option value="light fragrance">Light Fragrance</option>
-    <option value="any">Doesn't matter</option>
-  </select>
-<form id="quiz">
-  <label>What is your skin type?</label><br>
-  <select id="skinType">
-    <option value="dry">Dry</option>
-    <option value="oily">Oily</option>
-    <option value="combination">Combination</option>
-    <option value="sensitive">Sensitive</option>
-    <option value="normal">Normal</option>
-  </select><br><br>
-
-<label>Do you have any of the following skin conditions?</label><br>
-  <select id="skinCondition">
-    <option value="none">None</option>
-    <option value="eczema">Eczema</option>
-    <option value="rosacea">Rosacea</option>
-    <option value="both">Both</option>
-    <option value="acne">Acne</option>
-    <option value="psoriasis">Psoriasis</option>
-    <option value="seborrheic">Seborrheic Dermatitis</option>
-  </select><br><br>
-
-  <label>Do you want fragrance-free?</label><br>
-  <select id="fragranceFree">
-    <option value="yes">Yes</option>
-    <option value="no">No</option>
-  </select><br><br>
-
-</form>
-
-<div id="result"></div>
-<button id="submitBtn" type="button" onclick="getCleanserRecommendation()">Find My Cleanser</button>
-
-  <div id="cleanser-results"></div>
-</div>
-
+    <section class="sections">
+      <a href="products.html" class="section-card">🧴 View All Products</a>
+      <a href="#" class="section-card">📖 Learn the Science (coming soon!)</a>
+    </section>
+  </body>
 </html>
 
