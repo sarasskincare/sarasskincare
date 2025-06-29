@@ -9,5 +9,38 @@
   <h1>Welcome to Sara's Skincare Quiz!</h1>
   <p>Get ready to glow with personalized product recommendations.</p>
 </body>
+  <div id="cleanser-quiz">
+  <h2>Cleanser Finder 🧴</h2>
+
+  <label for="skinType">What's your skin type?</label>
+  <select id="skinType">
+    <option value="oily">Oily</option>
+    <option value="dry">Dry</option>
+    <option value="combination">Combination</option>
+    <option value="normal">Normal</option>
+    <option value="sensitive">Sensitive</option>
+  </select>
+
+  <label for="skinGoal">What's your main skin goal?</label>
+  <select id="skinGoal">
+    <option value="acne">Acne</option>
+    <option value="hydration">Hydration</option>
+    <option value="aging">Aging</option>
+    <option value="barrier repair">Barrier Repair</option>
+    <option value="eczema">Eczema-friendly</option>
+  </select>
+
+  <label for="fragrance">Fragrance preference?</label>
+  <select id="fragrance">
+    <option value="fragrancefree">Fragrance-Free</option>
+    <option value="light fragrance">Light Fragrance</option>
+    <option value="any">Doesn't matter</option>
+  </select>
+
+  <button onclick="getCleanserRecommendation()">Find My Cleanser</button>
+
+  <div id="cleanser-results"></div>
+</div>
+
 </html>
 
