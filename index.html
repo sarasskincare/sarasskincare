@@ -1,47 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sara's Skincare ✨</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sara's Skincare</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <header class="navbar">
-    <div class="logo">Sara's Skincare</div>
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#products">Products</a></li>
-        <li><a href="#quiz">Quiz</a></li>
-        <li><a href="#about">About</a></li>
-      </ul>
-    </nav>
-  </header>
+      body {
+        font-family: 'Quicksand', sans-serif;
+        background-color: #fff7fb;
+        color: #333;
+        line-height: 1.6;
+      }
 
-  <section class="hero">
-    <div class="overlay">
-      <h1>Ready to Glow?</h1>
-      <a href="#quiz" class="cta-button">Take the Quiz</a>
-    </div>
-  </section>
+      header {
+        background-image: url('images/glass-skin-girl.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-align: center;
+        padding: 0 20px;
+      }
 
-  <section class="intro">
-    <h2>Want to glow? Shimmer? Start your skincare journey now.</h2>
-    <a href="#quiz" class="cta-link">Find Your Routine</a>
-  </section>
+      header h1 {
+        font-size: 3.5rem;
+        background-color: rgba(255, 255, 255, 0.2);
+        padding: 1rem 2rem;
+        border-radius: 1rem;
+        color: #fff;
+        backdrop-filter: blur(4px);
+      }
 
-  <section id="products" class="products-section">
-    <h2>Our Featured Products</h2>
-    <p>Explore what works best for your skin type and goals.</p>
-    <!-- Product cards will go here -->
-  </section>
+      header p {
+        margin-top: 1rem;
+        font-size: 1.5rem;
+        background-color: rgba(255, 255, 255, 0.2);
+        padding: 0.5rem 1.5rem;
+        border-radius: 1rem;
+        backdrop-filter: blur(4px);
+      }
 
-  <footer>
-    <p>&copy; 2025 Sara's Skincare. All rights reserved.</p>
-  </footer>
-</body>
+      .cta-section {
+        background: white;
+        padding: 3rem 2rem;
+        text-align: center;
+      }
+
+      .cta-section h2 {
+        font-size: 2rem;
+        color: #b56bbf;
+        margin-bottom: 1rem;
+      }
+
+      .cta-section a {
+        display: inline-block;
+        background-color: #eecbff;
+        color: #5a2a74;
+        padding: 0.75rem 1.5rem;
+        border-radius: 999px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+      }
+
+      .cta-section a:hover {
+        background-color: #f5dcff;
+        transform: translateY(-2px);
+      }
+
+      footer {
+        background: #f3e8ff;
+        text-align: center;
+        padding: 1rem;
+        font-size: 0.9rem;
+        color: #775f8e;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Ready to Glow? ✨</h1>
+      <p>Find the cleanser your skin has been dreaming of 💧💖</p>
+    </header>
+
+    <section class="cta-section">
+      <h2>Want dewy glass skin? Take our quiz! 💅</h2>
+      <a href="quiz.html">Find My Cleanser 🔍</a>
+    </section>
+
+    <footer>
+      <p>© 2025 Sara's Skincare. Made with love, science, and SPF 💕🧴</p>
+    </footer>
+  </body>
 </html>
+
 
