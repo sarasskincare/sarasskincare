@@ -4,16 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sara's Skincare</title>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --mauve: #b798d6;
-      --blush: #fdecef;
-      --neutral: #fffafc;
-      --text: #2f2f2f;
-      --accent: #e8d4f2;
-    }
-
     * {
       margin: 0;
       padding: 0;
@@ -22,24 +14,25 @@
 
     body {
       font-family: 'DM Sans', sans-serif;
-      background-color: var(--neutral);
-      color: var(--text);
-      line-height: 1.6;
+      background-color: #fff6fa;
+      color: #333;
     }
 
     nav {
+      position: absolute;
+      top: 20px;
+      left: 0;
+      width: 100%;
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      background-color: var(--blush);
-      padding: 1rem 2rem;
-      border-bottom: 2px solid var(--mauve);
+      padding: 0 2rem;
+      z-index: 10;
     }
 
     nav .logo {
-      font-size: 1.6rem;
-      font-weight: 600;
-      color: var(--mauve);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #a967b3;
     }
 
     nav ul {
@@ -50,52 +43,89 @@
 
     nav ul li a {
       text-decoration: none;
-      color: var(--mauve);
+      color: #a967b3;
       font-weight: 600;
     }
 
     nav ul li a:hover {
-      color: #ac7cc9;
+      color: #f598bb;
     }
 
     header {
-      background-color: var(--accent);
-      padding: 6rem 2rem;
+      background-color: #fff;
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       text-align: center;
-      border-bottom: 3px solid var(--mauve);
+      position: relative;
+      border-bottom: 10px solid #c6a4e2;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.6);
+      z-index: 0;
+    }
+
+    header h1, header p {
+      position: relative;
+      z-index: 1;
+      background: rgba(255, 255, 255, 0.3);
+      padding: 1rem 2rem;
+      border-radius: 1rem;
+      color: #5a2a74;
+      backdrop-filter: blur(6px);
     }
 
     header h1 {
       font-size: 3rem;
-      color: var(--mauve);
       margin-bottom: 1rem;
+      font-weight: 700;
     }
 
     header p {
-      font-size: 1.25rem;
-      color: #5f4b78;
+      font-size: 1.2rem;
     }
 
     .cta {
-      background-color: white;
+      background: white;
       padding: 4rem 2rem;
       text-align: center;
-      border-radius: 1rem;
-      margin: 2rem auto;
-      max-width: 700px;
-      border: 2px dashed var(--blush);
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
     }
 
-    .cta h2 {
+    .cta-img {
+      width: 180px;
+      border-radius: 1rem;
+    }
+
+    .cta-content {
+      max-width: 500px;
+    }
+
+    .cta-content h2 {
       font-size: 2rem;
-      color: var(--mauve);
+      color: #b56bbf;
       margin-bottom: 1rem;
     }
 
-    .cta a {
+    .cta-content a {
       display: inline-block;
-      background-color: var(--mauve);
-      color: white;
+      background-color: #fbd3fc;
+      color: #5a2a74;
       padding: 0.75rem 1.5rem;
       border-radius: 999px;
       text-decoration: none;
@@ -105,17 +135,17 @@
       transition: all 0.3s ease;
     }
 
-    .cta a:hover {
-      background-color: #ac7cc9;
+    .cta-content a:hover {
+      background-color: #fbe6ff;
+      transform: translateY(-2px);
     }
 
     footer {
-      background: var(--blush);
+      background: #f3e8ff;
       text-align: center;
       padding: 1rem;
       font-size: 0.9rem;
       color: #775f8e;
-      border-top: 2px solid var(--mauve);
     }
   </style>
 </head>
@@ -130,19 +160,24 @@
   </nav>
 
   <header>
-    <h1>Ready to Glow?</h1>
-    <p>~Find the skincare routine your skin has been dreaming of~</p>
+    <h1>Find Your Perfect Skincare Routine</h1>
+    <p>Powered by science, made for your glow.</p>
   </header>
 
   <section class="cta">
-    <h2>Want dewy glass skin? Take our quiz</h2>
-    <a href="quiz.html">Find My Cleanser</a>
+    <img class="cta-img" src="/mnt/data/Screenshot 2025-06-29 082324.png" alt="glass skin girl" />
+    <div class="cta-content">
+      <h2>Want dewy glass skin? Take our quiz!</h2>
+      <a href="quiz.html">Start My Routine</a>
+    </div>
+    <img class="cta-img" src="/mnt/data/Screenshot 2025-06-29 082711.png" alt="skincare flatlay" />
   </section>
 
   <footer>
-    <p>© 2025 Sara's Skincare.</p>
+    <p>© 2025 Sara's Skincare. Made with love, science, and SPF</p>
   </footer>
 </body>
 </html>
+
 
 
