@@ -51,7 +51,7 @@ nav a:hover {
 /* Hero Section */
 .hero {
   height: 90vh;
-  background-image: url('images/glass-skin-girl.jpg'); /* Replace with your actual image path */
+background-image: url('https://i.imgur.com/kPHJ2JW.jpg');
   background-size: cover;
   background-position: center;
   display: flex;
