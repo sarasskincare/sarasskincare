@@ -1,32 +1,23 @@
 function getCleanserRecommendation() {
   const skinType = document.getElementById("skinType").value;
-  const skinGoal = document.getElementById("skinGoal").value;
-  const fragrancePref = document.getElementById("fragrance").value;
+  const eczemaRosacea = document.getElementById("eczemaRosacea").value;
+  const fragranceFree = document.getElementById("fragranceFree").value;
 
-  const matches = products.filter(product => {
-    const matchesSkin = product.skinTypes.includes(skinType);
-    const matchesGoal = product.skinGoals?.includes(skinGoal);
-    const matchesFragrance =
-      fragrancePref === "any" || product.fragranceType.includes(fragrancePref);
-    return matchesSkin && matchesGoal && matchesFragrance;
-  });
+  let matches = products.filter(product =>
+    product.skinTypes.includes(skinType) &&
+    (eczemaRosacea === "no" || !product.whenToNotUse.some(reason => reason.toLowerCase().includes("eczema") || reason.toLowerCase().includes("rosacea"))) &&
+    (fragranceFree === "no" || product.fragranceType.includes("fragrancefree"))
+  );
 
-  const resultsDiv = document.getElementById("cleanser-results");
-  resultsDiv.innerHTML = "";
-
-  if (matches.length === 0) {
-    resultsDiv.innerHTML = "<p>No cleansers found 😥</p>";
+  const resultDiv = document.getElementById("result");
+  if (matches.length > 0) {
+    resultDiv.innerHTML = matches.map(product => `
+      <h3>${product.name}</h3>
+      <p>${product.description}</p>
+      <a href="${product.link}" target="_blank">View Product</a>
+      <hr>
+    `).join("");
   } else {
-    matches.slice(0, 3).forEach(product => {
-      const card = `
-        <div style="border:1px solid #ccc; padding:10px; margin:10px; border-radius:10px">
-          <h3>${product.name}</h3>
-          <img src="${product.image}" alt="${product.name}" width="120">
-          <p>${product.description}</p>
-          <a href="${product.link}" target="_blank">View Product</a>
-        </div>
-      `;
-      resultsDiv.innerHTML += card;
-    });
+    resultDiv.innerHTML = "<p>No matching cleansers found. Try different answers!</p>";
   }
 }
