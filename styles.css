@@ -194,5 +194,14 @@ background-image: url('https://i.imgur.com/kPHJ2JW.jpg');
   width: 80%;
 }
 
+.section-divider-style {
+  max-width: 750px;
+  margin: 3rem auto 4rem;
+  background: #ffffff;
+  border: 2px solid #e7c4f9;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(200, 150, 255, 0.2);
+  height: 40px;
+}
 
 
