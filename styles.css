@@ -139,16 +139,23 @@ background-image: url('https://i.imgur.com/kPHJ2JW.jpg');
 .cta-btn:hover {
   background-color: #8244a8;
 }
+
+.why-wrapper {
+  padding: 5rem 2rem 6rem;
+  background: #fff6fa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .why-us {
   background: linear-gradient(145deg, #ffeaf6, #fef9ff);
-  padding: 4rem 2rem;
-  margin-top: 3rem;
   border-radius: 2rem;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-  box-shadow: 0 4px 16px rgba(225, 160, 233, 0.25);
+  padding: 3rem 2rem;
+  box-shadow: 0 8px 24px rgba(225, 160, 233, 0.25);
+  max-width: 700px;
   text-align: center;
+  margin-bottom: 2.5rem;
 }
 
 .why-title {
@@ -163,6 +170,14 @@ background-image: url('https://i.imgur.com/kPHJ2JW.jpg');
   border: 2px dashed #e0b8ff;
   box-shadow: 0 0 20px rgba(216, 176, 255, 0.2);
   text-decoration: underline wavy #dba9ff;
+}
+
+.footer-custom {
+  font-size: 0.95rem;
+  color: #775f8e;
+  text-align: center;
+  margin-top: 1rem;
+  opacity: 0.8;
 }
 
 
