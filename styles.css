@@ -71,3 +71,134 @@ nav a:hover {
 
 .hero-text h2 {
   font-size: 2.5rem;
+  color: #8244a8;
+  margin-bottom: 0.5rem;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  color: #6e6e6e;
+  margin-bottom: 1.5rem;
+}
+
+.hero-btn {
+  background-color: #e09ecf;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.hero-btn:hover {
+  background-color: #8244a8;
+}
+
+/* ----------------- CTA SECTION ----------------- */
+.cta {
+  background-color: #fff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.cta-box {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #fef2f8;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.cta-box h3 {
+  font-size: 1.8rem;
+  color: #8244a8;
+  margin-bottom: 1rem;
+}
+
+.cta-box p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  color: #4a4a4a;
+}
+
+.cta-btn {
+  display: inline-block;
+  background-color: #e09ecf;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  box-shadow: 0 6px 12px rgba(232, 193, 252, 0.4);
+}
+
+.cta-btn:hover {
+  background-color: #8244a8;
+}
+
+/* ----------------- WHY GLOW GUIDE SECTION ----------------- */
+.why-wrapper {
+  padding: 5rem 2rem;
+  background: #fff6fa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.why-us {
+  background: linear-gradient(145deg, #fff1f9, #fef9ff);
+  border-radius: 2rem;
+  padding: 3rem 2.5rem;
+  box-shadow: 0 12px 28px rgba(225, 160, 233, 0.25);
+  max-width: 750px;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+  border: 2px dashed #f7c2e6;
+  backdrop-filter: blur(4px);
+}
+
+.why-title {
+  font-size: 2.2rem;
+  color: #b56bbf;
+  margin-bottom: 1rem;
+  padding: 0.6rem 1.5rem;
+  border-radius: 2rem;
+  background: #ffffffcc;
+  display: inline-block;
+  border: 2px solid #e7c4f9;
+  text-decoration: underline wavy #df9bd9;
+  box-shadow: 0 0 10px rgba(200, 150, 255, 0.1);
+}
+
+.why-us p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #444;
+  margin-top: 1rem;
+}
+
+/* ----------------- DIVIDER ----------------- */
+.section-border {
+  border: none;
+  border-top: 3px dashed #dab9f5;
+  margin: 3rem auto;
+  width: 80%;
+}
+
+/* ----------------- FOOTER ----------------- */
+.footer-custom {
+  font-size: 0.95rem;
+  color: #775f8e;
+  text-align: center;
+  margin-top: 2rem;
+  opacity: 0.85;
+}
