@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sara's Skincare</title>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&family=Montserrat:wght@400;600&family=Pacifico&display=swap" rel="stylesheet">
   <link rel="icon" href="favicon.ico" type="image/x-icon"/>
   <style>
     :root {
@@ -24,46 +24,70 @@
       color: #502f5a;
       min-height: 100vh;
     }
-    header {
-      background: linear-gradient(90deg, var(--soft-pink), var(--soft-purple));
-      box-shadow: var(--shadow);
-      padding: 2rem 0 1.5rem 0;
-      text-align: center;
-      position: relative;
-    }
-    .logo {
-      font-family: 'Quicksand', cursive, sans-serif;
-      color: var(--accent);
-      font-size: 2.6rem;
-      letter-spacing: 2px;
-      font-weight: 700;
-      margin-bottom: 0.35rem;
+    /* New Header */
+    .topbar {
+      width: 100%;
+      background: linear-gradient(90deg, var(--accent2) 30%, var(--soft-pink) 100%);
+      padding: 0.5rem 0 0.5rem 0;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 0.5rem;
+      box-shadow: var(--shadow);
+      border-bottom-left-radius: 2.2rem 1.2rem;
+      border-bottom-right-radius: 2.2rem 1.2rem;
     }
-    .logo-bow {
-      width: 2.2rem;
-      vertical-align: middle;
-    }
-    nav {
-      margin-top: 1rem;
-    }
-    nav a {
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-family: 'Pacifico', cursive, sans-serif;
+      font-size: 2.2rem;
       color: var(--accent);
-      text-decoration: none;
-      margin: 0 1.5rem;
-      font-weight: 600;
-      font-size: 1.1rem;
-      padding: 0.2rem 0.7rem;
-      border-radius: 0.7rem;
-      transition: background 0.2s;
+      letter-spacing: 1px;
+      font-weight: 700;
     }
-    nav a:hover {
-      background: var(--accent2);
+    .brand-bow {
+      width: 2.3rem;
+      margin-right: 0.2rem;
+      vertical-align: middle;
+      filter: drop-shadow(0 0 4px #f2b5ec88);
+    }
+    .main-nav {
+      margin-left: 2.5rem;
+      display: flex;
+      gap: 1.7rem;
+    }
+    .main-nav a {
+      color: var(--accent);
+      background: rgba(255,255,255,0.59);
+      text-decoration: none;
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 700;
+      font-size: 1.13rem;
+      padding: 0.22rem 1.1rem;
+      border-radius: 1.2rem;
+      transition: background 0.18s, color 0.18s;
+      letter-spacing: 0.01em;
+    }
+    .main-nav a:hover {
+      background: var(--accent);
       color: #fff;
     }
+    @media (max-width: 730px) {
+      .topbar {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding-bottom: 1rem;
+      }
+      .main-nav {
+        margin-left: 0;
+        gap: 1.1rem;
+      }
+      .brand {
+        font-size: 1.4rem;
+      }
+    }
+    /* Hero Section */
     .hero {
       max-width: 550px;
       margin: 2.5rem auto 1.5rem auto;
@@ -84,6 +108,7 @@
       align-items: center;
       justify-content: center;
       gap: 0.7rem;
+      letter-spacing: 1px;
     }
     .hero .bow {
       width: 1.7rem;
@@ -114,7 +139,7 @@
       background: linear-gradient(90deg, var(--accent), var(--accent2));
       transform: scale(1.04);
     }
-    /* QUIZ CTA GLASS SKIN - reused for bottom cards */
+    /* QUIZ CTA GLASS SKIN */
     .cta-glassskin {
       display: flex;
       justify-content: center;
@@ -131,7 +156,7 @@
       margin: 0 auto;
       border: 2.5px solid #f8c7e8;
     }
-    .cta-glassskin-box h3, .cta-glassskin-box h2 {
+    .cta-glassskin-box h3 {
       margin: 0 0 0.4rem 0;
       color: #a874b8;
       font-size: 1.38rem;
@@ -166,20 +191,54 @@
       background: linear-gradient(90deg, #a874b8, #f8c7e8);
       transform: scale(1.04);
     }
-    .cta-glassskin-list {
+    /* Two card sections side by side */
+    .side-by-side-section {
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      gap: 2.2rem;
+      margin: 2.5rem 0 2.7rem 0;
+      flex-wrap: wrap;
+    }
+    .side-card {
+      background: #fff6fb;
+      border-radius: 2.2rem;
+      box-shadow: 0 6px 32px #e7bbf633, 0 1.5px 8px #f8c7e855;
+      padding: 2rem 2.1rem 1.7rem 2.1rem;
+      text-align: center;
+      max-width: 370px;
+      width: 100%;
+      border: 2.5px solid #f8c7e8;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    .side-card h2 {
+      margin: 0 0 0.7rem 0;
+      color: #a874b8;
+      font-size: 1.19rem;
+      font-family: 'Quicksand', cursive, sans-serif;
+      letter-spacing: 1px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+    .side-list {
       list-style: none;
       padding: 0;
       margin: 1rem auto 0 auto;
       text-align: left;
       max-width: 340px;
     }
-    .cta-glassskin-list li {
+    .side-list li {
       margin-bottom: 0.7rem;
-      font-size: 1.09rem;
+      font-size: 1.04rem;
       position: relative;
       padding-left: 1.8rem;
     }
-    .cta-glassskin-list li::before {
+    .side-list li::before {
       content: url('https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/2728.svg');
       position: absolute;
       left: 0;
@@ -187,29 +246,48 @@
       width: 1.2rem;
       height: 1.2rem;
     }
+    @media (max-width: 900px) {
+      .side-by-side-section {
+        flex-direction: column;
+        gap: 1.3rem;
+        align-items: center;
+      }
+      .side-card {
+        max-width: 98vw;
+      }
+    }
     @media (max-width: 700px) {
-      .hero, .cta-glassskin-box {
+      .hero, .cta-glassskin-box, .side-card {
         padding: 1.2rem 0.7rem 1.2rem 0.7rem;
       }
       .hero h1 { font-size: 1.5rem; }
-      .cta-glassskin-box h3, .cta-glassskin-box h2 { font-size: 1.1rem; }
+      .cta-glassskin-box h3, .side-card h2 { font-size: 1.1rem; }
     }
     @media (max-width: 430px) {
-      .logo { font-size: 1.5rem; }
+      .brand { font-size: 1.25rem; }
       .hero { padding: 1.2rem 0.6rem 1.1rem 0.6rem; }
       .hero-btn, .cta-glassskin-btn { font-size: 1rem; padding: 0.75rem 1.2rem; }
-      .cta-glassskin-box { max-width: 99vw; }
+      .cta-glassskin-box, .side-card { max-width: 99vw; }
+    }
+    footer {
+      margin: 3.2rem 0 1.3rem 0;
+      text-align: center;
+      color: #b48fc9;
+      font-size: 1.07rem;
+      letter-spacing: 0.5px;
+      padding-bottom: 1.2rem;
     }
   </style>
 </head>
 <body>
-  <header>
-    <div class="logo">
-      <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f380.svg" alt="Bow" class="logo-bow"/>
+  <!-- New topbar header -->
+  <header class="topbar">
+    <span class="brand">
+      <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f380.svg" alt="Bow" class="brand-bow"/>
       Sara's Skincare
-    </div>
-    <nav>
-      <a href="#quiz" class="nav-quiz">Quiz</a>
+    </span>
+    <nav class="main-nav">
+      <a href="#quiz">Quiz</a>
       <a href="#about">About</a>
       <a href="#science">Science</a>
     </nav>
@@ -236,26 +314,24 @@
           Take our quiz to find your personalized skincare routine.<br>
           <span class="cta-glassskin-powered">Powered by real skin science.</span>
         </p>
-        <a href="quiz.html" class="cta-glassskin-btn">Start My Routine</a>
+        <a href="quiz.html" class="cta-glassskin-btn">Start the Quiz</a>
       </div>
     </section>
 
-    <!-- About/Science Section with quiz-style card aesthetic -->
-    <section class="cta-glassskin" id="about">
-      <div class="cta-glassskin-box">
+    <!-- Side by side About/Science Section -->
+    <section class="side-by-side-section">
+      <div class="side-card" id="about">
         <h2>What makes us different?</h2>
-        <ul class="cta-glassskin-list">
+        <ul class="side-list">
           <li>Personalized routines—no more generic advice!</li>
           <li>Powered by real science (not just TikTok trends)</li>
           <li>Fun, preppy vibes & dreamy design (bows included!)</li>
           <li>Profiles and routines crafted for your skin’s unique needs</li>
         </ul>
       </div>
-    </section>
-    <section class="cta-glassskin" id="science">
-      <div class="cta-glassskin-box">
+      <div class="side-card" id="science">
         <h2>How it works</h2>
-        <ul class="cta-glassskin-list">
+        <ul class="side-list">
           <li>Answer a few quick, science-backed questions</li>
           <li>Get matched to a unique skin profile</li>
           <li>See your step-by-step routine with ingredient spotlights</li>
