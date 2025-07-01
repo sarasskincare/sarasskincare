@@ -31,11 +31,11 @@
       box-shadow: 0 2px 16px #f8c7e825;
       border-bottom-left-radius: 1.2rem 0.6rem;
       border-bottom-right-radius: 1.2rem 0.6rem;
-      padding: 0.6rem 0 0.45rem 0;
+      padding: 0.5rem 0 0.35rem 0;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 2.5rem;
+      gap: 2.2rem;
       z-index: 10;
       position: relative;
     }
@@ -44,28 +44,28 @@
       text-decoration: none;
       font-family: 'Quicksand', sans-serif;
       font-weight: 700;
-      font-size: 1.09rem;
+      font-size: 1.05rem;
       letter-spacing: 0.03em;
-      padding: 0.3rem 1.1rem;
+      padding: 0.23rem 0.95rem;
       border-radius: 1rem;
       transition: background 0.16s, color 0.16s;
-      margin: 0 0.2rem;
+      margin: 0 0.1rem;
     }
     .topnav a:hover, .topnav a.active {
       background: var(--accent2);
       color: #fff;
     }
-    /* HERO HEADER - SHORT, CUTE, PASTEL */
+    /* HERO HEADER - EVEN SHORTER, CUTE, PASTEL */
     .main-hero-header {
       background: linear-gradient(120deg, #ffe6f7 60%, #e5e1ff 100%);
       box-shadow: var(--shadow);
-      padding: 0 0 1.5rem 0;
+      padding: 0 0 0.6rem 0;
       position: relative;
-      border-bottom-left-radius: 3.5rem 2.5rem;
-      border-bottom-right-radius: 3.5rem 2.5rem;
+      border-bottom-left-radius: 3rem 1.5rem;
+      border-bottom-right-radius: 3rem 1.5rem;
       overflow: hidden;
       z-index: 1;
-      min-height: 140px;
+      min-height: 80px;
     }
     .main-hero-inner {
       display: flex;
@@ -73,93 +73,100 @@
       align-items: center;
       max-width: 700px;
       margin: 0 auto;
-      padding-top: 1.1rem;
+      padding-top: 0.35rem;
       text-align: center;
       position: relative;
       z-index: 2;
     }
     .main-hero-bow {
-      width: 2.2rem;
-      height: 2.2rem;
-      filter: drop-shadow(0 0 8px #f8c7e8aa);
-      margin-bottom: 0.3rem;
+      width: 1.7rem;
+      height: 1.7rem;
+      filter: drop-shadow(0 0 6px #f8c7e8aa);
+      margin-bottom: 0.15rem;
       margin-top: 0.1rem;
     }
     .main-hero-title {
       font-family: 'Pacifico', cursive, sans-serif;
       color: var(--accent);
-      font-size: 2.1rem;
+      font-size: 1.32rem;
       font-weight: 700;
-      margin: 0 0 0.15rem 0;
-      letter-spacing: 1.2px;
-      text-shadow: 0 3px 16px #f8c7e855;
+      margin: 0 0 0.08rem 0;
+      letter-spacing: 1.05px;
+      text-shadow: 0 2px 10px #f8c7e855;
       display: flex;
       align-items: center;
-      gap: 0.45rem;
+      gap: 0.35rem;
       justify-content: center;
     }
-    .main-hero-sub {
-      color: #a874b8;
-      font-size: 1.07rem;
-      font-family: 'Quicksand', sans-serif;
-      margin-bottom: 0.6rem;
-      margin-top: 0.1rem;
-      letter-spacing: 0.03em;
-      display: none;
-    }
     .main-hero-desc {
-      font-size: 1.06rem;
+      font-size: 1.01rem;
       color: #695c7a;
       max-width: 570px;
-      margin: 0 auto 0.15rem auto;
-      line-height: 1.7;
+      margin: 0 auto 0.04rem auto;
+      line-height: 1.5;
       font-family: 'Montserrat', sans-serif;
     }
-    .main-hero-btn {
-      display: none;
-    }
     @media (max-width: 700px) {
-      .main-hero-header { padding-bottom: 1rem; min-height: 90px; }
-      .main-hero-title { font-size: 1.2rem; }
-      .main-hero-bow { width: 1.3rem; height: 1.3rem; }
-      .main-hero-sub { font-size: 0.9rem; }
-      .main-hero-desc { font-size: 0.98rem; }
+      .main-hero-header { padding-bottom: 0.2rem; min-height: 60px; }
+      .main-hero-title { font-size: 0.98rem; }
+      .main-hero-bow { width: 1.1rem; height: 1.1rem; }
+      .main-hero-desc { font-size: 0.95rem; }
     }
     @media (max-width: 430px) {
-      .main-hero-header { border-bottom-left-radius: 2rem 1rem; border-bottom-right-radius: 2rem 1rem; }
-      .main-hero-inner { padding-top: 0.5rem; }
-      .main-hero-title { font-size: 0.87rem; }
-      .main-hero-bow { width: 1.1rem; height: 1.1rem; }
+      .main-hero-header { border-bottom-left-radius: 1.4rem 0.7rem; border-bottom-right-radius: 1.4rem 0.7rem; }
+      .main-hero-inner { padding-top: 0.2rem; }
+      .main-hero-title { font-size: 0.79rem; }
+      .main-hero-bow { width: 0.8rem; height: 0.8rem; }
     }
-    /* CTA GLASS SKIN - now with cute images */
+    /* CTA GLASS SKIN - with animated SVGs */
     .cta-glassskin {
       display: flex;
       justify-content: center;
       align-items: center;
       margin: 2.2rem 0 2.2rem 0;
     }
-    .cta-glassskin-box-wrap {
+    .cta-anim-wrap {
       display: flex;
       align-items: center;
-      gap: 1.4rem;
+      gap: 1.2rem;
       background: transparent;
     }
-    .cute-side-img {
-      width: 2.8rem;
-      height: 2.8rem;
-      border-radius: 0.8rem;
-      background: #ffe6f7;
-      box-shadow: 0 2px 10px #f8c7e822, 0 0.5px 3px #a874b822;
-      padding: 0.4rem;
+    .cta-anim-art {
       display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: center;
+      gap: 0.3rem;
     }
-    .cute-side-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
+    /* Simple bottle animation */
+    .bottle-anim {
+      width: 2.5rem;
+      height: 2.5rem;
       display: block;
+      animation: bottle-bounce 1.5s infinite alternate cubic-bezier(.6,0,.6,.99);
+    }
+    .bottle-anim2 {
+      width: 2.5rem;
+      height: 2.5rem;
+      display: block;
+      animation: bottle-bounce2 1.8s infinite alternate cubic-bezier(.6,0,.6,.99);
+    }
+    .animal-anim {
+      width: 2.1rem;
+      height: 2.1rem;
+      display: block;
+      animation: animal-bounce 1.7s infinite alternate;
+    }
+    @keyframes bottle-bounce {
+      0% { transform: translateY(0) rotate(-8deg);}
+      100% { transform: translateY(-8px) rotate(8deg);}
+    }
+    @keyframes bottle-bounce2 {
+      0% { transform: translateY(0) rotate(6deg);}
+      100% { transform: translateY(-10px) rotate(-6deg);}
+    }
+    @keyframes animal-bounce {
+      0% { transform: translateY(0);}
+      100% { transform: translateY(-9px);}
     }
     .cta-glassskin-box {
       background: #fff6fb;
@@ -277,7 +284,7 @@
       .side-card {
         max-width: 98vw;
       }
-      .cta-glassskin-box-wrap {
+      .cta-anim-wrap {
         flex-direction: column;
         gap: 1rem;
       }
@@ -291,7 +298,7 @@
     }
     @media (max-width: 430px) {
       .cta-glassskin-box, .side-card { max-width: 99vw; }
-      .cta-glassskin-box-wrap { flex-direction: column; gap: .7rem;}
+      .cta-anim-wrap { flex-direction: column; gap: .7rem;}
     }
     footer {
       margin: 3.2rem 0 1.3rem 0;
@@ -320,17 +327,38 @@
   </header>
 
   <main>
-    <!-- Quiz CTA Section -->
+    <!-- Quiz CTA Section with animated bottles and animal -->
     <section class="cta-glassskin" id="quiz">
-      <div class="cta-glassskin-box-wrap">
-        <span class="cute-side-img">
-          <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f49b.svg" alt="Yellow Heart"/>
+      <div class="cta-anim-wrap">
+        <span class="cta-anim-art">
+          <!-- Cute bottle SVG #1 -->
+          <svg class="bottle-anim" viewBox="0 0 50 75" fill="none">
+            <rect x="13" y="18" width="24" height="45" rx="10" fill="#f8c7e8" />
+            <rect x="18" y="12" width="14" height="10" rx="5" fill="#a874b8"/>
+            <ellipse cx="25" cy="50" rx="7" ry="7.5" fill="#fff"/>
+            <ellipse cx="22" cy="44" rx="1.7" ry="2" fill="#502f5a"/>
+            <ellipse cx="28" cy="44" rx="1.7" ry="2" fill="#502f5a"/>
+            <ellipse cx="25" cy="53" rx="2.9" ry="1.2" fill="#f8c7e8"/>
+            <circle cx="21.7" cy="48" r="1" fill="#502f5a"/>
+            <circle cx="28.3" cy="48" r="1" fill="#502f5a"/>
+            <ellipse cx="25" cy="40" rx="3" ry="1" fill="#fff" opacity="0.4"/>
+          </svg>
+          <!-- Smiling cloud animal SVG -->
+          <svg class="animal-anim" viewBox="0 0 45 30" fill="none">
+            <ellipse cx="22.5" cy="15" rx="15" ry="11" fill="#fff"/>
+            <ellipse cx="12.5" cy="15" rx="5" ry="4.5" fill="#fff"/>
+            <ellipse cx="32.5" cy="15" rx="5" ry="4.5" fill="#fff"/>
+            <ellipse cx="20" cy="20" rx="1.2" ry="1.7" fill="#502f5a"/>
+            <ellipse cx="25" cy="20" rx="1.2" ry="1.7" fill="#502f5a"/>
+            <ellipse cx="22.5" cy="24" rx="2.5" ry="1" fill="#f8c7e8"/>
+            <ellipse cx="18" cy="12" rx="1.2" ry="1" fill="#f8c7e8"/>
+            <ellipse cx="27" cy="12" rx="1.2" ry="1" fill="#f8c7e8"/>
+            <ellipse cx="22.5" cy="11" rx="3" ry="1" fill="#fff" opacity="0.4"/>
+          </svg>
         </span>
         <div class="cta-glassskin-box">
           <h3>
-            Want dewy glass skin? 
-            <span style="font-size:1.3em">✨</span>
-            <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f496.svg" alt="Sparkling Heart" style="width:1.5em;margin-left:0.2em;vertical-align:-0.25em;">
+            Want dewy glass skin?
           </h3>
           <p>
             Take our quiz to find your personalized skincare routine.<br>
@@ -338,8 +366,29 @@
           </p>
           <a href="quiz.html" class="cta-glassskin-btn">Start the Quiz</a>
         </div>
-        <span class="cute-side-img">
-          <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f37f.svg" alt="Popcorn"/>
+        <span class="cta-anim-art">
+          <!-- Cute bottle SVG #2 -->
+          <svg class="bottle-anim2" viewBox="0 0 50 75" fill="none">
+            <rect x="13" y="18" width="24" height="45" rx="10" fill="#a874b8" />
+            <rect x="18" y="12" width="14" height="10" rx="5" fill="#f8c7e8"/>
+            <ellipse cx="25" cy="50" rx="7" ry="7.5" fill="#fff"/>
+            <ellipse cx="22" cy="44" rx="1.7" ry="2" fill="#502f5a"/>
+            <ellipse cx="28" cy="44" rx="1.7" ry="2" fill="#502f5a"/>
+            <ellipse cx="25" cy="53" rx="2.9" ry="1.2" fill="#a874b8"/>
+            <circle cx="21.7" cy="48" r="1" fill="#502f5a"/>
+            <circle cx="28.3" cy="48" r="1" fill="#502f5a"/>
+            <ellipse cx="25" cy="40" rx="3" ry="1" fill="#fff" opacity="0.4"/>
+          </svg>
+          <!-- Mini smiling bear face SVG -->
+          <svg class="animal-anim" viewBox="0 0 36 28" fill="none">
+            <ellipse cx="18" cy="16" rx="12" ry="10" fill="#fff"/>
+            <ellipse cx="8" cy="13" rx="3" ry="3" fill="#f8c7e8"/>
+            <ellipse cx="28" cy="13" rx="3" ry="3" fill="#f8c7e8"/>
+            <ellipse cx="15" cy="20" rx="1" ry="1.4" fill="#502f5a"/>
+            <ellipse cx="21" cy="20" rx="1" ry="1.4" fill="#502f5a"/>
+            <ellipse cx="18" cy="23" rx="2" ry="0.8" fill="#a874b8"/>
+            <ellipse cx="18" cy="12.5" rx="3.2" ry="0.7" fill="#fff" opacity="0.3"/>
+          </svg>
         </span>
       </div>
     </section>
@@ -368,7 +417,7 @@
   </main>
 
   <footer>
-    &copy; 2025 Sara's Skincare | Dreamy routines & real results
+    &copy; 2025 Sara's Skincare
   </footer>
 </body>
 </html>
