@@ -9,12 +9,12 @@
   <style>
     :root {
       --main-bg: #fff6fb;
-      --card-bg: #fff;
       --accent: #d87fc3;
       --accent2: #f8c7e8;
       --hot-pink: #ff9ee7;
-      --soft-pink: #ffe6f7;
-      --soft-purple: #f5e6ff;
+      --purple: #a874b8;
+      --purple-dark: #7a4c9e;
+      --white: #fff;
       --shadow: 0 8px 24px rgba(216, 127, 195, 0.15);
     }
     html, body {
@@ -56,49 +56,75 @@
       background: linear-gradient(90deg, var(--hot-pink) 40%, var(--accent2) 100%);
       color: #fff;
     }
-    /* Rounded Gradient Rectangle for Hero - no white inside, all gradient */
-    .rounded-hero {
+    /* POP HERO CARD */
+    .pop-hero {
       margin: 2.2rem auto 1.6rem auto;
-      background: linear-gradient(120deg, #ffb3e1 12%, #ffe6f7 61%, #f8c7e8 100%);
+      background: var(--white);
       border-radius: 2.8rem;
       box-shadow: 0 6px 32px #e7bbf655, 0 1.5px 8px #f8c7e855;
       padding: 2.7rem 2.8rem 2.2rem 2.8rem;
-      max-width: 980px;
+      max-width: 600px;
       min-width: 220px;
-      width: 93vw;
+      width: 92vw;
       text-align: center;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      border: 3.5px solid #ffb3e1;
+      border: 3.5px solid var(--accent2);
+      position: relative;
     }
-    .rounded-hero-title {
+    .pop-hero-title {
       font-family: 'Quicksand', cursive, sans-serif;
-      color: #e051ab;
+      color: var(--white);
       font-size: 2.25rem;
-      font-weight: 800;
+      font-weight: 900;
       letter-spacing: 1.1px;
-      margin-bottom: 1.4rem;
-      text-shadow: 0 4px 24px #ffb3e155;
+      margin-bottom: 1.2rem;
+      text-shadow: 0 4px 24px #ff9ee7, 0 2px 8px var(--accent2);
       text-transform: uppercase;
-      background: linear-gradient(90deg, #ff9ee7 40%, #e051ab 100%);
+      background: linear-gradient(90deg, var(--hot-pink) 12%, var(--purple-dark) 85%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
       display: block;
+      word-spacing: 0.1em;
+      line-height: 1.13;
     }
-    .rounded-hero-desc {
-      font-size: 1.23rem;
-      color: #c2529c;
+    .pop-hero-desc {
+      font-size: 1.18rem;
+      color: var(--purple-dark);
       font-family: 'Montserrat', sans-serif;
       line-height: 1.74;
       letter-spacing: 0.01em;
-      padding: 0.3rem 0.6rem 0.2rem 0.6rem;
-      margin: 0;
-      max-width: 860px;
+      margin: 0 0 2.1rem 0;
+      max-width: 530px;
       background: none;
       display: inline-block;
+    }
+    .pop-hero-btn {
+      display: inline-block;
+      background: linear-gradient(90deg, var(--hot-pink) 10%, var(--purple) 90%);
+      color: #fff;
+      font-weight: 900;
+      font-size: 1.22rem;
+      padding: 1rem 2.7rem;
+      border: none;
+      border-radius: 2.3rem;
+      box-shadow: 0 3px 16px var(--accent2);
+      cursor: pointer;
+      text-decoration: none;
+      margin-top: 0.3rem;
+      transition: background 0.19s, color 0.14s, transform 0.1s;
+      border: 2.5px solid var(--hot-pink);
+      letter-spacing: 0.07em;
+      text-shadow: 0 2px 12px #ffb3e1;
+    }
+    .pop-hero-btn:hover {
+      background: linear-gradient(90deg, var(--purple-dark) 10%, var(--hot-pink) 90%);
+      color: #fff;
+      border-color: var(--purple-dark);
+      transform: scale(1.06) rotate(-2deg);
     }
     /* CTA GLASS SKIN */
     .cta-glassskin {
@@ -195,9 +221,9 @@
       .cta-glassskin-box { margin: 0; }
     }
     @media (max-width: 700px) {
-      .rounded-hero { padding: 1.2rem 0.8rem; }
-      .rounded-hero-title { font-size: 1.15rem; }
-      .rounded-hero-desc { font-size: 0.97rem; }
+      .pop-hero { padding: 1.2rem 0.8rem; }
+      .pop-hero-title { font-size: 1.15rem; }
+      .pop-hero-desc { font-size: 0.97rem; }
       .cta-img-left img, .cta-img-right img { max-width: 78px; }
       .cta-glassskin-box h3 { font-size: 1.1rem; }
       .cta-glassskin-box { font-size: 1.01rem; }
@@ -206,7 +232,7 @@
       .cta-glassskin-box { max-width: 99vw; }
       .cta-img-left, .cta-img-right { max-width: 70px; }
       .cta-img-left img, .cta-img-right img { max-width: 60px; }
-      .rounded-hero { padding: 0.4rem 0.2rem; }
+      .pop-hero { padding: 0.4rem 0.2rem; }
     }
     /* Two card sections side by side */
     .side-by-side-section {
@@ -231,9 +257,10 @@
       flex-direction: column;
       justify-content: flex-start;
       color: #be3c97;
+      position: relative;
     }
     .side-card h2 {
-      margin: 0 0 0.7rem 0;
+      margin: 0 0 0.2rem 0;
       color: #e051ab;
       font-size: 1.19rem;
       font-family: 'Quicksand', cursive, sans-serif;
@@ -243,6 +270,15 @@
       justify-content: center;
       gap: 0.5rem;
       text-shadow: 0 2px 8px #ffb3e155;
+      position: relative;
+      z-index: 2;
+    }
+    .squiggle {
+      display: block;
+      margin: 0.1rem auto 1rem auto;
+      width: 120px;
+      height: 17px;
+      z-index: 1;
     }
     .side-list {
       list-style: none;
@@ -254,7 +290,7 @@
     }
     .side-list li {
       margin-bottom: 0.7rem;
-      font-size: 1.04rem;
+      font-size: 1.07rem;
       position: relative;
       padding-left: 1.8rem;
     }
@@ -302,16 +338,14 @@
     <a href="#aboutme">About Me</a>
   </nav>
 
-  <section class="rounded-hero">
-    <div class="rounded-hero-title">
-      <span>
-        <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f380.svg" class="rounded-hero-bow" alt="Bow"/>
-      </span>
+  <section class="pop-hero">
+    <div class="pop-hero-title">
       READY TO FIND YOUR PERFECT SKIN CARE ROUTINE?
     </div>
-    <div class="rounded-hero-desc">
+    <div class="pop-hero-desc">
       Our science-based quiz and product list help you discover what works for your unique skin! Each product features detailed info on chemical structure and compounds, plus how they'll interact with YOUR skin type.
     </div>
+    <a href="quiz.html" class="pop-hero-btn">Start the Quiz</a>
   </section>
 
   <main>
@@ -343,20 +377,26 @@
     <section class="side-by-side-section">
       <div class="side-card" id="about">
         <h2>What makes us different?</h2>
+        <svg class="squiggle" viewBox="0 0 120 17" fill="none">
+          <path d="M2 15 C15 2, 30 18, 45 10 S75 2, 90 15 S110 18, 118 2" stroke="#a874b8" stroke-width="4" fill="none" stroke-linecap="round" />
+        </svg>
         <ul class="side-list">
           <li>Personalized routines—no more generic advice!</li>
-          <li>Powered by real science (not just TikTok trends)</li>
-          <li>Fun, preppy vibes & dreamy design (bows included!)</li>
+          <li>Powered by real science that studies how the chemical structures and ingredients effect YOUR skin</li>
+          <li>Based ENTIRELY on science not just trends, made for you specifically,</li>
           <li>Profiles and routines crafted for your skin’s unique needs</li>
         </ul>
       </div>
       <div class="side-card" id="science">
         <h2>How it works</h2>
+        <svg class="squiggle" viewBox="0 0 120 17" fill="none">
+          <path d="M2 15 C15 2, 30 18, 45 10 S75 2, 90 15 S110 18, 118 2" stroke="#a874b8" stroke-width="4" fill="none" stroke-linecap="round" />
+        </svg>
         <ul class="side-list">
           <li>Answer a few quick, science-backed questions</li>
           <li>Get matched to a unique skin profile</li>
           <li>See your step-by-step routine with ingredient spotlights</li>
-          <li>Easy, aesthetic, and dermatologist-inspired!</li>
+          <li>It's easy, completely FREE, no sign-up required! and dermatologist-inspired!</li>
         </ul>
       </div>
     </section>
