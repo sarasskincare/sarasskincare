@@ -56,16 +56,16 @@
       background: linear-gradient(90deg, var(--hot-pink) 40%, var(--accent2) 100%);
       color: #fff;
     }
-    /* POP HERO CARD */
+    /* POP HERO CARD - wider and smaller height */
     .pop-hero {
       margin: 2.2rem auto 1.6rem auto;
       background: var(--white);
-      border-radius: 2.8rem;
+      border-radius: 2.3rem;
       box-shadow: 0 6px 32px #e7bbf655, 0 1.5px 8px #f8c7e855;
-      padding: 2.7rem 2.8rem 2.2rem 2.8rem;
-      max-width: 600px;
+      padding: 0.95rem 2.6rem 0.95rem 2.6rem;
+      max-width: 950px;
       min-width: 220px;
-      width: 92vw;
+      width: 99vw;
       text-align: center;
       display: flex;
       flex-direction: column;
@@ -77,10 +77,10 @@
     .pop-hero-title {
       font-family: 'Quicksand', cursive, sans-serif;
       color: var(--white);
-      font-size: 2.25rem;
+      font-size: 1.42rem;
       font-weight: 900;
       letter-spacing: 1.1px;
-      margin-bottom: 1.2rem;
+      margin-bottom: 0.9rem;
       text-shadow: 0 4px 24px #ff9ee7, 0 2px 8px var(--accent2);
       text-transform: uppercase;
       background: linear-gradient(90deg, var(--hot-pink) 12%, var(--purple-dark) 85%);
@@ -92,13 +92,13 @@
       line-height: 1.13;
     }
     .pop-hero-desc {
-      font-size: 1.18rem;
+      font-size: 1.01rem;
       color: var(--purple-dark);
       font-family: 'Montserrat', sans-serif;
       line-height: 1.74;
       letter-spacing: 0.01em;
-      margin: 0 0 2.1rem 0;
-      max-width: 530px;
+      margin: 0 0 1.1rem 0;
+      max-width: 800px;
       background: none;
       display: inline-block;
     }
@@ -107,14 +107,14 @@
       background: linear-gradient(90deg, var(--hot-pink) 10%, var(--purple) 90%);
       color: #fff;
       font-weight: 900;
-      font-size: 1.22rem;
-      padding: 1rem 2.7rem;
+      font-size: 1.02rem;
+      padding: 0.7rem 2.1rem;
       border: none;
       border-radius: 2.3rem;
       box-shadow: 0 3px 16px var(--accent2);
       cursor: pointer;
       text-decoration: none;
-      margin-top: 0.3rem;
+      margin-top: 0.2rem;
       transition: background 0.19s, color 0.14s, transform 0.1s;
       border: 2.5px solid var(--hot-pink);
       letter-spacing: 0.07em;
@@ -221,9 +221,9 @@
       .cta-glassskin-box { margin: 0; }
     }
     @media (max-width: 700px) {
-      .pop-hero { padding: 1.2rem 0.8rem; }
-      .pop-hero-title { font-size: 1.15rem; }
-      .pop-hero-desc { font-size: 0.97rem; }
+      .pop-hero { padding: 0.7rem 0.5rem; }
+      .pop-hero-title { font-size: 1rem; }
+      .pop-hero-desc { font-size: 0.95rem; }
       .cta-img-left img, .cta-img-right img { max-width: 78px; }
       .cta-glassskin-box h3 { font-size: 1.1rem; }
       .cta-glassskin-box { font-size: 1.01rem; }
@@ -232,7 +232,7 @@
       .cta-glassskin-box { max-width: 99vw; }
       .cta-img-left, .cta-img-right { max-width: 70px; }
       .cta-img-left img, .cta-img-right img { max-width: 60px; }
-      .pop-hero { padding: 0.4rem 0.2rem; }
+      .pop-hero { padding: 0.25rem 0.1rem; }
     }
     /* Two card sections side by side */
     .side-by-side-section {
@@ -273,34 +273,28 @@
       position: relative;
       z-index: 2;
     }
+    /* Wavy squiggle line - more lively */
     .squiggle {
       display: block;
       margin: 0.1rem auto 1rem auto;
-      width: 120px;
-      height: 17px;
+      width: 140px;
+      height: 25px;
       z-index: 1;
     }
-    .side-list {
-      list-style: none;
-      padding: 0;
-      margin: 1rem auto 0 auto;
-      text-align: left;
-      max-width: 340px;
-      color: #be3c97;
-    }
-    .side-list li {
-      margin-bottom: 0.7rem;
-      font-size: 1.07rem;
-      position: relative;
-      padding-left: 1.8rem;
-    }
-    .side-list li::before {
-      content: url('https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/2728.svg');
-      position: absolute;
-      left: 0;
-      top: 0.1rem;
-      width: 1.2rem;
-      height: 1.2rem;
+    /* Wide empty pastel box under each side-card */
+    .side-card-empty {
+      background: linear-gradient(90deg, #fff6fb 80%, #ffb3e1 100%);
+      border-radius: 1.5rem;
+      border: 2.5px solid #f8c7e8;
+      box-shadow: 0 2px 16px #f8c7e822;
+      margin: 2.2rem auto 0.7rem auto;
+      min-height: 60px;
+      width: 97vw;
+      max-width: 1080px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
     }
     @media (max-width: 900px) {
       .side-by-side-section {
@@ -317,9 +311,11 @@
         padding: 1.2rem 0.7rem 1.2rem 0.7rem;
       }
       .side-card h2 { font-size: 1.1rem; }
+      .side-card-empty { min-height: 40px; }
     }
     @media (max-width: 430px) {
       .side-card { max-width: 99vw; }
+      .side-card-empty { width: 98vw; min-height: 24px; }
     }
     footer {
       margin: 3.2rem 0 1.3rem 0;
@@ -377,29 +373,34 @@
     <section class="side-by-side-section">
       <div class="side-card" id="about">
         <h2>What makes us different?</h2>
-        <svg class="squiggle" viewBox="0 0 120 17" fill="none">
-          <path d="M2 15 C15 2, 30 18, 45 10 S75 2, 90 15 S110 18, 118 2" stroke="#a874b8" stroke-width="4" fill="none" stroke-linecap="round" />
+        <svg class="squiggle" viewBox="0 0 140 25" fill="none">
+          <path d="M3 12 Q 15 2, 30 15 T 55 15 Q 70 25, 80 12 Q 90 0, 110 20 T 137 12" stroke="#a874b8" stroke-width="4" fill="none" stroke-linecap="round"/>
         </svg>
         <ul class="side-list">
           <li>Personalized routines—no more generic advice!</li>
-          <li>Powered by real science that studies how the chemical structures and ingredients effect YOUR skin</li>
-          <li>Based ENTIRELY on science not just trends, made for you specifically,</li>
-          <li>Profiles and routines crafted for your skin’s unique needs</li>
+          <li>Powered by real science that studies how the chemical structures and ingredients effect YOUR skin
+</li>
+          <liBased ENTIRELY on science not just trends, made for you specifically,
+</li>
+          <li>Profiles and routines crafted for your skin’s unique needs
+</li>
         </ul>
       </div>
       <div class="side-card" id="science">
         <h2>How it works</h2>
-        <svg class="squiggle" viewBox="0 0 120 17" fill="none">
-          <path d="M2 15 C15 2, 30 18, 45 10 S75 2, 90 15 S110 18, 118 2" stroke="#a874b8" stroke-width="4" fill="none" stroke-linecap="round" />
+        <svg class="squiggle" viewBox="0 0 140 25" fill="none">
+          <path d="M3 12 Q 15 2, 30 15 T 55 15 Q 70 25, 80 12 Q 90 0, 110 20 T 137 12" stroke="#a874b8" stroke-width="4" fill="none" stroke-linecap="round"/>
         </svg>
         <ul class="side-list">
           <li>Answer a few quick, science-backed questions</li>
           <li>Get matched to a unique skin profile</li>
           <li>See your step-by-step routine with ingredient spotlights</li>
-          <li>It's easy, completely FREE, no sign-up required! and dermatologist-inspired!</li>
+          <liIt's easy, completely FREE, no sign-up required! and dermatologist-inspired!
+!</li>
         </ul>
       </div>
     </section>
+    <div class="side-card-empty"></div>
   </main>
 
   <footer>
