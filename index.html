@@ -16,7 +16,6 @@
       --purple-dark: #7a4c9e;
       --white: #fff;
       --shadow: 0 8px 24px rgba(216, 127, 195, 0.15);
-      --star: url('https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/2728.svg');
     }
     html, body {
       margin: 0; padding: 0;
@@ -57,14 +56,14 @@
       background: linear-gradient(90deg, var(--hot-pink) 40%, var(--accent2) 100%);
       color: #fff;
     }
-    /* POP HERO CARD - bigger, longer, for main title */
+    /* POP HERO CARD - wider and smaller height */
     .pop-hero {
       margin: 2.2rem auto 1.6rem auto;
       background: var(--white);
       border-radius: 2.3rem;
       box-shadow: 0 6px 32px #e7bbf655, 0 1.5px 8px #f8c7e855;
-      padding: 2.7rem 4.5rem 2.7rem 4.5rem;
-      max-width: 1350px;
+      padding: 0.95rem 2.6rem 0.95rem 2.6rem;
+      max-width: 950px;
       min-width: 220px;
       width: 99vw;
       text-align: center;
@@ -78,90 +77,211 @@
     .pop-hero-title {
       font-family: 'Quicksand', cursive, sans-serif;
       color: var(--white);
-      font-size: 3.7rem;
+      font-size: 1.42rem;
       font-weight: 900;
-      letter-spacing: 1.5px;
-      margin-bottom: 2.4rem;
-      margin-top: 0.5rem;
-      text-shadow: 0 4px 32px #ff9ee7, 0 2px 16px var(--accent2);
+      letter-spacing: 1.1px;
+      margin-bottom: 0.9rem;
+      text-shadow: 0 4px 24px #ff9ee7, 0 2px 8px var(--accent2);
       text-transform: uppercase;
       background: linear-gradient(90deg, var(--hot-pink) 12%, var(--purple-dark) 85%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
       display: block;
-      word-spacing: 0.18em;
-      line-height: 1.09;
+      word-spacing: 0.1em;
+      line-height: 1.13;
     }
-    @media (max-width: 900px) {
-      .pop-hero { padding: 2.2rem 1rem; }
-      .pop-hero-title { font-size: 2.1rem; }
+    .pop-hero-desc {
+      font-size: 1.01rem;
+      color: var(--purple-dark);
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1.74;
+      letter-spacing: 0.01em;
+      margin: 0 0 1.1rem 0;
+      max-width: 800px;
+      background: none;
+      display: inline-block;
     }
-    @media (max-width: 600px) {
-      .pop-hero { padding: 1.1rem 0.1rem; }
-      .pop-hero-title { font-size: 1.28rem; }
+    .pop-hero-btn {
+      display: inline-block;
+      background: linear-gradient(90deg, var(--hot-pink) 10%, var(--purple) 90%);
+      color: #fff;
+      font-weight: 900;
+      font-size: 1.02rem;
+      padding: 0.7rem 2.1rem;
+      border: none;
+      border-radius: 2.3rem;
+      box-shadow: 0 3px 16px var(--accent2);
+      cursor: pointer;
+      text-decoration: none;
+      margin-top: 0.2rem;
+      transition: background 0.19s, color 0.14s, transform 0.1s;
+      border: 2.5px solid var(--hot-pink);
+      letter-spacing: 0.07em;
+      text-shadow: 0 2px 12px #ffb3e1;
     }
-    .squiggle {
-      display: block;
-      margin: 0.2rem auto 1.2rem auto;
-      width: 210px;
-      height: 45px;
-      z-index: 1;
+    .pop-hero-btn:hover {
+      background: linear-gradient(90deg, var(--purple-dark) 10%, var(--hot-pink) 90%);
+      color: #fff;
+      border-color: var(--purple-dark);
+      transform: scale(1.06) rotate(-2deg);
     }
-    /* SQUIGGLY, actually squiggly! */
-    /* hand-drawn, wavy, big and purple */
-    /* STARRED BULLETS */
-    .side-bullets {
-      list-style: none;
-      margin: 0 auto;
-      padding: 0;
-      max-width: 700px;
+    /* CTA GLASS SKIN */
+    .cta-glassskin {
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      margin: 2.2rem 0 2.2rem 0;
+    }
+    .cta-img-left,
+    .cta-img-right {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 160px;
+      min-width: 90px;
+      max-width: 220px;
+      height: auto;
+    }
+    .cta-img-left img,
+    .cta-img-right img {
+      width: 100%;
+      max-width: 140px;
+      height: auto;
+      border-radius: 1.3rem;
+      box-shadow: 0 2px 16px #f8c7e822;
+      background: #fff;
+      padding: 0.2rem;
+      object-fit: contain;
+      transition: box-shadow 0.25s;
+    }
+    .cta-img-left img:hover,
+    .cta-img-right img:hover {
+      box-shadow: 0 8px 24px #e051ab55, 0 2px 8px #ffb3e1aa;
+    }
+    .cta-glassskin-box {
+      background: linear-gradient(120deg, #ffe6f7 60%, #ffb3e1 100%);
+      border-radius: 2.2rem;
+      box-shadow: 0 6px 32px #e7bbf633, 0 1.5px 8px #f8c7e855;
+      padding: 2.17rem 2.1rem 1.7rem 2.1rem;
       text-align: center;
+      max-width: 430px;
+      margin: 0 1.5rem;
+      border: 2.7px solid #ffb3e1;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 1.05rem;
+      font-size: 1.12rem;
+      justify-content: center;
+      box-sizing: border-box;
     }
-    .side-bullets li {
-      position: relative;
-      font-size: 1.37rem;
-      padding-left: 2.5rem;
-      font-family: 'Quicksand', 'Montserrat', sans-serif;
-      color: #8a3299;
-      font-weight: 700;
-      text-align: left;
-      display: block;
-      line-height: 1.5;
-      letter-spacing: 0.02em;
-      margin-bottom: 0.08em;
-      max-width: 640px;
+    .cta-glassskin-box h3 {
+      margin: 0 0 0.4rem 0;
+      color: #e051ab;
+      font-size: 1.58rem;
+      font-family: 'Quicksand', cursive, sans-serif;
+      letter-spacing: 1px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      text-shadow: 0 2px 12px #ffb3e188;
     }
-    .side-bullets li::before {
-      content: "";
-      background-image: var(--star);
-      background-size: 1.5rem 1.5rem;
-      background-repeat: no-repeat;
-      width: 1.5rem;
-      height: 1.5rem;
-      position: absolute;
-      left: 0;
-      top: 0.12em;
+    .cta-glassskin-powered {
+      color: #e051ab;
+      font-size: 1.08em;
+    }
+    .cta-glassskin-btn {
       display: inline-block;
+      background: linear-gradient(90deg, #ff9ee7 40%, #e051ab 100%);
+      color: #fff;
+      font-weight: bold;
+      font-size: 1.18rem;
+      padding: 0.7rem 2.1rem;
+      border: none;
+      border-radius: 2rem;
+      box-shadow: 0 3px 16px #e051ab33;
+      cursor: pointer;
+      text-decoration: none;
+      margin-top: 1.1rem;
+      transition: background 0.2s, color 0.18s, transform 0.1s;
+      border: 2.5px solid #ffb3e1;
+      filter: drop-shadow(0 0 7px #f8c7e8aa);
+      letter-spacing: 0.04em;
     }
-    /* Responsive bulleted list */
-    @media (max-width: 900px) {
-      .side-bullets li {
-        font-size: 1.07rem;
-        padding-left: 2rem;
-      }
-      .side-bullets { max-width: 97vw; }
-      .pop-hero-title { font-size: 2.1rem; }
+    .cta-glassskin-btn:hover {
+      background: linear-gradient(90deg, #e051ab 40%, #ff9ee7 100%);
+      color: #fff;
+      border-color: #e051ab;
+      transform: scale(1.045) rotate(-2deg);
     }
-    @media (max-width: 600px) {
-      .side-bullets li { font-size: 0.98rem; padding-left: 1.4rem;}
-      .squiggle { width: 110px; height: 25px;}
+    @media (max-width: 980px) {
+      .cta-glassskin { flex-direction: column; gap: 1.2rem; }
+      .cta-img-left, .cta-img-right { margin: 0 !important; }
+      .cta-glassskin-box { margin: 0; }
     }
-    /* Wide empty pastel box under the lists */
+    @media (max-width: 700px) {
+      .pop-hero { padding: 0.7rem 0.5rem; }
+      .pop-hero-title { font-size: 1rem; }
+      .pop-hero-desc { font-size: 0.95rem; }
+      .cta-img-left img, .cta-img-right img { max-width: 78px; }
+      .cta-glassskin-box h3 { font-size: 1.1rem; }
+      .cta-glassskin-box { font-size: 1.01rem; }
+    }
+    @media (max-width: 430px) {
+      .cta-glassskin-box { max-width: 99vw; }
+      .cta-img-left, .cta-img-right { max-width: 70px; }
+      .cta-img-left img, .cta-img-right img { max-width: 60px; }
+      .pop-hero { padding: 0.25rem 0.1rem; }
+    }
+    /* Two card sections side by side */
+    .side-by-side-section {
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      gap: 2.2rem;
+      margin: 2.5rem 0 2.7rem 0;
+      flex-wrap: wrap;
+    }
+    .side-card {
+      background: linear-gradient(120deg, #ffe6f7 65%, #ffb3e1 100%);
+      border-radius: 2.2rem;
+      box-shadow: 0 6px 32px #e7bbf633, 0 1.5px 8px #f8c7e855;
+      padding: 2rem 2.1rem 1.7rem 2.1rem;
+      text-align: center;
+      max-width: 370px;
+      width: 100%;
+      border: 2.5px solid #ffb3e1;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      color: #be3c97;
+      position: relative;
+    }
+    .side-card h2 {
+      margin: 0 0 0.2rem 0;
+      color: #e051ab;
+      font-size: 1.19rem;
+      font-family: 'Quicksand', cursive, sans-serif;
+      letter-spacing: 1px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      text-shadow: 0 2px 8px #ffb3e155;
+      position: relative;
+      z-index: 2;
+    }
+    /* Wavy squiggle line - more lively */
+    .squiggle {
+      display: block;
+      margin: 0.1rem auto 1rem auto;
+      width: 140px;
+      height: 25px;
+      z-index: 1;
+    }
+    /* Wide empty pastel box under each side-card */
     .side-card-empty {
       background: linear-gradient(90deg, #fff6fb 80%, #ffb3e1 100%);
       border-radius: 1.5rem;
@@ -175,6 +295,27 @@
       align-items: center;
       justify-content: center;
       font-size: 1.1rem;
+    }
+    @media (max-width: 900px) {
+      .side-by-side-section {
+        flex-direction: column;
+        gap: 1.3rem;
+        align-items: center;
+      }
+      .side-card {
+        max-width: 98vw;
+      }
+    }
+    @media (max-width: 700px) {
+      .side-card {
+        padding: 1.2rem 0.7rem 1.2rem 0.7rem;
+      }
+      .side-card h2 { font-size: 1.1rem; }
+      .side-card-empty { min-height: 40px; }
+    }
+    @media (max-width: 430px) {
+      .side-card { max-width: 99vw; }
+      .side-card-empty { width: 98vw; min-height: 24px; }
     }
     footer {
       margin: 3.2rem 0 1.3rem 0;
@@ -197,50 +338,66 @@
     <div class="pop-hero-title">
       READY TO FIND YOUR PERFECT SKIN CARE ROUTINE?
     </div>
-    <svg class="squiggle" viewBox="0 0 210 45" fill="none">
-      <path d="M5 22 Q30 2, 55 22 T105 22 T155 22 Q180 42, 205 22"
-            stroke="#a874b8"
-            stroke-width="6"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            />
-      <path d="M5 32 Q35 12, 65 32 T125 32 T185 32 Q205 42, 205 32"
-            stroke="#d87fc3"
-            stroke-width="3"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            />
-    </svg>
-    <ul class="side-bullets">
-      <li>Personalized routines—no more generic advice!</li>
-      <li>Powered by real science that studies how the chemical structures and ingredients effect <b>YOUR</b> skin</li>
-      <li>Profiles and routines crafted for your skin’s unique needs</li>
-    </ul>
-    <svg class="squiggle" viewBox="0 0 210 45" fill="none">
-      <path d="M5 22 Q30 2, 55 22 T105 22 T155 22 Q180 42, 205 22"
-            stroke="#a874b8"
-            stroke-width="6"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            />
-      <path d="M5 32 Q35 12, 65 32 T125 32 T185 32 Q205 42, 205 32"
-            stroke="#d87fc3"
-            stroke-width="3"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            />
-    </svg>
-    <ul class="side-bullets">
-      <li>Answer a few quick, science-backed questions</li>
-      <li>Get matched to a unique skin profile</li>
-      <li>See your step-by-step routine with ingredient spotlights</li>
-    </ul>
-    <div class="side-card-empty"></div>
+    <div class="pop-hero-desc">
+      Our science-based quiz and product list help you discover what works for your unique skin! Each product features detailed info on chemical structure and compounds, plus how they'll interact with YOUR skin type.
+    </div>
+    <a href="quiz.html" class="pop-hero-btn">Start the Quiz</a>
   </section>
+
+  <main>
+    <!-- Quiz CTA Section with penguin and products images -->
+    <section class="cta-glassskin" id="quiz">
+      <span class="cta-img-left">
+        <img src="https://png.pngtree.com/png-clipart/20210309/original/pngtree-cute-cartoon-penguin-clipart-png-image_5854607.jpg"
+          alt="Cute Cartoon Penguin"
+          style="background:#fff6fb;">
+      </span>
+      <div class="cta-glassskin-box">
+        <h3>
+          Want dewy glass skin?
+        </h3>
+        <p>
+          Take our quiz to find your personalized skincare routine.<br>
+          <span class="cta-glassskin-powered">Powered by real skin science.</span>
+        </p>
+        <a href="quiz.html" class="cta-glassskin-btn">Start the Quiz</a>
+      </div>
+      <span class="cta-img-right">
+        <img src="https://static8.depositphotos.com/1003532/54878349/v/450/depositphotos_548783496-stock-illustration-set-natural-organic-cosmetic-products.jpg"
+          alt="Cute Skincare Product Bottles"
+          style="background:#fffdfa;">
+      </span>
+    </section>
+
+    <!-- Side by side About/Science Section -->
+    <section class="side-by-side-section">
+      <div class="side-card" id="about">
+        <h2>What makes us different?</h2>
+        <svg class="squiggle" viewBox="0 0 140 25" fill="none">
+          <path d="M3 12 Q 15 2, 30 15 T 55 15 Q 70 25, 80 12 Q 90 0, 110 20 T 137 12" stroke="#a874b8" stroke-width="4" fill="none" stroke-linecap="round"/>
+        </svg>
+        <ul class="side-list">
+          <li>Personalized routines—no more generic advice!</li>
+          <li>Powered by real science (not just TikTok trends)</li>
+          <li>Fun, preppy vibes & dreamy design (bows included!)</li>
+          <li>Profiles and routines crafted for your skin’s unique needs</li>
+        </ul>
+      </div>
+      <div class="side-card" id="science">
+        <h2>How it works</h2>
+        <svg class="squiggle" viewBox="0 0 140 25" fill="none">
+          <path d="M3 12 Q 15 2, 30 15 T 55 15 Q 70 25, 80 12 Q 90 0, 110 20 T 137 12" stroke="#a874b8" stroke-width="4" fill="none" stroke-linecap="round"/>
+        </svg>
+        <ul class="side-list">
+          <li>Answer a few quick, science-backed questions</li>
+          <li>Get matched to a unique skin profile</li>
+          <li>See your step-by-step routine with ingredient spotlights</li>
+          <li>Easy, aesthetic, and dermatologist-inspired!</li>
+        </ul>
+      </div>
+    </section>
+    <div class="side-card-empty"></div>
+  </main>
 
   <footer>
     &copy; 2025 Sara's Skincare
