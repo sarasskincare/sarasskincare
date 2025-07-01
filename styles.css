@@ -203,6 +203,53 @@
       margin-top: 2rem;
       opacity: 0.85;
     }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <div class="logo">Glow Guide</div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Search</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
+  <section class="hero">
+    <div class="hero-overlay">
+      <div class="hero-text">
+        <h2>Find Your Perfect Skincare Routine</h2>
+        <p>Tailored just for you 💖</p>
+        <a href="quiz.html" class="hero-btn">Start My Routine</a>
+      </div>
+    </div>
+  </section>
 
+  <div class="section-divider-style"></div>
 
+  <section class="cta">
+    <div class="cta-box">
+      <h3>Want dewy glass skin? ✨</h3>
+      <p>Take our quiz to find your personalized skincare routine. Powered by real skin science.</p>
+      <a href="quiz.html" class="cta-btn">Start My Routine</a>
+    </div>
+  </section>
+
+  <section class="why-wrapper">
+    <div class="why-us">
+      <h2 class="why-title">Why Glow Guide?</h2>
+      <p>
+        We don’t just guess or follow trends — we analyze how each product’s <strong>chemical structure</strong> reacts with your <strong>unique skin type</strong>. It’s fully scientific, not random. We’ve handpicked dozens of products for different skin goals and conditions, just for you. All you have to do is take the <strong>FREE</strong> quiz — and BAM, you get your perfect skincare routine. Real science. Real results. 💖
+      </p>
+    </div>
+  </section>
+
+  <footer class="footer-custom">
+    <p>© 2025 Sara's Skincare.</p>
+  </footer>
+</body>
+</html>
