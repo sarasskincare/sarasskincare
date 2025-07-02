@@ -37,38 +37,27 @@
       overflow: hidden;
       pointer-events: none;
     }
+    /* -- Blobs, SVGs for organic shapes -- */
     .blob {
       position: absolute;
-      border-radius: 50%;
-      opacity: 0.85;
+      opacity: 0.8;
       filter: blur(0.5px);
+      z-index: 0;
     }
     .blob1 {
-      width: 410px; height: 410px;
-      background: var(--blob1);
-      top: -110px; left: -120px;
-      z-index: 0;
+      top: -90px; left: -110px; width: 430px; height: 330px;
       animation: floatblob1 12s ease-in-out infinite alternate;
     }
     .blob2 {
-      width: 320px; height: 320px;
-      background: var(--blob2);
-      top: 60vh; left: -80px;
-      z-index: 0;
+      top: 55vh; left: -60px; width: 320px; height: 240px;
       animation: floatblob2 17s ease-in-out infinite alternate;
     }
     .blob3 {
-      width: 340px; height: 340px;
-      background: var(--blob3);
-      top: 20vh; right: -100px;
-      z-index: 0;
+      top: 23vh; right: -90px; width: 370px; height: 270px;
       animation: floatblob3 15s ease-in-out infinite alternate;
     }
     .blob4 {
-      width: 220px; height: 220px;
-      background: var(--blob4);
-      top: 75vh; right: -60px;
-      z-index: 0;
+      top: 77vh; right: -70px; width: 200px; height: 180px;
       animation: floatblob4 18s ease-in-out infinite alternate;
     }
     @keyframes floatblob1 {
@@ -142,12 +131,12 @@
     .pop-hero-title {
       font-family: 'Quicksand', cursive, sans-serif;
       color: var(--rose);
-      font-size: 3rem;
-      font-weight: 900;
-      letter-spacing: 1.5px;
+      font-size: 3.3rem;
+      font-weight: 1000;
+      letter-spacing: 2.2px;
       margin-bottom: 0.8rem;
       margin-top: 0.5rem;
-      text-shadow: 0 2px 8px var(--hot-pink), 0 2px 8px var(--rose);
+      text-shadow: 0 3px 12px var(--hot-pink), 0 2px 8px var(--rose);
       text-transform: uppercase;
       background: none;
       display: block;
@@ -307,7 +296,7 @@
     }
     /* Take the Quiz Section */
     .quiz-section {
-      background: var(--accent);
+      background: var(--white);
       border-radius: 2.3rem;
       border: 3.5px solid var(--rose);
       box-shadow: 0 2px 24px #ffd2e855;
@@ -394,10 +383,18 @@
 </head>
 <body>
   <div class="background-blobs">
-    <div class="blob blob1"></div>
-    <div class="blob blob2"></div>
-    <div class="blob blob3"></div>
-    <div class="blob blob4"></div>
+    <svg class="blob blob1" viewBox="0 0 430 330">
+      <path fill="#ffe3f1" d="M70 60Q55 150 110 230Q165 310 270 290Q375 270 385 190Q395 110 320 60Q245 10 150 30Q80 45 70 60Z"/>
+    </svg>
+    <svg class="blob blob2" viewBox="0 0 320 240">
+      <path fill="#ffd2e8" d="M30 90Q10 170 120 200Q230 230 280 160Q330 90 245 60Q160 30 90 60Q40 80 30 90Z"/>
+    </svg>
+    <svg class="blob blob3" viewBox="0 0 370 270">
+      <path fill="#fbc9df" d="M90 70Q60 200 200 250Q340 300 340 170Q340 40 210 40Q100 40 90 70Z"/>
+    </svg>
+    <svg class="blob blob4" viewBox="0 0 200 180">
+      <path fill="#f662aa22" d="M70 40Q10 120 120 160Q230 200 180 80Q130 -40 70 40Z"/>
+    </svg>
   </div>
 
   <nav class="topnav">
