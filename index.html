@@ -37,7 +37,6 @@
       overflow: hidden;
       pointer-events: none;
     }
-    /* -- Blobs, SVGs for organic shapes -- */
     .blob {
       position: absolute;
       opacity: 0.85;
@@ -218,7 +217,6 @@
       color: var(--rose);
       position: relative;
       z-index: 1;
-      /* For consistent sizing: */
       box-sizing: border-box;
       min-height: 340px;
       height: 100%;
@@ -304,8 +302,8 @@
       .side-bullets li { font-size: 0.98rem; padding-left: 1.2rem;}
       .squiggle { width: 90px; height: 19px;}
     }
-    /* Take the Quiz Section */
-    .quiz-section {
+    .quiz-section,
+    .quiz-info-section {
       background: var(--white);
       border-radius: 2.3rem;
       border: 3.5px solid var(--rose);
@@ -322,7 +320,8 @@
       z-index: 2;
       position: relative;
     }
-    .quiz-section-title {
+    .quiz-section-title,
+    .quiz-info-section-title {
       font-family: 'Quicksand', cursive, sans-serif;
       font-size: 2.2rem;
       color: var(--rose);
@@ -365,18 +364,7 @@
       transform: scale(1.045) rotate(-2deg);
     }
     .side-card-empty {
-      background: var(--accent);
-      border-radius: 1.5rem;
-      border: 2.5px solid var(--rose);
-      box-shadow: 0 2px 16px #ffd2e888;
-      margin: 2.2rem auto 0.7rem auto;
-      min-height: 60px;
-      width: 97vw;
-      max-width: 1080px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.1rem;
+      display: none;
     }
     footer {
       margin: 3.2rem 0 1.3rem 0;
@@ -470,7 +458,12 @@
       <a href="/quiz.html" class="quiz-section-btn">Start My Quiz</a>
     </section>
 
-    <div class="side-card-empty"></div>
+    <section class="quiz-info-section">
+      <div class="quiz-info-section-title">
+        How Our Quiz Works
+      </div>
+    </section>
+
   </main>
 
   <footer>
