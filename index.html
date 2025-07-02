@@ -137,11 +137,14 @@
       margin-bottom: 0.8rem;
       margin-top: 0.5rem;
       text-shadow: 0 3px 12px var(--hot-pink), 0 2px 8px var(--rose);
-      text-transform: uppercase;
-      background: none;
+      background: linear-gradient(90deg, #f89dc5 10%, #f662aa 90%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
       display: block;
       word-spacing: 0.18em;
       line-height: 1.09;
+      font-variation-settings: "wght" 900;
     }
     .pop-hero-desc {
       max-width: 650px;
@@ -227,17 +230,20 @@
     }
     .side-card h2 {
       margin: 0 0 0.3rem 0;
-      color: var(--accent2);
-      font-size: 1.47rem;
       font-family: 'Quicksand', cursive, sans-serif;
+      font-size: 1.47rem;
+      font-weight: 700;
       letter-spacing: 1px;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 0.5rem;
       text-shadow: 0 2px 8px var(--hot-pink)55;
-      position: relative;
-      z-index: 2;
+      background: linear-gradient(90deg, #f89dc5 10%, #f662aa 90%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-variation-settings: "wght" 700;
     }
     .squiggle {
       display: block;
@@ -288,8 +294,7 @@
       list-style: none;
       margin: 1.3em auto 1.3em auto;
       padding: 0;
-      /* widen for this section */
-      max-width: 730px;
+      max-width: 900px;
       text-align: left;
       display: flex;
       flex-direction: column;
@@ -307,7 +312,7 @@
       line-height: 1.65;
       margin-bottom: 0.06em;
       letter-spacing: 0.01em;
-      max-width: 680px;
+      max-width: 860px;
     }
     @media (max-width: 1020px) {
       .quiz-info-bullets { max-width: 99vw; }
@@ -356,23 +361,26 @@
     .quiz-section-title,
     .quiz-info-section-title {
       font-family: 'Quicksand', cursive, sans-serif;
-      color: var(--rose);
-      font-weight: 1000;
+      font-weight: 700;
       letter-spacing: 1.5px;
       text-shadow: 0 2px 12px var(--accent2)33;
-      text-transform: uppercase;
+      background: linear-gradient(90deg, #f89dc5 10%, #f662aa 90%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
       margin-bottom: 1.1rem;
       margin-top: 0.4rem;
-      background: none;
       display: block;
       line-height: 1.11;
       word-spacing: 0.18em;
     }
     .quiz-section-title {
       font-size: 2.2rem;
+      font-weight: 1000;
     }
     .quiz-info-section-title {
-      font-size: 1.75rem;
+      font-size: 1.85rem;
+      font-weight: 900;
     }
     .quiz-section-desc {
       font-size: 1.20rem;
@@ -509,7 +517,7 @@
 
     <section id="how-our-quiz-works" class="quiz-info-section">
       <div class="quiz-info-section-title">
-        HOW OUR QUIZ WORKS
+        How our quiz works
       </div>
       <div class="quiz-section-desc">
         <ul class="quiz-info-bullets">
@@ -523,13 +531,13 @@
 
     <section id="how-we-build-your-routine" class="quiz-info-section">
       <div class="quiz-info-section-title">
-        HOW WE BUILD YOUR ROUTINE
+        How we build your routine
       </div>
       <div class="quiz-section-desc">
         <ul class="quiz-info-bullets">
-          <li>We analyze your answers to pinpoint your hydration, oil balance, barrier strength, exfoliation needs, sensitivities, and lifestyle.</li>
+          <li>We analyze your answers to pinpoint your skin’s hydration, oil balance, barrier strength, exfoliation needs, sensitivities, and lifestyle.</li>
           <li>We select ingredients by function (brighten, soothe, exfoliate), molecular weight (penetration), solubility &amp; pH (stability), and interaction safety (no conflicts).</li>
-          <li>We layer your routine like a cosmetic chemist: cleanser, toner/essence (if needed), serum (for your top goal), moisturizer (for barrier and occlusion), and SPF (for finish and comfort).</li>
+          <li>Your routine is layered like a cosmetic chemist: cleanser, toner/essence (if needed), serum (for your top goal), moisturizer (for barrier and occlusion), and SPF (for finish and comfort).</li>
           <li>Every step includes 2–3 real product options (affordable, midrange, luxe) chosen for ingredient transparency, proven actives, and top formulation quality.</li>
         </ul>
       </div>
