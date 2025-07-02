@@ -20,6 +20,8 @@
       --blob2: #ffd2e8;
       --blob3: #fed7e8;
       --blob4: #f7aacd;
+      --gradient-dark: #f3006b;
+      --gradient-light: #ffb3da;
     }
     html, body {
       margin: 0; padding: 0;
@@ -43,38 +45,14 @@
       filter: blur(0.5px);
       z-index: 0;
     }
-    .blob1 {
-      top: -90px; left: -110px; width: 430px; height: 330px;
-      animation: floatblob1 12s ease-in-out infinite alternate;
-    }
-    .blob2 {
-      top: 55vh; left: -60px; width: 320px; height: 240px;
-      animation: floatblob2 17s ease-in-out infinite alternate;
-    }
-    .blob3 {
-      top: 23vh; right: -90px; width: 370px; height: 270px;
-      animation: floatblob3 15s ease-in-out infinite alternate;
-    }
-    .blob4 {
-      top: 77vh; right: -70px; width: 200px; height: 180px;
-      animation: floatblob4 18s ease-in-out infinite alternate;
-    }
-    @keyframes floatblob1 {
-      0% {transform: scale(1) translateY(0);}
-      100% {transform: scale(1.08) translateY(-18px);}
-    }
-    @keyframes floatblob2 {
-      0% {transform: scale(1) translateY(0);}
-      100% {transform: scale(1.02) translateY(-25px);}
-    }
-    @keyframes floatblob3 {
-      0% {transform: scale(1) translateY(0);}
-      100% {transform: scale(1.10) translateY(20px);}
-    }
-    @keyframes floatblob4 {
-      0% {transform: scale(1) translateY(0);}
-      100% {transform: scale(1.07) translateY(-12px);}
-    }
+    .blob1 { top: -90px; left: -110px; width: 430px; height: 330px; animation: floatblob1 12s ease-in-out infinite alternate;}
+    .blob2 { top: 55vh; left: -60px; width: 320px; height: 240px; animation: floatblob2 17s ease-in-out infinite alternate;}
+    .blob3 { top: 23vh; right: -90px; width: 370px; height: 270px; animation: floatblob3 15s ease-in-out infinite alternate;}
+    .blob4 { top: 77vh; right: -70px; width: 200px; height: 180px; animation: floatblob4 18s ease-in-out infinite alternate;}
+    @keyframes floatblob1 {0% {transform: scale(1) translateY(0);}100% {transform: scale(1.08) translateY(-18px);}}
+    @keyframes floatblob2 {0% {transform: scale(1) translateY(0);}100% {transform: scale(1.02) translateY(-25px);}}
+    @keyframes floatblob3 {0% {transform: scale(1) translateY(0);}100% {transform: scale(1.10) translateY(20px);}}
+    @keyframes floatblob4 {0% {transform: scale(1) translateY(0);}100% {transform: scale(1.07) translateY(-12px);}}
 
     .topnav {
       width: 100%;
@@ -130,21 +108,18 @@
     }
     .pop-hero-title {
       font-family: 'Quicksand', cursive, sans-serif;
-      color: var(--rose);
       font-size: 3.3rem;
       font-weight: 1000;
       letter-spacing: 2.2px;
       margin-bottom: 0.8rem;
       margin-top: 0.5rem;
       text-shadow: 0 3px 12px var(--hot-pink), 0 2px 8px var(--rose);
-      background: linear-gradient(90deg, #f89dc5 10%, #f662aa 90%);
+      background: linear-gradient(90deg, var(--gradient-dark) 0%, var(--gradient-light) 50%, var(--gradient-dark) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      display: block;
       word-spacing: 0.18em;
       line-height: 1.09;
-      font-variation-settings: "wght" 900;
     }
     .pop-hero-desc {
       max-width: 650px;
@@ -239,11 +214,10 @@
       justify-content: center;
       gap: 0.5rem;
       text-shadow: 0 2px 8px var(--hot-pink)55;
-      background: linear-gradient(90deg, #f89dc5 10%, #f662aa 90%);
+      background: linear-gradient(90deg, var(--gradient-dark) 0%, var(--gradient-light) 50%, var(--gradient-dark) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      font-variation-settings: "wght" 700;
     }
     .squiggle {
       display: block;
@@ -294,28 +268,28 @@
       list-style: none;
       margin: 1.3em auto 1.3em auto;
       padding: 0;
-      max-width: 900px;
+      max-width: 1100px;
       text-align: left;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      gap: 0.9em;
+      gap: 1.4em;
       position: relative;
     }
     .quiz-info-bullets li {
       position: relative;
-      font-size: 1.17rem;
+      font-size: 1.22rem;
       padding-left: 2rem;
       font-family: 'Quicksand', 'Montserrat', sans-serif;
       color: var(--rose);
-      font-weight: 700;
-      line-height: 1.65;
+      font-weight: 500;
+      line-height: 1.75;
       margin-bottom: 0.06em;
       letter-spacing: 0.01em;
-      max-width: 860px;
+      max-width: 1080px;
     }
-    @media (max-width: 1020px) {
-      .quiz-info-bullets { max-width: 99vw; }
+    @media (max-width: 1250px) {
+      .quiz-info-bullets { max-width: 97vw; }
     }
     @media (max-width: 900px) {
       .side-by-side-section {
@@ -337,7 +311,7 @@
       .side-card h2 { font-size: 1.12rem; }
       .side-bullets li { font-size: 0.98rem; padding-left: 1.2rem;}
       .squiggle { width: 90px; height: 19px;}
-      .quiz-info-bullets li { font-size: 0.99rem; padding-left: 1.2rem;}
+      .quiz-info-bullets li { font-size: 1rem; padding-left: 1.2rem;}
     }
     .quiz-section,
     .quiz-info-section {
@@ -345,10 +319,11 @@
       border-radius: 2.3rem;
       border: 3.5px solid var(--rose);
       box-shadow: 0 2px 24px #ffd2e855;
-      margin: 2.5rem auto 2.5rem auto;
-      padding: 2.7rem 3vw 3.0rem 3vw;
-      max-width: 1150px;
-      width: 97vw;
+      margin: 3.3rem auto 3.3rem auto;
+      padding: 3.1rem 4vw 3.3rem 4vw;
+      max-width: 1400px;
+      min-width: 320px;
+      width: 99vw;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -361,35 +336,32 @@
     .quiz-section-title,
     .quiz-info-section-title {
       font-family: 'Quicksand', cursive, sans-serif;
-      font-weight: 700;
+      font-weight: 900;
       letter-spacing: 1.5px;
       text-shadow: 0 2px 12px var(--accent2)33;
-      background: linear-gradient(90deg, #f89dc5 10%, #f662aa 90%);
+      background: linear-gradient(90deg, var(--gradient-dark) 0%, var(--gradient-light) 50%, var(--gradient-dark) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      margin-bottom: 1.1rem;
+      margin-bottom: 1.4rem;
       margin-top: 0.4rem;
       display: block;
       line-height: 1.11;
       word-spacing: 0.18em;
+      font-size: 2.3rem;
     }
     .quiz-section-title {
-      font-size: 2.2rem;
+      font-size: 2.6rem;
       font-weight: 1000;
     }
-    .quiz-info-section-title {
-      font-size: 1.85rem;
-      font-weight: 900;
-    }
     .quiz-section-desc {
-      font-size: 1.20rem;
+      font-size: 1.28rem;
       color: var(--rose);
       margin-bottom: 1.2rem;
       font-family: 'Montserrat', sans-serif;
       font-weight: 500;
       line-height: 1.6;
-      max-width: 900px;
+      max-width: 1100px;
       margin-left: auto;
       margin-right: auto;
       text-align: left;
@@ -509,7 +481,7 @@
       <div class="quiz-section-title">
         Take the Quiz
       </div>
-      <div class="quiz-section-desc" style="max-width:900px;margin-bottom:0;">
+      <div class="quiz-section-desc" style="max-width:1100px;margin-bottom:0;">
         Ready to get your personalized skincare routine? Our quiz uses science-backed questions to match you to the best products and steps for your unique skin. It only takes a minute!
       </div>
       <a href="/quiz.html" class="quiz-section-btn">Start My Quiz</a>
