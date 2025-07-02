@@ -271,7 +271,8 @@
       margin-bottom: 0.08em;
       max-width: 320px;
     }
-    .side-bullets li::before {
+    .side-bullets li::before,
+    .quiz-info-bullets li::before {
       content: "";
       background-image: var(--star);
       background-size: 1.2rem 1.2rem;
@@ -282,6 +283,34 @@
       left: 0;
       top: 0.12em;
       display: inline-block;
+    }
+    .quiz-info-bullets {
+      list-style: none;
+      margin: 1.3em auto 1.3em auto;
+      padding: 0;
+      /* widen for this section */
+      max-width: 730px;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.9em;
+      position: relative;
+    }
+    .quiz-info-bullets li {
+      position: relative;
+      font-size: 1.17rem;
+      padding-left: 2rem;
+      font-family: 'Quicksand', 'Montserrat', sans-serif;
+      color: var(--rose);
+      font-weight: 700;
+      line-height: 1.65;
+      margin-bottom: 0.06em;
+      letter-spacing: 0.01em;
+      max-width: 680px;
+    }
+    @media (max-width: 1020px) {
+      .quiz-info-bullets { max-width: 99vw; }
     }
     @media (max-width: 900px) {
       .side-by-side-section {
@@ -294,6 +323,7 @@
         min-height: unset;
         height: unset;
       }
+      .quiz-info-bullets { max-width: 98vw; }
     }
     @media (max-width: 600px) {
       .side-card {
@@ -302,6 +332,7 @@
       .side-card h2 { font-size: 1.12rem; }
       .side-bullets li { font-size: 0.98rem; padding-left: 1.2rem;}
       .squiggle { width: 90px; height: 19px;}
+      .quiz-info-bullets li { font-size: 0.99rem; padding-left: 1.2rem;}
     }
     .quiz-section,
     .quiz-info-section {
@@ -325,21 +356,35 @@
     .quiz-section-title,
     .quiz-info-section-title {
       font-family: 'Quicksand', cursive, sans-serif;
-      font-size: 2.2rem;
       color: var(--rose);
-      margin-bottom: 0.6rem;
-      font-weight: 900;
-      letter-spacing: 1px;
+      font-weight: 1000;
+      letter-spacing: 1.5px;
       text-shadow: 0 2px 12px var(--accent2)33;
+      text-transform: uppercase;
+      margin-bottom: 1.1rem;
+      margin-top: 0.4rem;
+      background: none;
+      display: block;
+      line-height: 1.11;
+      word-spacing: 0.18em;
+    }
+    .quiz-section-title {
+      font-size: 2.2rem;
+    }
+    .quiz-info-section-title {
+      font-size: 1.75rem;
     }
     .quiz-section-desc {
-      font-size: 1.17rem;
+      font-size: 1.20rem;
       color: var(--rose);
       margin-bottom: 1.2rem;
       font-family: 'Montserrat', sans-serif;
       font-weight: 500;
-      line-height: 1.5;
-      max-width: 700px;
+      line-height: 1.6;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
     }
     .quiz-section-btn {
       display: inline-block;
@@ -456,7 +501,7 @@
       <div class="quiz-section-title">
         Take the Quiz
       </div>
-      <div class="quiz-section-desc" style="max-width:700px;margin-bottom:0;">
+      <div class="quiz-section-desc" style="max-width:900px;margin-bottom:0;">
         Ready to get your personalized skincare routine? Our quiz uses science-backed questions to match you to the best products and steps for your unique skin. It only takes a minute!
       </div>
       <a href="/quiz.html" class="quiz-section-btn">Start My Quiz</a>
@@ -464,60 +509,28 @@
 
     <section id="how-our-quiz-works" class="quiz-info-section">
       <div class="quiz-info-section-title">
-        How Our Quiz Works
+        HOW OUR QUIZ WORKS
       </div>
-      <div class="quiz-section-desc" style="max-width:700px;margin-bottom:0;">
-        Every question you answer feeds into a real-time, weighted logic system.<br>
-        Each response is mapped to specific:
-        <ul style="text-align:left; margin:1.2em auto 1.2em auto; max-width:480px; color:#f662aa;">
-          <li><b>Skin profiles</b> (based on dermatology research, which there are more than 50 of that match YOU)</li>
-          <li><b>Ingredient needs</b> (based on reactivity, pH range, molecular size, solubility, and penetration depth)</li>
-          <li><b>Routine preferences</b> (like product texture, step count, and budget)</li>
+      <div class="quiz-section-desc">
+        <ul class="quiz-info-bullets">
+          <li>Every answer you give updates your real-time skin profile.</li>
+          <li>We match you to one of 50+ dermatologist-backed skin profiles, ingredient needs (like pH and solubility), and routine preferences.</li>
+          <li>Your answers are scored and cross-analyzed to understand your skin type, barrier strength, ingredient tolerances, oil/water balance, and lifestyle stressors.</li>
+          <li>This 3D profile is used as the blueprint for your custom routine.</li>
         </ul>
-        Your answers aren’t just categorized—they’re scored and cross-analyzed. This builds a 3D profile of your:
-        <ul style="text-align:left; margin:1.2em auto 1.2em auto; max-width:480px; color:#f662aa;">
-          <li><b>Skin type and barrier strength</b></li>
-          <li><b>Active ingredient tolerance</b></li>
-          <li><b>Oil vs water balance</b></li>
-          <li><b>Repair vs renewal needs</b></li>
-          <li><b>Environmental + lifestyle stressors</b></li>
-        </ul>
-        This gives us the blueprint to start formulation-matching your perfect routine.
       </div>
     </section>
 
     <section id="how-we-build-your-routine" class="quiz-info-section">
       <div class="quiz-info-section-title">
-        How We Build Your Routine
+        HOW WE BUILD YOUR ROUTINE
       </div>
-      <div class="quiz-section-desc" style="max-width:700px;margin-bottom:0;">
-        We analyze your answers<br>
-        Each quiz response adds points toward skin profiles and identifies your hydration, oil balance, barrier strength, exfoliation needs, ingredient sensitivities, and lifestyle factors.
-        <br><br>
-        We match you to functional ingredients<br>
-        Based on your profile, we select ingredients with the right:
-        <ul style="text-align:left; margin:0.8em auto 0.8em 2em; max-width:480px; color:#f662aa;">
-          <li>Function (e.g., brighten, soothe, exfoliate)</li>
-          <li>Molecular weight (to know if it penetrates deep or stays on the surface)</li>
-          <li>Solubility &amp; pH (to ensure stability and reduce irritation)</li>
-          <li>Interaction safety (we avoid ingredient conflicts)</li>
-        </ul>
-        We build a layered routine<br>
-        Your personalized routine follows cosmetic formulation logic:
-        <ul style="text-align:left; margin:0.8em auto 0.8em 2em; max-width:480px; color:#f662aa;">
-          <li>Cleanser based on oiliness, makeup use, and sensitivity</li>
-          <li>Toner/Essence if hydration or pH balancing is needed</li>
-          <li>Serum tailored to your primary goal (acne, glow, barrier repair, etc.)</li>
-          <li>Moisturizer chosen for barrier needs and occlusion level</li>
-          <li>SPF with preferred texture, sensitivity, and finish</li>
-        </ul>
-        We recommend actual products<br>
-        Each step includes 2–3 options across different price points (affordable, midrange, luxe)<br>
-        Every product is selected based on:
-        <ul style="text-align:left; margin:0.8em auto 0.8em 2em; max-width:480px; color:#f662aa;">
-          <li>Ingredient transparency</li>
-          <li>Proven actives</li>
-          <li>Formulation quality (not just hype)</li>
+      <div class="quiz-section-desc">
+        <ul class="quiz-info-bullets">
+          <li>We analyze your answers to pinpoint your hydration, oil balance, barrier strength, exfoliation needs, sensitivities, and lifestyle.</li>
+          <li>We select ingredients by function (brighten, soothe, exfoliate), molecular weight (penetration), solubility &amp; pH (stability), and interaction safety (no conflicts).</li>
+          <li>We layer your routine like a cosmetic chemist: cleanser, toner/essence (if needed), serum (for your top goal), moisturizer (for barrier and occlusion), and SPF (for finish and comfort).</li>
+          <li>Every step includes 2–3 real product options (affordable, midrange, luxe) chosen for ingredient transparency, proven actives, and top formulation quality.</li>
         </ul>
       </div>
     </section>
