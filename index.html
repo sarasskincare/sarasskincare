@@ -8,27 +8,28 @@
   <link rel="icon" href="favicon.ico" type="image/x-icon"/>
   <style>
     :root {
-      --main-bg: #f4f5fa;
-      --accent: #472B79;         /* Royal purple */
-      --accent2: #b0b5d8;        /* Light gray-blue */
-      --hot-pink: #4275d8;       /* Blue, replaces old pink */
-      --purple: #472B79;         /* Royal purple */
-      --purple-dark: #2d1850;    /* Darker royal purple */
+      --main-bg: #f9f6ff;            /* Lavender base */
+      --accent: #b193e5;             /* Lavender accent */
+      --accent2: #caffe0;            /* Minty accent */
+      --hot-pink: #ffb3da;           /* Baby pink */
+      --peach: #ffe5b4;              /* Peach accent */
+      --purple: #b193e5;             /* Lavender */
+      --purple-dark: #a481c8;        /* Deeper lavender */
       --white: #fff;
-      --shadow: 0 8px 24px rgba(71, 43, 121, 0.13);
+      --shadow: 0 8px 24px rgba(177, 147, 229, 0.15);
       --star: url('https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/2728.svg');
     }
     html, body {
       margin: 0; padding: 0;
       font-family: 'Montserrat', 'Quicksand', Arial, sans-serif;
       background: var(--main-bg);
-      color: var(--accent);
+      color: var(--purple-dark);
       min-height: 100vh;
     }
     .topnav {
       width: 100%;
       background: var(--white);
-      box-shadow: 0 2px 16px #b0b5d855;
+      box-shadow: 0 2px 16px #e5d7fa55;
       border-bottom-left-radius: 1.2rem 0.6rem;
       border-bottom-right-radius: 1.2rem 0.6rem;
       padding: 0.5rem 0 0.35rem 0;
@@ -40,7 +41,7 @@
       position: relative;
     }
     .topnav a {
-      color: var(--accent);
+      color: var(--purple-dark);
       text-decoration: none;
       font-family: 'Quicksand', sans-serif;
       font-weight: 700;
@@ -48,10 +49,10 @@
       letter-spacing: 0.03em;
       padding: 0.35rem 1.15rem;
       border-radius: 1.2rem;
-      background: linear-gradient(90deg, #edeef5 60%, #b0b5d8 100%);
+      background: linear-gradient(90deg, #f6ebff 60%, #ffe5b4 100%);
       transition: background 0.21s, color 0.21s;
       margin: 0 0.1rem;
-      box-shadow: 0 1px 7px #b0b5d855;
+      box-shadow: 0 1px 7px #ffe5b455;
     }
     .topnav a:hover, .topnav a.active {
       background: linear-gradient(90deg, var(--hot-pink) 40%, var(--accent2) 100%);
@@ -61,7 +62,7 @@
       margin: 2.5rem auto 2.5rem auto;
       background: var(--white);
       border-radius: 2.5rem;
-      box-shadow: 0 6px 32px #b0b5d833, 0 1.5px 8px #b0b5d899;
+      box-shadow: 0 6px 32px #e5d7fa55, 0 1.5px 8px #ffe5b488;
       padding: 2.7rem 5vw 2.7rem 5vw;
       max-width: 1300px;
       min-width: 220px;
@@ -71,7 +72,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      border: 3.5px solid var(--accent2);
+      border: 3.5px solid var(--hot-pink);
       position: relative;
     }
     .pop-hero-title {
@@ -82,9 +83,9 @@
       letter-spacing: 1.5px;
       margin-bottom: 0.7rem;
       margin-top: 0.5rem;
-      text-shadow: 0 4px 32px #b0b5d8, 0 2px 16px var(--accent2);
+      text-shadow: 0 4px 32px var(--hot-pink), 0 2px 16px var(--peach);
       text-transform: uppercase;
-      background: linear-gradient(90deg, var(--hot-pink) 10%, var(--purple-dark) 90%);
+      background: linear-gradient(90deg, var(--hot-pink) 10%, var(--accent) 60%, var(--accent2) 90%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -100,6 +101,7 @@
       .pop-hero { padding: 1.1rem 0.1rem; }
       .pop-hero-title { font-size: 1.28rem; }
     }
+
     .side-by-side-section {
       display: flex;
       justify-content: center;
@@ -110,14 +112,14 @@
       width: 100%;
     }
     .side-card {
-      background: linear-gradient(120deg, #edeef5 65%, #b0b5d8 100%);
+      background: linear-gradient(120deg, #f6ebff 65%, #caffe0 100%);
       border-radius: 2.2rem;
-      box-shadow: 0 6px 32px #b0b5d833, 0 1.5px 8px #b0b5d888;
+      box-shadow: 0 6px 32px #e5d7fa55, 0 1.5px 8px #ffe5b488;
       padding: 2rem 2.1rem 1.7rem 2.1rem;
       text-align: center;
       max-width: 420px;
       width: 100%;
-      border: 2.5px solid #b0b5d8;
+      border: 2.5px solid var(--hot-pink);
       margin: 0 auto;
       display: flex;
       flex-direction: column;
@@ -136,7 +138,7 @@
       align-items: center;
       justify-content: center;
       gap: 0.5rem;
-      text-shadow: 0 2px 8px #b0b5d855;
+      text-shadow: 0 2px 8px var(--hot-pink)55;
       position: relative;
       z-index: 2;
     }
@@ -164,7 +166,7 @@
       font-size: 1.13rem;
       padding-left: 2rem;
       font-family: 'Quicksand', 'Montserrat', sans-serif;
-      color: var(--purple-dark);
+      color: #a481c8;
       font-weight: 700;
       text-align: left;
       display: block;
@@ -204,10 +206,10 @@
       .squiggle { width: 90px; height: 19px;}
     }
     .side-card-empty {
-      background: linear-gradient(90deg, #f4f5fa 80%, #b0b5d8 100%);
+      background: linear-gradient(90deg, #ffe5b4 80%, #ffb3da 100%);
       border-radius: 1.5rem;
-      border: 2.5px solid #b0b5d8;
-      box-shadow: 0 2px 16px #b0b5d822;
+      border: 2.5px solid #ffb3da;
+      box-shadow: 0 2px 16px #ffe5b488;
       margin: 2.2rem auto 0.7rem auto;
       min-height: 60px;
       width: 97vw;
@@ -220,7 +222,7 @@
     footer {
       margin: 3.2rem 0 1.3rem 0;
       text-align: center;
-      color: var(--accent);
+      color: var(--peach);
       font-size: 1.07rem;
       letter-spacing: 0.5px;
       padding-bottom: 1.2rem;
@@ -244,10 +246,10 @@
     <section class="side-by-side-section">
       <div class="side-card" id="about">
         <h2>What makes us different?</h2>
-        <!-- very squiggly line, hand-drawn look, purple -->
+        <!-- very squiggly line, hand-drawn look, lavender -->
         <svg class="squiggle" viewBox="0 0 160 32" fill="none">
           <path d="M5 16 Q23 2, 44 16 Q65 30, 85 16 Q105 2, 125 16 Q145 30, 155 16"
-            stroke="#472B79"
+            stroke="#b193e5"
             stroke-width="4"
             fill="none"
             stroke-linecap="round"
@@ -263,7 +265,7 @@
         <h2>How it works</h2>
         <svg class="squiggle" viewBox="0 0 160 32" fill="none">
           <path d="M5 16 Q23 2, 44 16 Q65 30, 85 16 Q105 2, 125 16 Q145 30, 155 16"
-            stroke="#472B79"
+            stroke="#b193e5"
             stroke-width="4"
             fill="none"
             stroke-linecap="round"
