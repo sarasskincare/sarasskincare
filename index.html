@@ -9,9 +9,9 @@
   <style>
     :root {
       --main-bg: #fff;
-      --accent: #ffb3da; /* baby pink */
-      --accent2: #f662aa; /* french rose pink */
-      --hot-pink: #ffb3da; 
+      --accent: #ffb3da;
+      --accent2: #f662aa;
+      --hot-pink: #ffb3da;
       --rose: #f662aa;
       --white: #fff;
       --shadow: 0 8px 24px rgba(246, 98, 170, 0.10);
@@ -104,6 +104,7 @@
       margin: 0 0.1rem;
       box-shadow: 0 1px 7px #ffd2e855;
       border: 2px solid var(--accent);
+      scroll-behavior: smooth;
     }
     .topnav a:hover, .topnav a.active {
       background: var(--hot-pink);
@@ -319,6 +320,7 @@
       text-align: center;
       z-index: 2;
       position: relative;
+      scroll-margin-top: 90px;
     }
     .quiz-section-title,
     .quiz-info-section-title {
@@ -399,6 +401,8 @@
     <a href="#" class="active">Home</a>
     <a href="#products">Product List</a>
     <a href="#aboutme">About Me</a>
+    <a href="#how-our-quiz-works">How Our Quiz Works</a>
+    <a href="#how-we-build-your-routine">How We Build Your Routine</a>
   </nav>
 
   <section class="pop-hero">
@@ -458,7 +462,7 @@
       <a href="/quiz.html" class="quiz-section-btn">Start My Quiz</a>
     </section>
 
-    <section class="quiz-info-section">
+    <section id="how-our-quiz-works" class="quiz-info-section">
       <div class="quiz-info-section-title">
         How Our Quiz Works
       </div>
@@ -482,52 +486,39 @@
       </div>
     </section>
 
-    <section class="quiz-info-section">
+    <section id="how-we-build-your-routine" class="quiz-info-section">
       <div class="quiz-info-section-title">
         How We Build Your Routine
       </div>
       <div class="quiz-section-desc" style="max-width:700px;margin-bottom:0;">
-        Once your skin profile is complete, we start building your ideal skincare routine—from the ingredients up. Here's how:
-        <ul style="text-align:left; margin:1.2em auto 1.2em auto; max-width:480px; color:#f662aa;">
-          <li>
-            <b>Ingredient Matching</b><br>
-            Based on your skin goals and sensitivities, we select ingredients with the right:
-            <ul style="margin:0.7em 0 0.7em 1.2em;">
-              <li>Function (hydration, exfoliation, brightening, calming)</li>
-              <li>Size (to know if it penetrates or stays surface-level)</li>
-              <li>Solubility (to ensure it pairs well with others)</li>
-              <li>pH Compatibility (so it won’t irritate your skin)</li>
-            </ul>
-          </li>
-          <li>
-            <b>Step-by-Step Formulation</b><br>
-            We construct your routine in layers, just like a real cosmetic chemist:
-            <ul style="margin:0.7em 0 0.7em 1.2em;">
-              <li><b>Cleanser:</b> Based on how much sebum, sweat, or makeup you produce</li>
-              <li><b>Toner/Essence:</b> Optional — chosen if your skin needs quick hydration or pH balancing</li>
-              <li><b>Serum:</b> This is the core of your routine — matched to your top goal (e.g., acne, glow, repair)</li>
-              <li><b>Moisturizer:</b> Chosen based on occlusive vs humectant needs</li>
-              <li><b>SPF:</b> Always matched to finish, sensitivity, and comfort level</li>
-            </ul>
-          </li>
-          <li>
-            <b>Budget + Preference Filter</b><br>
-            Each step gets 2–3 product options, based on your chosen profile:
-            <ul style="margin:0.7em 0 0.7em 1.2em;">
-              <li>Affordable</li>
-              <li>Midrange</li>
-              <li>Luxe</li>
-            </ul>
-          </li>
+        We analyze your answers<br>
+        Each quiz response adds points toward skin profiles and identifies your hydration, oil balance, barrier strength, exfoliation needs, ingredient sensitivities, and lifestyle factors.
+        <br><br>
+        We match you to functional ingredients<br>
+        Based on your profile, we select ingredients with the right:
+        <ul style="text-align:left; margin:0.8em auto 0.8em 2em; max-width:480px; color:#f662aa;">
+          <li>Function (e.g., brighten, soothe, exfoliate)</li>
+          <li>Molecular weight (to know if it penetrates deep or stays on the surface)</li>
+          <li>Solubility &amp; pH (to ensure stability and reduce irritation)</li>
+          <li>Interaction safety (we avoid ingredient conflicts)</li>
         </ul>
-        Every recommendation is formulation-vetted — we read the INCI list, not just the marketing. This quiz doesn’t just give you "dry skin? Use cream." <br><br>
-        It mimics how a dermatologist + cosmetic chemist would approach your routine:
-        <ul style="text-align:left; margin:1.2em auto 1.2em auto; max-width:480px; color:#f662aa;">
-          <li>With a clinical understanding of what your skin needs</li>
-          <li>Using formulas that actually work</li>
-          <li>Built using ingredient layering logic, to avoid conflicts or overload</li>
+        We build a layered routine<br>
+        Your personalized routine follows cosmetic formulation logic:
+        <ul style="text-align:left; margin:0.8em auto 0.8em 2em; max-width:480px; color:#f662aa;">
+          <li>Cleanser based on oiliness, makeup use, and sensitivity</li>
+          <li>Toner/Essence if hydration or pH balancing is needed</li>
+          <li>Serum tailored to your primary goal (acne, glow, barrier repair, etc.)</li>
+          <li>Moisturizer chosen for barrier needs and occlusion level</li>
+          <li>SPF with preferred texture, sensitivity, and finish</li>
         </ul>
-        We use compound-level matching, real user data, and skin biology research to give you a routine that makes sense for your skin.
+        We recommend actual products<br>
+        Each step includes 2–3 options across different price points (affordable, midrange, luxe)<br>
+        Every product is selected based on:
+        <ul style="text-align:left; margin:0.8em auto 0.8em 2em; max-width:480px; color:#f662aa;">
+          <li>Ingredient transparency</li>
+          <li>Proven actives</li>
+          <li>Formulation quality (not just hype)</li>
+        </ul>
       </div>
     </section>
 
