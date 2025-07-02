@@ -8,13 +8,13 @@
   <link rel="icon" href="favicon.ico" type="image/x-icon"/>
   <style>
     :root {
-      --main-bg: #f9f6ff;            /* Lavender base */
-      --accent: #b193e5;             /* Lavender accent */
-      --accent2: #caffe0;            /* Minty accent */
-      --hot-pink: #ffb3da;           /* Baby pink */
-      --peach: #ffe5b4;              /* Peach accent */
-      --purple: #b193e5;             /* Lavender */
-      --purple-dark: #a481c8;        /* Deeper lavender */
+      --main-bg: #f9f6ff;
+      --accent: #b193e5;
+      --accent2: #caffe0;
+      --hot-pink: #ffb3da;
+      --peach: #ffe5b4;
+      --purple: #b193e5;
+      --purple-dark: #a481c8;
       --mint: #caffe0;
       --white: #fff;
       --shadow: 0 8px 24px rgba(177, 147, 229, 0.08);
@@ -187,7 +187,6 @@
       height: 32px;
       z-index: 1;
     }
-    /* CENTERED STAR BULLET LISTS */
     .side-bullets {
       list-style: none;
       margin: 0 auto 0.3rem auto;
@@ -243,6 +242,63 @@
       .side-bullets li { font-size: 0.98rem; padding-left: 1.2rem;}
       .squiggle { width: 90px; height: 19px;}
     }
+    /* Take the Quiz Section */
+    .quiz-section {
+      background: var(--mint);
+      border-radius: 2rem;
+      border: 2.5px solid var(--hot-pink);
+      box-shadow: 0 2px 16px #ffe5b488;
+      margin: 2.5rem auto 2.5rem auto;
+      padding: 2.2rem 2vw 2.5rem 2vw;
+      max-width: 700px;
+      width: 94vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .quiz-section-title {
+      font-family: 'Quicksand', cursive, sans-serif;
+      font-size: 2.1rem;
+      color: var(--purple-dark);
+      margin-bottom: 0.6rem;
+      font-weight: 900;
+      letter-spacing: 1px;
+    }
+    .quiz-section-desc {
+      font-size: 1.13rem;
+      color: #8f7bb6;
+      margin-bottom: 1.2rem;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      line-height: 1.5;
+      max-width: 470px;
+    }
+    .quiz-section-btn {
+      display: inline-block;
+      background: linear-gradient(90deg, var(--hot-pink) 10%, var(--mint) 90%);
+      color: #763a54;
+      font-weight: bold;
+      font-size: 1.1rem;
+      padding: 0.7rem 2.1rem;
+      border: none;
+      border-radius: 2rem;
+      box-shadow: 0 3px 16px #ffb3da33;
+      cursor: pointer;
+      text-decoration: none;
+      margin-top: 0.5rem;
+      transition: background 0.2s, color 0.18s, transform 0.1s;
+      border: 2.5px solid #ffb3da;
+      filter: drop-shadow(0 0 7px #ffe5b4aa);
+      letter-spacing: 0.04em;
+    }
+    .quiz-section-btn:hover {
+      background: linear-gradient(90deg, var(--mint) 10%, var(--hot-pink) 90%);
+      color: #fff;
+      border-color: var(--mint);
+      transform: scale(1.045) rotate(-2deg);
+    }
     .side-card-empty {
       background: var(--peach);
       border-radius: 1.5rem;
@@ -279,7 +335,7 @@
       READY TO FIND YOUR PERFECT SKIN CARE ROUTINE?
     </div>
     <div class="pop-hero-desc">
-      Discover your ideal skincare steps with routines designed for your unique skin.  
+      Discover your ideal skincare steps with routines designed for your unique skin.<br>
       Take our science-backed quiz and get matched with a profile & regimen tailored just for you—no more guessing or generic advice!
     </div>
     <a href="#quiz" class="pop-hero-btn">Take the Quiz</a>
@@ -289,7 +345,6 @@
     <section class="side-by-side-section">
       <div class="side-card" id="about">
         <h2>What makes us different?</h2>
-        <!-- very squiggly line, hand-drawn look, lavender -->
         <svg class="squiggle" viewBox="0 0 160 32" fill="none">
           <path d="M5 16 Q23 2, 44 16 Q65 30, 85 16 Q105 2, 125 16 Q145 30, 155 16"
             stroke="#b193e5"
@@ -321,6 +376,17 @@
         </ul>
       </div>
     </section>
+
+    <section id="quiz" class="quiz-section">
+      <div class="quiz-section-title">
+        Take the Quiz
+      </div>
+      <div class="quiz-section-desc">
+        Ready to get your personalized skincare routine? Our quiz uses science-backed questions to match you to the best products and steps for your unique skin. It only takes a minute!
+      </div>
+      <a href="/quiz.html" class="quiz-section-btn">Start My Quiz</a>
+    </section>
+
     <div class="side-card-empty"></div>
   </main>
 
