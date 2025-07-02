@@ -18,8 +18,8 @@
       --star: url('https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/2728.svg');
       --blob1: #ffe3f1;
       --blob2: #ffd2e8;
-      --blob3: #fbc9df;
-      --blob4: #f662aa22;
+      --blob3: #fed7e8;
+      --blob4: #f7aacd;
     }
     html, body {
       margin: 0; padding: 0;
@@ -40,7 +40,7 @@
     /* -- Blobs, SVGs for organic shapes -- */
     .blob {
       position: absolute;
-      opacity: 0.8;
+      opacity: 0.85;
       filter: blur(0.5px);
       z-index: 0;
     }
@@ -206,8 +206,9 @@
       box-shadow: 0 6px 32px #ffd2e822, 0 1.5px 8px #ffd2e844;
       padding: 2rem 2.1rem 1.7rem 2.1rem;
       text-align: center;
-      max-width: 420px;
       width: 100%;
+      min-width: 320px;
+      max-width: 420px;
       border: 2.5px solid var(--accent);
       margin: 0 auto;
       display: flex;
@@ -217,6 +218,13 @@
       color: var(--rose);
       position: relative;
       z-index: 1;
+      /* For consistent sizing: */
+      box-sizing: border-box;
+      min-height: 340px;
+      height: 100%;
+    }
+    .side-by-side-section {
+      align-items: stretch;
     }
     .side-card h2 {
       margin: 0 0 0.3rem 0;
@@ -284,6 +292,8 @@
       }
       .side-card {
         max-width: 97vw;
+        min-height: unset;
+        height: unset;
       }
     }
     @media (max-width: 600px) {
@@ -390,10 +400,10 @@
       <path fill="#ffd2e8" d="M30 90Q10 170 120 200Q230 230 280 160Q330 90 245 60Q160 30 90 60Q40 80 30 90Z"/>
     </svg>
     <svg class="blob blob3" viewBox="0 0 370 270">
-      <path fill="#fbc9df" d="M90 70Q60 200 200 250Q340 300 340 170Q340 40 210 40Q100 40 90 70Z"/>
+      <path fill="#fed7e8" d="M90 70Q60 200 200 250Q340 300 340 170Q340 40 210 40Q100 40 90 70Z"/>
     </svg>
     <svg class="blob blob4" viewBox="0 0 200 180">
-      <path fill="#f662aa22" d="M70 40Q10 120 120 160Q230 200 180 80Q130 -40 70 40Z"/>
+      <path fill="#f7aacd" d="M70 40Q10 120 120 160Q230 200 180 80Q130 -40 70 40Z"/>
     </svg>
   </div>
 
