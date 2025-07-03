@@ -118,13 +118,16 @@
     .pop-hero-title {
       font-family: 'Quicksand', cursive, sans-serif;
       font-size: 3.3rem;
-      font-weight: 1200;
+      font-weight: 1000;
       letter-spacing: 2.2px;
       margin-bottom: 0.8rem;
       margin-top: 0.5rem;
       text-shadow: 0 3px 12px var(--hot-pink), 0 2px 8px var(--rose);
-      color: var(--rose-darker);
-      background: none;
+      background: linear-gradient(90deg, #f89dc5 10%, #f662aa 90%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      display: block;
       word-spacing: 0.18em;
       line-height: 1.09;
     }
@@ -139,24 +142,29 @@
       letter-spacing: 0.01em;
       text-align: center;
     }
+
+    /* ---- SPECIAL SECTION TITLES ---- */
     .quiz-info-section-title {
       font-family: 'Quicksand', cursive, sans-serif;
-      font-size: 2.2rem;
-      font-weight: 1200;
-      color: var(--rose-darker);
-      letter-spacing: 1.5px;
+      font-size: 3.0rem;
+      font-weight: 1000;
+      letter-spacing: 2.2px;
       margin-bottom: 2.1rem;
       margin-top: 1.1rem;
       display: block;
-      line-height: 1.12;
+      line-height: 1.09;
       word-spacing: 0.18em;
-      text-shadow: 0 3px 18px #ffd2e844, 0 1px 3px #e73c7e33;
+      background: linear-gradient(90deg, #ffb3da 0%, #f662aa 50%, #ffb3da 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-shadow: 0 3px 16px #ffd2e899, 0 2px 8px #f662aa88;
     }
     .quiz-section-title {
       font-family: 'Quicksand', cursive, sans-serif;
       font-size: 2.6rem;
-      font-weight: 1200;
-      color: var(--rose-darker);
+      font-weight: 1000;
+      color: var(--rose);
       letter-spacing: 1.5px;
       margin-bottom: 2.1rem;
       margin-top: 1.1rem;
@@ -164,6 +172,10 @@
       line-height: 1.12;
       word-spacing: 0.18em;
       text-shadow: 0 3px 12px var(--hot-pink), 0 2px 8px var(--rose);
+      background: none;
+      -webkit-background-clip: border-box;
+      -webkit-text-fill-color: initial;
+      background-clip: border-box;
     }
 
     .quiz-info-section,
@@ -234,8 +246,6 @@
       top: 0.12em;
       display: inline-block;
     }
-
-    /* Nav and side cards unchanged for brevity, they remain as before */
 
     .side-by-side-section {
       display: flex;
