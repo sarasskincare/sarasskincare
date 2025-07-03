@@ -71,23 +71,32 @@
     .topnav a {
       color: var(--rose);
       text-decoration: none;
-      font-family: 'Quicksand', sans-serif;
-      font-weight: 700;
-      font-size: 1.09rem;
+      font-family: 'Quicksand', cursive, sans-serif;
+      font-weight: 900;
+      font-size: 1.13rem;
       letter-spacing: 0.03em;
-      padding: 0.35rem 1.15rem;
-      border-radius: 1.2rem;
-      background: var(--main-bg);
-      transition: background 0.21s, color 0.21s;
-      margin: 0 0.1rem;
-      box-shadow: 0 1px 7px #ffd2e855;
-      border: 2px solid var(--accent);
-      scroll-behavior: smooth;
+      padding: 0.6rem 1.55rem;
+      border-radius: 1.8rem;
+      background: linear-gradient(90deg, #e73c7e 0%, #ffd2e8 60%, #e73c7e 100%);
+      border: none;
+      box-shadow: 0 1px 8px #ffd2e855;
+      border: 2.5px solid var(--accent);
+      transition: background 0.21s, color 0.21s, transform 0.11s;
+      margin: 0 0.18rem;
+      filter: brightness(1.04);
+      display: inline-block;
+      cursor: pointer;
+      position: relative;
+      z-index: 11;
     }
     .topnav a:hover, .topnav a.active {
-      background: var(--hot-pink);
-      color: var(--rose);
+      background: linear-gradient(90deg, #f662aa 0%, #ffe3f1 60%, #f662aa 100%);
+      color: #d10063;
+      transform: scale(1.07);
+      box-shadow: 0 2px 14px #ffd2e899;
+      border-color: #f662aa;
     }
+
     .pop-hero {
       margin: 2.5rem auto 2.5rem auto;
       background: var(--white);
@@ -338,31 +347,32 @@
     .quiz-section-title,
     .quiz-info-section-title {
       font-family: 'Quicksand', cursive, sans-serif;
-      font-weight: 1100; /* SUPER BOLD */
+      font-weight: 1200; /* ULTRA BOLD */
       letter-spacing: 1.5px;
       text-shadow: 0 2px 12px var(--accent2)22;
-      background: linear-gradient(90deg, var(--gradient-dark) 0%, var(--gradient-light) 60%, var(--gradient-dark) 100%);
+      background: linear-gradient(90deg, var(--gradient-dark) 0%, var(--gradient-light) 70%, var(--gradient-dark) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
       margin-bottom: 3.1rem;
       margin-top: 1.4rem;
       display: block;
-      line-height: 1.12;
+      line-height: 1.08;
       word-spacing: 0.18em;
-      font-size: 4.1rem;
-      font-stretch: expanded;
-      letter-spacing: 0.06em;
+      font-size: 4.8rem;
+      font-variation-settings: "wght" 1200;
+      /* less prominent gradient */
+      opacity: 0.84;
     }
     .quiz-section-title {
       font-size: 2.6rem;
       font-weight: 1000;
-      /* REMOVE GRADIENT, MAKE SOLID ROSE */
       background: none !important;
       -webkit-text-fill-color: var(--rose) !important;
       color: var(--rose) !important;
       text-shadow: 0 3px 12px var(--hot-pink), 0 2px 8px var(--rose);
       background-clip: border-box;
+      opacity: 1;
     }
     .quiz-section-desc {
       font-size: 1.65rem;
