@@ -14,6 +14,7 @@
       --hot-pink: #ffb3da;
       --rose: #f662aa;
       --rose-dark: #a20046;
+      --rose-darker: #871140;
       --white: #fff;
       --shadow: 0 8px 24px rgba(246, 98, 170, 0.10);
       --star: url('https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/2728.svg');
@@ -76,7 +77,7 @@
       letter-spacing: 0.03em;
       padding: 0.6rem 1.55rem;
       border-radius: 1.8rem;
-      background: linear-gradient(90deg, #e73c7e 0%, #ffd2e8 60%, #e73c7e 100%);
+      background: linear-gradient(90deg, #ffd2e8 0%, #ffe3f1 100%);
       border: none;
       box-shadow: 0 1px 8px #ffd2e855;
       border: 2.5px solid var(--accent);
@@ -89,7 +90,7 @@
       z-index: 11;
     }
     .topnav a:hover, .topnav a.active {
-      background: linear-gradient(90deg, #f662aa 0%, #ffe3f1 60%, #f662aa 100%);
+      background: linear-gradient(90deg, #f662aa 0%, #ffe3f1 100%);
       color: #d10063;
       transform: scale(1.07);
       box-shadow: 0 2px 14px #ffd2e899;
@@ -117,15 +118,13 @@
     .pop-hero-title {
       font-family: 'Quicksand', cursive, sans-serif;
       font-size: 3.3rem;
-      font-weight: 1000;
+      font-weight: 1200;
       letter-spacing: 2.2px;
       margin-bottom: 0.8rem;
       margin-top: 0.5rem;
       text-shadow: 0 3px 12px var(--hot-pink), 0 2px 8px var(--rose);
-      background: linear-gradient(90deg, #e73c7e 0%, #ffe3f1 50%, #e73c7e 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      color: var(--rose-darker);
+      background: none;
       word-spacing: 0.18em;
       line-height: 1.09;
     }
@@ -140,59 +139,24 @@
       letter-spacing: 0.01em;
       text-align: center;
     }
-    .pop-hero-btn {
-      display: inline-block;
-      background: var(--rose);
-      color: #fff;
-      font-weight: bold;
-      font-size: 1.13rem;
-      padding: 0.7rem 2.1rem;
-      border: none;
-      border-radius: 2rem;
-      box-shadow: 0 3px 16px #ffd2e855;
-      cursor: pointer;
-      text-decoration: none;
-      margin-top: 1.1rem;
-      transition: background 0.2s, color 0.18s, transform 0.1s;
-      border: 2.5px solid var(--accent2);
-      filter: drop-shadow(0 0 7px #ffd2e8aa);
-      letter-spacing: 0.04em;
-    }
-    .pop-hero-btn:hover {
-      background: linear-gradient(90deg, var(--rose) 10%, var(--accent) 90%);
-      color: #fff;
-      border-color: var(--rose);
-      transform: scale(1.045) rotate(-2deg);
-    }
-    @media (max-width: 900px) {
-      .pop-hero { padding: 1.5rem 2vw; }
-      .pop-hero-title { font-size: 2.1rem; }
-      .pop-hero-desc { font-size: 1.06rem; }
-    }
-    @media (max-width: 600px) {
-      .pop-hero { padding: 1.1rem 0.1rem; }
-      .pop-hero-title { font-size: 1.28rem; }
-      .pop-hero-desc { font-size: 0.97rem; }
-    }
-
     .quiz-info-section-title {
       font-family: 'Quicksand', cursive, sans-serif;
       font-size: 2.2rem;
       font-weight: 1200;
-      color: var(--rose-dark);
+      color: var(--rose-darker);
       letter-spacing: 1.5px;
       margin-bottom: 2.1rem;
       margin-top: 1.1rem;
       display: block;
       line-height: 1.12;
       word-spacing: 0.18em;
-      text-shadow: 0 2px 8px #ffd2e822, 0 1px 3px #e73c7e44;
+      text-shadow: 0 3px 18px #ffd2e844, 0 1px 3px #e73c7e33;
     }
     .quiz-section-title {
       font-family: 'Quicksand', cursive, sans-serif;
       font-size: 2.6rem;
-      font-weight: 1000;
-      color: var(--rose);
+      font-weight: 1200;
+      color: var(--rose-darker);
       letter-spacing: 1.5px;
       margin-bottom: 2.1rem;
       margin-top: 1.1rem;
