@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sara's Skincare</title>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&family=Montserrat:wght@400;600&family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@900&family=Montserrat:wght@400;600&family=Pacifico&display=swap" rel="stylesheet">
   <link rel="icon" href="favicon.ico" type="image/x-icon"/>
   <style>
     :root {
@@ -20,8 +20,8 @@
       --blob2: #ffd2e8;
       --blob3: #fed7e8;
       --blob4: #f7aacd;
-      --gradient-dark: #f3006b;
-      --gradient-light: #ffb3da;
+      --gradient-dark: #e73c7e;
+      --gradient-light: #ffe3f1;
     }
     html, body {
       margin: 0; padding: 0;
@@ -134,7 +134,7 @@
     }
     .pop-hero-btn {
       display: inline-block;
-      background: linear-gradient(90deg, var(--accent) 10%, var(--rose) 90%);
+      background: var(--rose);
       color: #fff;
       font-weight: bold;
       font-size: 1.13rem;
@@ -266,30 +266,31 @@
     }
     .quiz-info-bullets {
       list-style: none;
-      margin: 1.3em auto 1.3em auto;
+      margin: 2.7em auto 2.3em auto;
       padding: 0;
-      max-width: 1100px;
+      max-width: 1350px;
       text-align: left;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      gap: 1.4em;
+      gap: 2em;
       position: relative;
     }
     .quiz-info-bullets li {
       position: relative;
-      font-size: 1.22rem;
-      padding-left: 2rem;
+      font-size: 1.65rem;
+      padding-left: 2.6rem;
       font-family: 'Quicksand', 'Montserrat', sans-serif;
       color: var(--rose);
       font-weight: 500;
-      line-height: 1.75;
+      line-height: 2.1;
       margin-bottom: 0.06em;
       letter-spacing: 0.01em;
-      max-width: 1080px;
+      max-width: 1330px;
     }
-    @media (max-width: 1250px) {
-      .quiz-info-bullets { max-width: 97vw; }
+    @media (max-width: 1550px) {
+      .quiz-info-bullets { max-width: 99vw; }
+      .quiz-section, .quiz-info-section { max-width: 99vw;}
     }
     @media (max-width: 900px) {
       .side-by-side-section {
@@ -303,6 +304,7 @@
         height: unset;
       }
       .quiz-info-bullets { max-width: 98vw; }
+      .quiz-section, .quiz-info-section { max-width: 98vw;}
     }
     @media (max-width: 600px) {
       .side-card {
@@ -311,7 +313,7 @@
       .side-card h2 { font-size: 1.12rem; }
       .side-bullets li { font-size: 0.98rem; padding-left: 1.2rem;}
       .squiggle { width: 90px; height: 19px;}
-      .quiz-info-bullets li { font-size: 1rem; padding-left: 1.2rem;}
+      .quiz-info-bullets li { font-size: 1.13rem; padding-left: 1.2rem;}
     }
     .quiz-section,
     .quiz-info-section {
@@ -319,10 +321,10 @@
       border-radius: 2.3rem;
       border: 3.5px solid var(--rose);
       box-shadow: 0 2px 24px #ffd2e855;
-      margin: 3.3rem auto 3.3rem auto;
-      padding: 3.1rem 4vw 3.3rem 4vw;
-      max-width: 1400px;
-      min-width: 320px;
+      margin: 5rem auto 5rem auto;
+      padding: 4.7rem 6vw 4.8rem 6vw;
+      max-width: 1700px;
+      min-width: 340px;
       width: 99vw;
       display: flex;
       flex-direction: column;
@@ -336,39 +338,47 @@
     .quiz-section-title,
     .quiz-info-section-title {
       font-family: 'Quicksand', cursive, sans-serif;
-      font-weight: 900;
+      font-weight: 1100; /* SUPER BOLD */
       letter-spacing: 1.5px;
-      text-shadow: 0 2px 12px var(--accent2)33;
-      background: linear-gradient(90deg, var(--gradient-dark) 0%, var(--gradient-light) 50%, var(--gradient-dark) 100%);
+      text-shadow: 0 2px 12px var(--accent2)22;
+      background: linear-gradient(90deg, var(--gradient-dark) 0%, var(--gradient-light) 60%, var(--gradient-dark) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      margin-bottom: 1.4rem;
-      margin-top: 0.4rem;
+      margin-bottom: 3.1rem;
+      margin-top: 1.4rem;
       display: block;
-      line-height: 1.11;
+      line-height: 1.12;
       word-spacing: 0.18em;
-      font-size: 2.3rem;
+      font-size: 4.1rem;
+      font-stretch: expanded;
+      letter-spacing: 0.06em;
     }
     .quiz-section-title {
       font-size: 2.6rem;
       font-weight: 1000;
+      /* REMOVE GRADIENT, MAKE SOLID ROSE */
+      background: none !important;
+      -webkit-text-fill-color: var(--rose) !important;
+      color: var(--rose) !important;
+      text-shadow: 0 3px 12px var(--hot-pink), 0 2px 8px var(--rose);
+      background-clip: border-box;
     }
     .quiz-section-desc {
-      font-size: 1.28rem;
+      font-size: 1.65rem;
       color: var(--rose);
-      margin-bottom: 1.2rem;
+      margin-bottom: 2.1rem;
       font-family: 'Montserrat', sans-serif;
       font-weight: 500;
-      line-height: 1.6;
-      max-width: 1100px;
+      line-height: 2.2;
+      max-width: 1500px;
       margin-left: auto;
       margin-right: auto;
       text-align: left;
     }
     .quiz-section-btn {
       display: inline-block;
-      background: linear-gradient(90deg, var(--accent2) 6%, var(--rose) 94%);
+      background: var(--rose);
       color: #fff;
       font-weight: bold;
       font-size: 1.14rem;
