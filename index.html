@@ -4,30 +4,34 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sara's Skincare</title>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@900&family=Montserrat:wght@400;600&family=Pacifico&display=swap" rel="stylesheet">
   <link rel="icon" href="favicon.ico" type="image/x-icon"/>
   <style>
     :root {
-      --main-bg: #fff;
+      --main-bg: #f7f8fa;
       --accent: #ffb3da;
       --accent2: #f662aa;
       --hot-pink: #ffb3da;
       --rose: #f662aa;
       --rose-dark: #a20046;
       --rose-darker: #871140;
+      --aqua: #41d9c5;
+      --sky: #a5e8fa;
+      --lilac: #d7bdfc;
+      --yellow: #ffe66d;
       --white: #fff;
+      --gray: #e4e6ea;
       --shadow: 0 8px 24px rgba(246, 98, 170, 0.10);
       --star: url('https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/2728.svg');
       --blob1: #ffe3f1;
-      --blob2: #ffd2e8;
+      --blob2: #a5e8fa;
       --blob3: #fed7e8;
-      --blob4: #f7aacd;
+      --blob4: #d7bdfc;
     }
     html, body {
       margin: 0; padding: 0;
-      font-family: 'Montserrat', 'Quicksand', Arial, sans-serif;
+      font-family: Calibri, 'Montserrat', Arial, sans-serif;
       background: var(--main-bg);
-      color: var(--rose);
+      color: var(--rose-dark);
       min-height: 100vh;
       position: relative;
       overflow-x: hidden;
@@ -41,14 +45,14 @@
     }
     .blob {
       position: absolute;
-      opacity: 0.85;
+      opacity: 0.65;
       filter: blur(0.5px);
       z-index: 0;
     }
-    .blob1 { top: -90px; left: -110px; width: 430px; height: 330px; animation: floatblob1 12s ease-in-out infinite alternate;}
-    .blob2 { top: 55vh; left: -60px; width: 320px; height: 240px; animation: floatblob2 17s ease-in-out infinite alternate;}
-    .blob3 { top: 23vh; right: -90px; width: 370px; height: 270px; animation: floatblob3 15s ease-in-out infinite alternate;}
-    .blob4 { top: 77vh; right: -70px; width: 200px; height: 180px; animation: floatblob4 18s ease-in-out infinite alternate;}
+    .blob1 { top: -80px; left: -110px; width: 390px; height: 320px; animation: floatblob1 12s ease-in-out infinite alternate;}
+    .blob2 { top: 10vh; right: -90px; width: 360px; height: 210px; animation: floatblob2 17s ease-in-out infinite alternate;}
+    .blob3 { top: 75vh; left: -60px; width: 220px; height: 180px; animation: floatblob3 15s ease-in-out infinite alternate;}
+    .blob4 { top: 60vh; right: -80px; width: 250px; height: 220px; animation: floatblob4 18s ease-in-out infinite alternate;}
     @keyframes floatblob1 {0% {transform: scale(1) translateY(0);}100% {transform: scale(1.08) translateY(-18px);}}
     @keyframes floatblob2 {0% {transform: scale(1) translateY(0);}100% {transform: scale(1.02) translateY(-25px);}}
     @keyframes floatblob3 {0% {transform: scale(1) translateY(0);}100% {transform: scale(1.10) translateY(20px);}}
@@ -57,7 +61,7 @@
     .topnav {
       width: 100%;
       background: var(--white);
-      box-shadow: 0 2px 16px #ffd2e822;
+      box-shadow: 0 2px 16px #a5e8fa33;
       border-bottom-left-radius: 1.2rem 0.6rem;
       border-bottom-right-radius: 1.2rem 0.6rem;
       padding: 0.5rem 0 0.35rem 0;
@@ -69,32 +73,31 @@
       position: relative;
     }
     .topnav a {
-      color: var(--rose);
+      color: var(--rose-dark);
       text-decoration: none;
-      font-family: 'Quicksand', cursive, sans-serif;
-      font-weight: 900;
+      font-family: Calibri, Arial, sans-serif;
+      font-weight: 700;
       font-size: 1.13rem;
       letter-spacing: 0.03em;
-      padding: 0.6rem 1.55rem;
-      border-radius: 1.8rem;
-      background: linear-gradient(90deg, #ffd2e8 0%, #ffe3f1 100%);
-      border: none;
-      box-shadow: 0 1px 8px #ffd2e855;
-      border: 2.5px solid var(--accent);
+      padding: 0.6rem 1.2rem;
+      border-radius: 1.3rem;
+      background: linear-gradient(90deg, var(--aqua) 0%, var(--sky) 100%);
+      border: 2px solid var(--accent);
+      box-shadow: 0 1px 8px #d7bdfc66;
       transition: background 0.21s, color 0.21s, transform 0.11s;
-      margin: 0 0.18rem;
-      filter: brightness(1.04);
+      margin: 0 0.15rem;
+      filter: brightness(1.03);
       display: inline-block;
       cursor: pointer;
       position: relative;
       z-index: 11;
     }
     .topnav a:hover, .topnav a.active {
-      background: linear-gradient(90deg, #f662aa 0%, #ffe3f1 100%);
-      color: #d10063;
+      background: linear-gradient(90deg, var(--yellow) 0%, var(--aqua) 100%);
+      color: var(--rose-darker);
       transform: scale(1.07);
-      box-shadow: 0 2px 14px #ffd2e899;
-      border-color: #f662aa;
+      box-shadow: 0 2px 14px #a5e8fa55;
+      border-color: var(--aqua);
     }
 
     .pop-hero {
@@ -116,78 +119,66 @@
       z-index: 2;
     }
     .pop-hero-title {
-      font-family: 'Quicksand', cursive, sans-serif;
-      font-size: 3.3rem;
-      font-weight: 1000;
-      letter-spacing: 2.2px;
+      font-family: Calibri, Arial, sans-serif;
+      font-size: 3.1rem;
+      font-weight: 900;
+      letter-spacing: 1.5px;
       margin-bottom: 0.8rem;
       margin-top: 0.5rem;
-      text-shadow: 0 3px 12px var(--hot-pink), 0 2px 8px var(--rose);
-      background: linear-gradient(90deg, #f89dc5 10%, #f662aa 90%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      color: var(--rose-dark);
+      text-shadow: 0 3px 12px var(--aqua), 0 2px 8px var(--lilac);
       display: block;
       word-spacing: 0.18em;
       line-height: 1.09;
+      background: none;
     }
     .pop-hero-desc {
       max-width: 650px;
       margin: 0 auto 1.7rem auto;
       font-size: 1.24rem;
-      color: var(--rose);
-      font-family: 'Montserrat', sans-serif;
+      color: var(--rose-darker);
+      font-family: Calibri, Arial, sans-serif;
       font-weight: 500;
       line-height: 1.6;
       letter-spacing: 0.01em;
       text-align: center;
     }
-
-    .quiz-info-section-title {
-      font-family: 'Quicksand', cursive, sans-serif;
-      font-size: 3.0rem;
-      font-weight: 1000;
-      letter-spacing: 2.2px;
-      margin-bottom: 2.1rem;
+    .quiz-section-btn {
+      display: inline-block;
+      background: linear-gradient(90deg, var(--aqua) 0%, var(--accent) 100%);
+      color: #fff;
+      font-weight: bold;
+      font-size: 1.18rem;
+      padding: 0.85rem 2.3rem;
+      border: none;
+      border-radius: 2rem;
+      box-shadow: 0 3px 16px #ffd2e855;
+      cursor: pointer;
+      text-decoration: none;
       margin-top: 1.1rem;
-      display: block;
-      line-height: 1.09;
-      word-spacing: 0.18em;
-      background: linear-gradient(90deg, #ffb3da 0%, #f662aa 50%, #ffb3da 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      text-shadow: 0 3px 16px #ffd2e899, 0 2px 8px #f662aa88;
+      transition: background 0.2s, color 0.18s, transform 0.1s;
+      border: 2.5px solid var(--aqua);
+      filter: drop-shadow(0 0 7px #ffd2e8aa);
+      letter-spacing: 0.04em;
     }
-    .quiz-section-title {
-      font-family: 'Quicksand', cursive, sans-serif;
-      font-size: 2.6rem;
-      font-weight: 1000;
-      color: var(--rose);
-      letter-spacing: 1.5px;
-      margin-bottom: 2.1rem;
-      margin-top: 1.1rem;
-      display: block;
-      line-height: 1.12;
-      word-spacing: 0.18em;
-      text-shadow: 0 3px 12px var(--hot-pink), 0 2px 8px var(--rose);
-      background: none;
-      -webkit-background-clip: border-box;
-      -webkit-text-fill-color: initial;
-      background-clip: border-box;
+    .quiz-section-btn:hover {
+      background: linear-gradient(90deg, var(--lilac) 5%, var(--accent2) 95%);
+      color: #fff;
+      border-color: var(--accent2);
+      transform: scale(1.045) rotate(-2deg);
     }
 
     .quiz-info-section,
     .quiz-section {
       background: var(--white);
-      border-radius: 2.3rem;
-      border: 3.5px solid var(--rose);
-      box-shadow: 0 2px 24px #ffd2e855;
-      margin: 4.2rem auto 4.2rem auto;
-      padding: 4rem 6vw 4.2rem 6vw;
-      max-width: 1500px;
-      min-width: 340px;
-      width: 99vw;
+      border-radius: 1.5rem;
+      border: 2.5px solid var(--aqua);
+      box-shadow: 0 2px 18px #a5e8fa44;
+      margin: 3rem auto 2rem auto;
+      padding: 2.2rem 2.5vw 2.2rem 2.5vw;
+      max-width: 650px;
+      min-width: 220px;
+      width: fit-content;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -197,52 +188,81 @@
       position: relative;
       scroll-margin-top: 90px;
     }
+    .quiz-info-section-title {
+      font-family: Calibri, Arial, sans-serif;
+      font-size: 2.1rem;
+      font-weight: 900;
+      color: var(--rose-dark);
+      letter-spacing: 1.5px;
+      margin-bottom: 1.1rem;
+      margin-top: 0.3rem;
+      display: block;
+      line-height: 1.09;
+      word-spacing: 0.18em;
+      background: none;
+      text-shadow: 0 3px 8px var(--yellow), 0 2px 8px var(--aqua);
+    }
+    .quiz-section-title {
+      font-family: Calibri, Arial, sans-serif;
+      font-size: 2.1rem;
+      font-weight: 900;
+      color: var(--rose-dark);
+      letter-spacing: 1.5px;
+      margin-bottom: 1.1rem;
+      margin-top: 0.3rem;
+      display: block;
+      line-height: 1.12;
+      word-spacing: 0.18em;
+      background: none;
+      text-shadow: 0 3px 12px var(--aqua), 0 2px 8px var(--lilac);
+    }
+
     .quiz-section-desc {
-      font-size: 1.45rem;
-      color: var(--rose);
-      margin-bottom: 1.8rem;
-      font-family: 'Montserrat', sans-serif;
+      font-size: 1.15rem;
+      color: var(--rose-darker);
+      margin-bottom: 1.2rem;
+      font-family: Calibri, Arial, sans-serif;
       font-weight: 500;
-      line-height: 1.75;
-      max-width: 1350px;
+      line-height: 1.5;
+      max-width: 600px;
       margin-left: auto;
       margin-right: auto;
       text-align: left;
     }
     .quiz-info-bullets {
       list-style: none;
-      margin: 2.7em auto 2.3em auto;
+      margin: 2em auto 1.5em auto;
       padding: 0;
-      max-width: 1200px;
+      max-width: 600px;
       text-align: left;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      gap: 2em;
+      gap: 1.3em;
       position: relative;
     }
     .quiz-info-bullets li {
       position: relative;
-      font-size: 1.4rem;
-      padding-left: 2.2rem;
-      font-family: 'Quicksand', 'Montserrat', sans-serif;
+      font-size: 1.12rem;
+      padding-left: 1.7rem;
+      font-family: Calibri, Arial, sans-serif;
       color: var(--rose);
       font-weight: 500;
-      line-height: 1.85;
+      line-height: 1.6;
       margin-bottom: 0.06em;
       letter-spacing: 0.01em;
-      max-width: 1200px;
+      max-width: 600px;
     }
     .quiz-info-bullets li::before {
       content: "";
       background-image: var(--star);
-      background-size: 1.2rem 1.2rem;
+      background-size: 1.1rem 1.1rem;
       background-repeat: no-repeat;
-      width: 1.2rem;
-      height: 1.2rem;
+      width: 1.1rem;
+      height: 1.1rem;
       position: absolute;
       left: 0;
-      top: 0.12em;
+      top: 0.14em;
       display: inline-block;
     }
 
@@ -259,74 +279,71 @@
     }
     .side-card {
       background: var(--white);
-      border-radius: 2.2rem;
-      box-shadow: 0 6px 32px #ffd2e822, 0 1.5px 8px #ffd2e844;
-      padding: 2rem 2.1rem 1.7rem 2.1rem;
+      border-radius: 1.5rem;
+      box-shadow: 0 6px 32px #d7bdfc33, 0 1.5px 8px #a5e8fa44;
+      padding: 1.7rem 1.2rem 1.3rem 1.2rem;
       text-align: center;
       width: 100%;
-      min-width: 320px;
-      max-width: 420px;
-      border: 2.5px solid var(--accent);
+      min-width: 220px;
+      max-width: 330px;
+      border: 2px solid var(--lilac);
       margin: 0 auto;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
       align-items: center;
-      color: var(--rose);
+      color: var(--rose-dark);
       position: relative;
       z-index: 1;
       box-sizing: border-box;
-      min-height: 340px;
+      min-height: 220px;
       height: 100%;
     }
     .side-card h2 {
-      margin: 0 0 0.3rem 0;
-      font-family: 'Quicksand', cursive, sans-serif;
-      font-size: 1.47rem;
-      font-weight: 700;
+      margin: 0 0 0.25rem 0;
+      font-family: Calibri, Arial, sans-serif;
+      font-size: 1.23rem;
+      font-weight: 900;
       letter-spacing: 1px;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 0.5rem;
-      text-shadow: 0 2px 8px var(--hot-pink)55;
-      background: linear-gradient(90deg, #e73c7e 0%, #ffe3f1 50%, #e73c7e 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      color: var(--aqua);
+      text-shadow: 0 1px 6px var(--lilac);
+      background: none;
     }
     .side-bullets {
       list-style: none;
-      margin: 0 auto 0.3rem auto;
+      margin: 0 auto 0.2rem auto;
       padding: 0;
-      max-width: 340px;
+      max-width: 300px;
       text-align: center;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 0.8rem;
+      gap: 0.7rem;
     }
     .side-bullets li {
       position: relative;
-      font-size: 1.13rem;
-      padding-left: 2rem;
-      font-family: 'Quicksand', 'Montserrat', sans-serif;
+      font-size: 1rem;
+      padding-left: 1.5rem;
+      font-family: Calibri, Arial, sans-serif;
       color: var(--rose);
       font-weight: 700;
       text-align: left;
       display: block;
-      line-height: 1.6;
-      letter-spacing: 0.01em;
+      line-height: 1.5;
       margin-bottom: 0.08em;
-      max-width: 320px;
+      max-width: 300px;
     }
     .side-bullets li::before {
       content: "";
       background-image: var(--star);
-      background-size: 1.2rem 1.2rem;
+      background-size: 1rem 1rem;
       background-repeat: no-repeat;
-      width: 1.2rem;
-      height: 1.2rem;
+      width: 1rem;
+      height: 1rem;
       position: absolute;
       left: 0;
       top: 0.12em;
@@ -335,42 +352,32 @@
     .squiggle {
       display: block;
       margin: 0.2rem auto 1.2rem auto;
-      width: 160px;
-      height: 32px;
+      width: 120px;
+      height: 22px;
       z-index: 1;
     }
-    .quiz-section-btn {
-      display: inline-block;
-      background: var(--rose);
-      color: #fff;
-      font-weight: bold;
-      font-size: 1.14rem;
-      padding: 0.8rem 2.3rem;
-      border: none;
-      border-radius: 2rem;
-      box-shadow: 0 3px 16px #ffd2e855;
-      cursor: pointer;
-      text-decoration: none;
-      margin-top: 0.5rem;
-      transition: background 0.2s, color 0.18s, transform 0.1s;
-      border: 2.5px solid var(--rose);
-      filter: drop-shadow(0 0 7px #ffd2e8aa);
-      letter-spacing: 0.04em;
+
+    @media (max-width: 900px) {
+      .quiz-info-section, .quiz-section { max-width: 96vw; }
+      .side-by-side-section { flex-direction: column; gap: 1.3rem; align-items: center; }
+      .side-card { max-width: 98vw; }
     }
-    .quiz-section-btn:hover {
-      background: linear-gradient(90deg, var(--rose) 10%, var(--accent2) 90%);
-      color: #fff;
-      border-color: var(--accent2);
-      transform: scale(1.045) rotate(-2deg);
+    @media (max-width: 600px) {
+      .quiz-info-section, .quiz-section { padding: 1.1rem 0.3rem 1.1rem 0.3rem; }
+      .quiz-info-section-title, .quiz-section-title { font-size: 1.28rem; }
+      .quiz-info-bullets li { font-size: 0.97rem; padding-left: 1.1rem;}
+      .side-card { padding: 1.1rem 0.3rem 1.1rem 0.3rem; }
+      .side-card h2 { font-size: 1rem; }
+      .side-bullets li { font-size: 0.89rem; padding-left: 1.1rem;}
+      .squiggle { width: 80px; height: 15px;}
     }
-    .side-card-empty {
-      display: none;
-    }
+
+    .side-card-empty { display: none; }
     footer {
-      margin: 3.2rem 0 1.3rem 0;
+      margin: 2.4rem 0 1rem 0;
       text-align: center;
-      color: var(--rose);
-      font-size: 1.07rem;
+      color: var(--rose-dark);
+      font-size: 1.1rem;
       letter-spacing: 0.5px;
       padding-bottom: 1.2rem;
       background: transparent;
@@ -385,13 +392,13 @@
       <path fill="#ffe3f1" d="M70 60Q55 150 110 230Q165 310 270 290Q375 270 385 190Q395 110 320 60Q245 10 150 30Q80 45 70 60Z"/>
     </svg>
     <svg class="blob blob2" viewBox="0 0 320 240">
-      <path fill="#ffd2e8" d="M30 90Q10 170 120 200Q230 230 280 160Q330 90 245 60Q160 30 90 60Q40 80 30 90Z"/>
+      <path fill="#a5e8fa" d="M30 90Q10 170 120 200Q230 230 280 160Q330 90 245 60Q160 30 90 60Q40 80 30 90Z"/>
     </svg>
     <svg class="blob blob3" viewBox="0 0 370 270">
       <path fill="#fed7e8" d="M90 70Q60 200 200 250Q340 300 340 170Q340 40 210 40Q100 40 90 70Z"/>
     </svg>
-    <svg class="blob blob4" viewBox="0 0 200 180">
-      <path fill="#f7aacd" d="M70 40Q10 120 120 160Q230 200 180 80Q130 -40 70 40Z"/>
+    <svg class="blob blob4" viewBox="0 0 250 220">
+      <ellipse cx="125" cy="110" rx="120" ry="100" fill="#d7bdfc"/>
     </svg>
   </div>
 
@@ -427,7 +434,7 @@
 
     <section id="how-our-quiz-works" class="quiz-info-section">
       <div class="quiz-info-section-title">
-        How our quiz works
+        How Our Quiz Works
       </div>
       <div class="quiz-section-desc">
         <ul class="quiz-info-bullets">
@@ -441,7 +448,7 @@
 
     <section id="how-we-build-your-routine" class="quiz-info-section">
       <div class="quiz-info-section-title">
-        How we build your routine
+        How We Build Your Routine
       </div>
       <div class="quiz-section-desc">
         <ul class="quiz-info-bullets">
@@ -453,7 +460,6 @@
       </div>
     </section>
 
-    <!-- MOVED TO BOTTOM -->
     <section class="side-by-side-section">
       <div class="side-card" id="about">
         <h2>What makes us different?</h2>
@@ -488,8 +494,6 @@
         </ul>
       </div>
     </section>
-    <!-- END moved to bottom -->
-
   </main>
 
   <footer>
