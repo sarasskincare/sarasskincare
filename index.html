@@ -11,29 +11,28 @@
       --cherry-pink: #f9a8c5;
       --cherry-dark: #d72660;
       --petal-light: #fff6fa;
-      --petal-shadow: #f9a8c544;
       --white: #fff;
       --gray-light: #f8f7fa;
       --gray: #ece9f2;
-      --brown: #a98d6a;
-      --black: #232323;
       --shadow: 0 8px 32px #d7266055, 0 2px 8px #f9a8c544;
       --border-radius: 2.7rem;
       --max-width-main: 1200px;
       --max-width-card: 600px;
-      --gradient-main: linear-gradient(120deg, #fff6fa 60%, #f9a8c5 100%);
-      --gradient-hero: linear-gradient(120deg, #fff6fa 0%, #f9a8c5 85%, #fff 100%);
-      --gradient-btn: linear-gradient(90deg, #d72660 60%, #f9a8c5 100%);
+      --solid-pink-bg: #fff6fa; /* soft cherry blossom pink */
     }
 
     html, body {
       margin: 0; padding: 0;
       font-family: Calibri, Arial, Helvetica, sans-serif;
-      background: var(--gradient-main);
+      background: var(--solid-pink-bg);
       color: var(--cherry-dark);
       min-height: 100vh;
       position: relative;
       overflow-x: hidden;
+    }
+    body {
+      background: var(--solid-pink-bg);
+      box-sizing: border-box;
     }
 
     /* Cherry blossom petals floating animation */
@@ -51,7 +50,6 @@
       height: 100%;
       display: block;
     }
-    /* 5 petals, staggered animation */
     .petal.p1 { left: 10vw; top: -40px; animation-duration: 13s; animation-delay: 0s;}
     .petal.p2 { left: 35vw; top: -60px; animation-duration: 17s; animation-delay: 2s;}
     .petal.p3 { left: 60vw; top: -20px; animation-duration: 16s; animation-delay: 4s;}
@@ -93,7 +91,7 @@
       padding: 0.65rem 1.5rem;
       border-radius: 1.5rem;
       border: 1.5px solid var(--gray);
-      box-shadow: 0 1px 8px var(--petal-shadow);
+      box-shadow: 0 1px 8px #f9a8c544;
       transition: background 0.21s, color 0.21s, border 0.15s, transform 0.11s, box-shadow 0.2s;
       margin: 0 0.18rem;
       display: inline-block;
@@ -105,12 +103,12 @@
       color: var(--white);
       border-color: var(--cherry-dark);
       transform: scale(1.07);
-      box-shadow: 0 6px 18px var(--petal-shadow);
+      box-shadow: 0 6px 18px #f9a8c544;
     }
 
     .pop-hero {
       margin: 3.2rem auto 3.2rem auto;
-      background: var(--gradient-hero);
+      background: var(--white);
       border-radius: var(--border-radius);
       box-shadow: var(--shadow);
       padding: 3.1rem 6vw 3.1rem 6vw;
@@ -148,7 +146,7 @@
       letter-spacing: 0.14em;
       border-bottom: 3px solid var(--cherry-dark);
       padding-bottom: 0.5rem;
-      box-shadow: 0 4px 24px var(--petal-shadow);
+      box-shadow: 0 4px 24px #f9a8c544;
       background: none;
     }
     .pop-hero-title::before,
@@ -178,11 +176,11 @@
       background: rgba(255,255,255,0.83);
       border-radius: 1.3rem;
       padding: 1rem 1rem 0.8rem 1rem;
-      box-shadow: 0 2px 18px var(--petal-shadow);
+      box-shadow: 0 2px 18px #f9a8c544;
     }
     .quiz-section-btn {
       display: inline-block;
-      background: var(--gradient-btn);
+      background: linear-gradient(90deg, #d72660 60%, #f9a8c5 100%);
       color: var(--white);
       font-family: Quicksand, Calibri, Arial, sans-serif;
       font-weight: bold;
@@ -190,7 +188,7 @@
       padding: 0.92rem 2.6rem;
       border: none;
       border-radius: 2.7rem;
-      box-shadow: 0 2px 12px var(--cherry-dark)22;
+      box-shadow: 0 2px 12px #d7266022;
       cursor: pointer;
       text-decoration: none;
       margin-top: 1.1rem;
@@ -201,7 +199,7 @@
     .quiz-section-btn:hover {
       background: linear-gradient(110deg, var(--cherry-dark), var(--cherry-pink));
       color: var(--white);
-      box-shadow: 0 8px 26px var(--petal-shadow);
+      box-shadow: 0 8px 26px #f9a8c544;
       border-color: var(--cherry-dark);
       transform: scale(1.07) rotate(-2deg);
     }
@@ -225,7 +223,7 @@
       background: linear-gradient(115deg, #fff6fa 70%, #f9a8c5 100%);
       border-radius: 2rem;
       border: 2px solid var(--cherry-pink);
-      box-shadow: 0 2px 18px var(--petal-shadow);
+      box-shadow: 0 2px 18px #f9a8c544;
       padding: 2.3rem 2.2rem 2.3rem 2.2rem;
       max-width: 370px;
       min-width: 220px;
@@ -242,7 +240,7 @@
       backdrop-filter: blur(1px);
     }
     .quiz-info-section:hover {
-      box-shadow: 0 8px 32px var(--petal-shadow);
+      box-shadow: 0 8px 32px #f9a8c544;
       border-color: var(--cherry-dark);
       transform: translateY(-4px) scale(1.03);
     }
@@ -282,7 +280,7 @@
       background: rgba(255,255,255,0.82);
       border-radius: 1rem;
       padding: 0.6rem;
-      box-shadow: 0 1px 6px var(--petal-shadow);
+      box-shadow: 0 1px 6px #f9a8c544;
     }
     .quiz-info-bullets {
       list-style: none;
@@ -340,7 +338,7 @@
       background: var(--white);
       border-radius: 2rem;
       border: 2px solid var(--cherry-pink);
-      box-shadow: 0 2px 18px var(--petal-shadow);
+      box-shadow: 0 2px 18px #f9a8c544;
       margin: 3.1rem auto 3.1rem auto;
       padding: 2.3rem 6vw 2.4rem 6vw;
       max-width: var(--max-width-main);
@@ -385,7 +383,7 @@
     .side-card {
       background: linear-gradient(120deg, #fff 80%, #f9a8c5 100%);
       border-radius: var(--border-radius);
-      box-shadow: 0 8px 32px var(--petal-shadow), 0 1.5px 8px var(--petal-shadow);
+      box-shadow: 0 8px 32px #f9a8c544, 0 1.5px 8px #f9a8c544;
       padding: 2.1rem 3.2rem 1.6rem 3.2rem;
       text-align: center;
       min-width: 370px;
@@ -407,7 +405,7 @@
       backdrop-filter: blur(1px);
     }
     .side-card:hover {
-      box-shadow: 0 14px 48px var(--petal-shadow);
+      box-shadow: 0 14px 48px #f9a8c544;
       border-color: var(--cherry-dark);
       transform: translateY(-3px) scale(1.025);
     }
