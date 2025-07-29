@@ -11,38 +11,38 @@
       --yellow: #fff3b0;
       --yellow-dark: #ffd43b;
       --pink: #ffb3da;
-      --pink-dark: #f662aa;
+      --pink-dark: #d72660;
       --gray-light: #f8f7fa;
       --gray: #ece9f2;
       --gray-medium: #dadadd;
       --white: #fff;
       --black: #232323;
-      --shadow: 0 8px 32px #23232322, 0 2px 8px #f662aa22;
+      --shadow: 0 8px 32px #23232322, 0 2px 8px #d7266022;
       --border-radius: 2.3rem;
       --max-width-main: 1200px;
       --max-width-card: 600px;
-      --gradient-main: linear-gradient(120deg, #fff 55%, #fff3b0 100%);
+      --gradient-main: linear-gradient(120deg, #fff 55%, #ffb3da 100%);
       --gradient-accent: linear-gradient(120deg, #ffb3da 0%, #fff3b0 100%);
       --gradient-card: linear-gradient(115deg, #fff 70%, #fff3b0 100%);
-      --gradient-hero: linear-gradient(120deg, #fff3b0 0%, #ffb3da 60%, #fff 100%);
-      --gradient-btn: linear-gradient(90deg, #f662aa 60%, #fff3b0 100%);
+      --gradient-hero: linear-gradient(120deg, #fff6fa 0%, #ffb3da 100%);
+      --gradient-btn: linear-gradient(90deg, #d72660 60%, #fff3b0 100%);
+      --light-pink-bg: #fff6fa;
     }
 
     html, body {
       margin: 0; padding: 0;
       font-family: Calibri, Arial, Helvetica, sans-serif;
-      background: var(--gray-light);
+      background: var(--light-pink-bg);
       color: var(--black);
       min-height: 100vh;
       position: relative;
       overflow-x: hidden;
     }
     body {
-      background: var(--gradient-main);
+      background: var(--light-pink-bg);
       box-sizing: border-box;
     }
 
-    /* Subtle pastel hero blob (yellow-pink) */
     .hero-blob {
       position: absolute;
       left: -140px;
@@ -62,7 +62,6 @@
       100% { transform: scale(1.07) translateY(40px);}
     }
 
-    /* Navigation Bar */
     .topnav {
       width: 100%;
       background: var(--white);
@@ -106,7 +105,6 @@
       box-shadow: 0 6px 18px #ffb3da33;
     }
 
-    /* Hero Section */
     .pop-hero {
       margin: 3.2rem auto 3.2rem auto;
       background: var(--gradient-hero);
@@ -129,24 +127,29 @@
     .pop-hero-title {
       font-family: Quicksand, Calibri, Arial, sans-serif;
       font-size: 2.6rem;
-      font-weight: 700;
+      font-weight: 900;
       letter-spacing: 2px;
       margin-bottom: 1.2rem;
       margin-top: 0.5rem;
-      color: var(--black);
+      color: var(--pink-dark);
       word-spacing: 0.18em;
       line-height: 1.09;
-      text-shadow: 0 3px 15px var(--pink), 0 1px 4px var(--yellow);
+      text-shadow: 0 3px 15px var(--white), 0 1px 4px var(--yellow-dark);
+      background: none;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 0.8rem;
       position: relative;
-      background: linear-gradient(90deg, var(--yellow) 60%, var(--pink) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      text-fill-color: transparent;
+      border-radius: 1.2rem;
+      /* Make it stand out more */
+      background: none;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      /* Optional underline effect for extra emphasis */
+      border-bottom: 3px solid var(--pink-dark);
+      padding-bottom: 0.5rem;
+      box-shadow: 0 4px 24px #f662aa33;
     }
     .pop-hero-title::before,
     .pop-hero-title::after {
@@ -208,7 +211,6 @@
       margin: 0 auto;
     }
 
-    /* Side by side for quiz info sections */
     .quiz-info-pair-wrap {
       display: flex;
       gap: 2.5rem;
