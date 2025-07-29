@@ -8,32 +8,31 @@
   <link href="https://fonts.googleapis.com/css?family=Quicksand:700&display=swap" rel="stylesheet"/>
   <style>
     :root {
+      --yellow: #fff3b0;
+      --yellow-dark: #ffd43b;
       --pink: #ffb3da;
       --pink-dark: #f662aa;
-      --purple: #bfa6ff;
-      --blue: #9ee7ff;
-      --yellow: #fff3b0;
-      --green: #c6ffd7;
       --gray-light: #f8f7fa;
       --gray: #ece9f2;
       --gray-medium: #dadadd;
       --white: #fff;
-      --shadow: 0 8px 32px #f662aa22, 0 2px 8px #bfa6ff22;
+      --black: #232323;
+      --shadow: 0 8px 32px #23232322, 0 2px 8px #f662aa22;
       --border-radius: 2.3rem;
       --max-width-main: 1200px;
       --max-width-card: 600px;
-      --gradient-main: linear-gradient(120deg, #fff 60%, #ffb3da 100%);
-      --gradient-accent: linear-gradient(120deg, #bfa6ff 0%, #ffb3da 100%);
-      --gradient-card: linear-gradient(115deg, #fff 70%, #bfa6ff 100%);
-      --gradient-hero: linear-gradient(120deg, #ffb3da 0%, #bfa6ff 60%, #fff 100%);
-      --gradient-btn: linear-gradient(90deg, #f662aa 60%, #bfa6ff 100%);
+      --gradient-main: linear-gradient(120deg, #fff 55%, #fff3b0 100%);
+      --gradient-accent: linear-gradient(120deg, #ffb3da 0%, #fff3b0 100%);
+      --gradient-card: linear-gradient(115deg, #fff 70%, #fff3b0 100%);
+      --gradient-hero: linear-gradient(120deg, #fff3b0 0%, #ffb3da 60%, #fff 100%);
+      --gradient-btn: linear-gradient(90deg, #f662aa 60%, #fff3b0 100%);
     }
 
     html, body {
       margin: 0; padding: 0;
       font-family: Calibri, Arial, Helvetica, sans-serif;
       background: var(--gray-light);
-      color: var(--pink-dark);
+      color: var(--black);
       min-height: 100vh;
       position: relative;
       overflow-x: hidden;
@@ -43,7 +42,7 @@
       box-sizing: border-box;
     }
 
-    /* Hero Pastel Blob */
+    /* Subtle pastel hero blob (yellow-pink) */
     .hero-blob {
       position: absolute;
       left: -140px;
@@ -51,7 +50,7 @@
       width: 480px;
       height: 380px;
       z-index: 0;
-      background: radial-gradient(circle at 65% 45%, #ffb3da88 0%, #bfa6ff11 100%);
+      background: radial-gradient(circle at 65% 45%, #fff3b088 0%, #ffb3da11 100%);
       border-radius: 55% 45% 65% 35%/60% 40% 60% 40%;
       filter: blur(3px);
       opacity: 0.7;
@@ -82,7 +81,7 @@
       margin: 0 auto;
     }
     .topnav a {
-      color: var(--pink-dark);
+      color: var(--black);
       background: var(--white);
       text-decoration: none;
       font-family: Quicksand, Calibri, Arial, sans-serif;
@@ -100,11 +99,11 @@
       position: relative;
     }
     .topnav a:hover, .topnav a.active {
-      background: var(--pink);
-      color: var(--white);
-      border-color: var(--pink-dark);
+      background: var(--yellow);
+      color: var(--pink-dark);
+      border-color: var(--pink);
       transform: scale(1.07);
-      box-shadow: 0 6px 18px #bfa6ff33;
+      box-shadow: 0 6px 18px #ffb3da33;
     }
 
     /* Hero Section */
@@ -122,7 +121,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      border: 2.5px solid #f6eaff;
+      border: 2.5px solid #fff3b0;
       position: relative;
       z-index: 2;
       overflow: hidden;
@@ -134,16 +133,16 @@
       letter-spacing: 2px;
       margin-bottom: 1.2rem;
       margin-top: 0.5rem;
-      color: var(--pink-dark);
+      color: var(--black);
       word-spacing: 0.18em;
       line-height: 1.09;
-      text-shadow: 0 3px 15px var(--pink), 0 1px 4px var(--gray);
+      text-shadow: 0 3px 15px var(--pink), 0 1px 4px var(--yellow);
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 0.8rem;
       position: relative;
-      background: linear-gradient(90deg, var(--pink) 60%, var(--purple) 100%);
+      background: linear-gradient(90deg, var(--yellow) 60%, var(--pink) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -153,7 +152,7 @@
     .pop-hero-title::after {
       content: "✨";
       font-size: 2.1rem;
-      color: var(--yellow);
+      color: var(--yellow-dark);
       opacity: 0.7;
       margin: 0 0.3rem;
       animation: sparkle 2s infinite alternate;
@@ -167,7 +166,7 @@
       max-width: 580px;
       margin: 0 auto 1.8rem auto;
       font-size: 1.13rem;
-      color: var(--pink-dark);
+      color: var(--black);
       font-family: Calibri, Arial, sans-serif;
       font-weight: 500;
       line-height: 1.6;
@@ -176,7 +175,7 @@
       background: rgba(255,255,255,0.83);
       border-radius: 1.3rem;
       padding: 1rem 1rem 0.8rem 1rem;
-      box-shadow: 0 2px 18px #bfa6ff11;
+      box-shadow: 0 2px 18px #ffb3da11;
     }
     .quiz-section-btn {
       display: inline-block;
@@ -188,7 +187,7 @@
       padding: 0.92rem 2.6rem;
       border: none;
       border-radius: 2.7rem;
-      box-shadow: 0 2px 12px var(--pink-dark)22;
+      box-shadow: 0 2px 12px var(--yellow-dark)22;
       cursor: pointer;
       text-decoration: none;
       margin-top: 1.1rem;
@@ -197,10 +196,10 @@
       letter-spacing: 0.05em;
     }
     .quiz-section-btn:hover {
-      background: linear-gradient(110deg, var(--purple), var(--yellow));
-      color: var(--pink-dark);
+      background: linear-gradient(110deg, var(--yellow-dark), var(--pink));
+      color: var(--black);
       box-shadow: 0 8px 26px #ffb3da66;
-      border-color: var(--purple);
+      border-color: var(--yellow-dark);
       transform: scale(1.07) rotate(-2deg);
     }
 
@@ -224,7 +223,7 @@
       background: var(--gradient-card);
       border-radius: 2rem;
       border: 2px solid var(--gray-medium);
-      box-shadow: 0 2px 18px #bfa6ff22;
+      box-shadow: 0 2px 18px #ffb3da22;
       padding: 2.3rem 2.2rem 2.3rem 2.2rem;
       max-width: 370px;
       min-width: 220px;
@@ -241,15 +240,15 @@
       backdrop-filter: blur(1px);
     }
     .quiz-info-section:hover {
-      box-shadow: 0 8px 32px #bfa6ff44;
-      border-color: var(--blue);
+      box-shadow: 0 8px 32px #ffb3da44;
+      border-color: var(--yellow-dark);
       transform: translateY(-4px) scale(1.03);
     }
     .quiz-info-section-title {
       font-family: Quicksand, Calibri, Arial, sans-serif;
       font-size: 1.33rem;
       font-weight: 700;
-      color: var(--pink-dark);
+      color: var(--black);
       letter-spacing: 1.1px;
       margin-bottom: 1.1rem;
       margin-top: 0.3rem;
@@ -257,19 +256,19 @@
       line-height: 1.12;
       word-spacing: 0.12em;
       background: none;
-      text-shadow: 0 2px 8px var(--purple)22;
+      text-shadow: 0 2px 8px var(--yellow)22;
       position: relative;
     }
     .quiz-info-section-title::after {
       content: "⭐";
       font-size: 1.18rem;
-      color: var(--blue);
+      color: var(--pink-dark);
       margin-left: 0.3rem;
       opacity: 0.7;
     }
     .quiz-section-desc {
       font-size: 0.99rem;
-      color: var(--pink-dark);
+      color: var(--black);
       margin-bottom: 1.1rem;
       font-family: Calibri, Arial, sans-serif;
       font-weight: 500;
@@ -281,7 +280,7 @@
       background: rgba(255,255,255,0.82);
       border-radius: 1rem;
       padding: 0.6rem;
-      box-shadow: 0 1px 6px #bfa6ff11;
+      box-shadow: 0 1px 6px #ffb3da11;
     }
     .quiz-info-bullets {
       list-style: none;
@@ -300,7 +299,7 @@
       font-size: 0.93rem;
       padding-left: 1.7rem;
       font-family: Calibri, Arial, sans-serif;
-      color: var(--pink-dark);
+      color: var(--black);
       font-weight: 500;
       line-height: 1.45;
       max-width: 295px;
@@ -313,16 +312,15 @@
       left: 0;
       top: 0.11em;
       font-size: 1.13em;
-      color: var(--green);
+      color: var(--yellow-dark);
       opacity: 0.8;
       transition: color 0.3s;
     }
     .quiz-info-bullets li:hover::before {
-      color: var(--blue);
+      color: var(--pink);
       font-size: 1.2em;
     }
 
-    /* Section dividers, wavy line */
     .divider {
       width: 100px;
       height: 10px;
@@ -336,7 +334,6 @@
       display: block;
     }
 
-    /* Main quiz section */
     .quiz-section {
       background: var(--white);
       border-radius: 2rem;
@@ -360,7 +357,7 @@
       font-family: Quicksand, Calibri, Arial, sans-serif;
       font-size: 1.38rem;
       font-weight: 700;
-      color: var(--pink-dark);
+      color: var(--black);
       letter-spacing: 1px;
       margin-bottom: 1.1rem;
       margin-top: 0.3rem;
@@ -371,7 +368,6 @@
       text-shadow: 0 2px 8px var(--pink)33;
     }
 
-    /* Side by side for wider cards */
     .side-by-side-section {
       display: flex;
       justify-content: center;
@@ -399,7 +395,7 @@
       flex-direction: column;
       justify-content: flex-start;
       align-items: center;
-      color: var(--pink-dark);
+      color: var(--black);
       position: relative;
       z-index: 1;
       box-sizing: border-box;
@@ -419,10 +415,10 @@
       font-size: 1.48rem;
       font-weight: 700;
       letter-spacing: 1.2px;
-      color: var(--purple);
+      color: var(--pink-dark);
       background: none;
       position: relative;
-      background: linear-gradient(90deg, var(--purple) 50%, var(--pink) 100%);
+      background: linear-gradient(90deg, var(--yellow-dark) 50%, var(--pink) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -434,7 +430,7 @@
       color: var(--pink-dark);
       margin-left: 0.38rem;
       opacity: 0.8;
-      filter: drop-shadow(0 0 4px var(--yellow));
+      filter: drop-shadow(0 0 4px var(--yellow-dark));
     }
     .side-bullets {
       list-style: none;
@@ -452,7 +448,7 @@
       font-size: 1.05rem;
       padding-left: 1.8rem;
       font-family: Calibri, Arial, sans-serif;
-      color: var(--pink-dark);
+      color: var(--black);
       font-weight: 700;
       text-align: left;
       display: block;
@@ -467,7 +463,7 @@
       left: 0;
       top: 0.12em;
       font-size: 1.12em;
-      color: var(--blue);
+      color: var(--yellow-dark);
       opacity: 0.7;
       transition: color 0.3s, font-size 0.3s;
     }
@@ -483,7 +479,6 @@
       z-index: 1;
     }
 
-    /* Responsive */
     @media (max-width: 1200px) {
       main, .pop-hero, .quiz-section, .side-by-side-section { max-width: 99vw; }
       .quiz-info-pair-wrap { max-width: 99vw; gap: 1.2rem; }
@@ -513,7 +508,7 @@
     footer {
       margin: 2rem 0 0.7rem 0;
       text-align: center;
-      color: var(--pink-dark);
+      color: var(--black);
       font-size: 1.05rem;
       letter-spacing: 0.5px;
       padding-bottom: 1.2rem;
@@ -524,9 +519,7 @@
   </style>
 </head>
 <body>
-  <!-- Decorative pastel blob for hero -->
   <div class="hero-blob"></div>
-
   <nav class="topnav">
     <a href="#" class="active">Home</a>
     <a href="#products">Product List</a>
@@ -559,7 +552,7 @@
 
     <span class="divider">
       <svg viewBox="0 0 100 10">
-        <path d="M5 5 Q25 0, 50 5 Q75 10, 95 5" stroke="#bfa6ff" stroke-width="3" fill="none"/>
+        <path d="M5 5 Q25 0, 50 5 Q75 10, 95 5" stroke="#fff3b0" stroke-width="3" fill="none"/>
       </svg>
     </span>
 
@@ -599,7 +592,6 @@
       </svg>
     </span>
 
-    <!-- wider side-by-side cards -->
     <section class="side-by-side-section">
       <div class="side-card" id="about">
         <h2>What makes us different?</h2>
