@@ -5,12 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sara's Skincare</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon"/>
-  <!-- Example of Google Fonts for headings -->
   <link href="https://fonts.googleapis.com/css?family=Quicksand:700&display=swap" rel="stylesheet"/>
   <style>
     :root {
       --pink: #ffb3da;
       --pink-dark: #f662aa;
+      --purple: #bfa6ff;
+      --blue: #9ee7ff;
+      --yellow: #fff3b0;
+      --green: #c6ffd7;
       --gray-light: #f6f6f6;
       --gray: #e5e5e6;
       --gray-medium: #dadadd;
@@ -19,9 +22,8 @@
       --border-radius: 2.3rem;
       --max-width-main: 1400px;
       --max-width-card: 800px;
-      --accent-gradient: linear-gradient(135deg, #ffb3da 0%, #fff 100%);
+      --accent-gradient: linear-gradient(135deg, #ffb3da 0%, #bfa6ff 100%);
     }
-
     html, body {
       margin: 0; padding: 0;
       font-family: Calibri, Arial, Helvetica, sans-serif;
@@ -31,10 +33,30 @@
       position: relative;
       overflow-x: hidden;
     }
-
-    /* Subtle background gradient for body */
     body {
-      background: linear-gradient(110deg, #fff 60%, #ffb3da 100%);
+      background: radial-gradient(circle at 70% 25%, var(--blue) 0%, transparent 40%),
+                  radial-gradient(circle at 20% 80%, var(--purple) 0%, transparent 55%),
+                  linear-gradient(110deg, #fff 60%, #ffb3da 100%);
+      position: relative;
+    }
+    /* Decorative floating bubbles */
+    .bubble {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.14;
+      pointer-events: none;
+      z-index: 0;
+      animation: floatbubble 7s infinite ease-in-out;
+    }
+    .bubble.pink { background: var(--pink); width: 120px; height: 120px; left: 10vw; top: 12vh; animation-delay: 0s;}
+    .bubble.purple { background: var(--purple); width: 90px; height: 90px; left: 78vw; top: 6vh; animation-delay: 1.5s;}
+    .bubble.blue { background: var(--blue); width: 100px; height: 100px; left: 60vw; top: 60vh; animation-delay: 2s;}
+    .bubble.yellow { background: var(--yellow); width: 75px; height: 75px; left: 18vw; top: 67vh; animation-delay: 3s;}
+    .bubble.green { background: var(--green); width: 70px; height: 70px; left: 88vw; top: 85vh; animation-delay: 4s;}
+    @keyframes floatbubble {
+      0% { transform: scale(1) translateY(0);}
+      50% { transform: scale(1.08) translateY(-30px);}
+      100% { transform: scale(1) translateY(0);}
     }
 
     /* Navigation */
@@ -74,19 +96,19 @@
       position: relative;
     }
     .topnav a:hover, .topnav a.active {
-      background: var(--pink);
+      background: var(--purple);
       color: var(--white);
       border-color: var(--pink-dark);
       transform: scale(1.07);
-      box-shadow: 0 6px 18px #f662aa33;
+      box-shadow: 0 6px 18px #bfa6ff44;
     }
 
     /* Hero Section */
     .pop-hero {
       margin: 3.2rem auto 3.2rem auto;
-      background: var(--accent-gradient);
+      background: linear-gradient(135deg, var(--accent-gradient), var(--blue) 110%);
       border-radius: 2.7rem;
-      box-shadow: var(--shadow);
+      box-shadow: 0 8px 36px #ffb3da55, 0 1.5px 8px #bfa6ff33;
       padding: 3.1rem 6vw 3.1rem 6vw;
       max-width: 1800px;
       min-width: 320px;
@@ -96,10 +118,11 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      border: 2.5px solid var(--gray);
+      border: 2.5px solid var(--purple);
       position: relative;
       z-index: 2;
       overflow: hidden;
+      backdrop-filter: blur(2px);
     }
     .pop-hero-title {
       font-family: Quicksand, Calibri, Arial, sans-serif;
@@ -116,15 +139,22 @@
       align-items: center;
       justify-content: center;
       gap: 0.8rem;
+      background: linear-gradient(90deg, var(--pink), var(--purple), var(--blue));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+      position: relative;
     }
     .pop-hero-title::before,
     .pop-hero-title::after {
       content: "✨";
       font-size: 2.1rem;
-      color: var(--pink-dark);
+      color: var(--yellow);
       opacity: 0.7;
       margin: 0 0.3rem;
       animation: sparkle 2s infinite alternate;
+      filter: drop-shadow(0 0 6px var(--pink));
     }
     @keyframes sparkle {
       0% { opacity: 0.6; transform: scale(1);}
@@ -140,10 +170,15 @@
       line-height: 1.6;
       letter-spacing: 0.01em;
       text-align: center;
+      background: rgba(255,255,255,0.8);
+      border-radius: 1.3rem;
+      padding: 1rem;
+      box-shadow: 0 2px 18px #bfa6ff22;
+      margin-bottom: 2rem;
     }
     .quiz-section-btn {
       display: inline-block;
-      background: var(--pink-dark);
+      background: linear-gradient(100deg, var(--pink-dark), var(--blue) 90%);
       color: var(--white);
       font-family: Quicksand, Calibri, Arial, sans-serif;
       font-weight: bold;
@@ -160,11 +195,11 @@
       letter-spacing: 0.05em;
     }
     .quiz-section-btn:hover {
-      background: var(--pink);
+      background: linear-gradient(110deg, var(--purple), var(--yellow));
       color: var(--pink-dark);
       box-shadow: 0 8px 26px #ffb3da66;
-      border-color: var(--pink);
-      transform: scale(1.05) rotate(-2deg);
+      border-color: var(--purple);
+      transform: scale(1.07) rotate(-2deg);
     }
 
     main {
@@ -183,10 +218,10 @@
       width: 100%;
     }
     .quiz-info-section {
-      background: var(--white);
+      background: linear-gradient(135deg, var(--white) 70%, var(--green) 100%);
       border-radius: 2rem;
       border: 2px solid var(--gray-medium);
-      box-shadow: 0 2px 18px #ffb3da22;
+      box-shadow: 0 2px 18px #bfa6ff22;
       padding: 2.3rem 2.2rem 2.3rem 2.2rem;
       max-width: 430px;
       min-width: 260px;
@@ -200,10 +235,12 @@
       position: relative;
       scroll-margin-top: 90px;
       transition: box-shadow 0.3s;
+      backdrop-filter: blur(1px);
     }
     .quiz-info-section:hover {
-      box-shadow: 0 6px 28px #ffb3da44;
-      border-color: var(--pink-dark);
+      box-shadow: 0 6px 28px #9ee7ff44;
+      border-color: var(--blue);
+      transform: translateY(-4px) scale(1.03);
     }
     .quiz-info-section-title {
       font-family: Quicksand, Calibri, Arial, sans-serif;
@@ -217,13 +254,13 @@
       line-height: 1.12;
       word-spacing: 0.12em;
       background: none;
-      text-shadow: 0 2px 8px var(--pink)33;
+      text-shadow: 0 2px 8px var(--purple)33;
       position: relative;
     }
     .quiz-info-section-title::after {
       content: "⭐";
       font-size: 1.18rem;
-      color: var(--pink-dark);
+      color: var(--blue);
       margin-left: 0.3rem;
       opacity: 0.8;
     }
@@ -238,6 +275,10 @@
       margin-left: auto;
       margin-right: auto;
       text-align: left;
+      background: rgba(255,255,255,0.8);
+      border-radius: 1rem;
+      padding: 0.6rem;
+      box-shadow: 0 1px 6px #bfa6ff11;
     }
     .quiz-info-bullets {
       list-style: none;
@@ -268,7 +309,13 @@
       left: 0;
       top: 0.11em;
       font-size: 1.2em;
+      color: var(--green);
       opacity: 0.8;
+      transition: color 0.3s;
+    }
+    .quiz-info-bullets li:hover::before {
+      color: var(--blue);
+      font-size: 1.3em;
     }
 
     .quiz-section {
@@ -319,7 +366,7 @@
       position: relative;
     }
     .side-card {
-      background: rgba(255,255,255,0.95);
+      background: linear-gradient(135deg, var(--white) 70%, var(--yellow) 100%);
       border-radius: 2.3rem;
       box-shadow: 0 8px 32px #ffb3da33, 0 1.5px 8px #ffb3da33;
       padding: 2.1rem 3.2rem 1.6rem 3.2rem;
@@ -340,10 +387,12 @@
       min-height: 180px;
       height: 100%;
       transition: box-shadow 0.3s;
+      backdrop-filter: blur(1px);
     }
     .side-card:hover {
-      box-shadow: 0 12px 48px #ffb3da77;
+      box-shadow: 0 12px 48px #f662aa77;
       border-color: var(--pink-dark);
+      transform: translateY(-3px) scale(1.02);
     }
     .side-card h2 {
       margin: 0 0 0.4rem 0;
@@ -351,9 +400,14 @@
       font-size: 1.7rem;
       font-weight: 700;
       letter-spacing: 1.2px;
-      color: var(--pink-dark);
+      color: var(--purple);
       background: none;
       position: relative;
+      background: linear-gradient(90deg, var(--purple), var(--blue), var(--pink));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
     }
     .side-card h2::after {
       content: "💗";
@@ -361,6 +415,7 @@
       color: var(--pink-dark);
       margin-left: 0.38rem;
       opacity: 0.8;
+      filter: drop-shadow(0 0 4px var(--yellow));
     }
     .side-bullets {
       list-style: none;
@@ -385,6 +440,7 @@
       line-height: 1.32;
       max-width: 600px;
       background: none;
+      transition: color 0.3s;
     }
     .side-bullets li::before {
       content: "⭐";
@@ -392,7 +448,13 @@
       left: 0;
       top: 0.12em;
       font-size: 1.2em;
+      color: var(--blue);
       opacity: 0.8;
+      transition: color 0.3s, font-size 0.3s;
+    }
+    .side-bullets li:hover::before {
+      color: var(--purple);
+      font-size: 1.4em;
     }
     .squiggle {
       display: block;
@@ -454,6 +516,13 @@
   </style>
 </head>
 <body>
+  <!-- Decorative bubbles -->
+  <div class="bubble pink"></div>
+  <div class="bubble purple"></div>
+  <div class="bubble blue"></div>
+  <div class="bubble yellow"></div>
+  <div class="bubble green"></div>
+
   <nav class="topnav">
     <a href="#" class="active">Home</a>
     <a href="#products">Product List</a>
