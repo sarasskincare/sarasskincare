@@ -8,58 +8,61 @@
   <link href="https://fonts.googleapis.com/css?family=Quicksand:700&display=swap" rel="stylesheet"/>
   <style>
     :root {
-      --yellow: #fff3b0;
-      --yellow-dark: #ffd43b;
-      --pink: #ffb3da;
-      --pink-dark: #d72660;
+      --cherry-pink: #f9a8c5;
+      --cherry-dark: #d72660;
+      --petal-light: #fff6fa;
+      --petal-shadow: #f9a8c544;
+      --white: #fff;
       --gray-light: #f8f7fa;
       --gray: #ece9f2;
-      --gray-medium: #dadadd;
-      --white: #fff;
+      --brown: #a98d6a;
       --black: #232323;
-      --shadow: 0 8px 32px #23232322, 0 2px 8px #d7266022;
-      --border-radius: 2.3rem;
+      --shadow: 0 8px 32px #d7266055, 0 2px 8px #f9a8c544;
+      --border-radius: 2.7rem;
       --max-width-main: 1200px;
       --max-width-card: 600px;
-      --gradient-main: linear-gradient(120deg, #fff 55%, #ffb3da 100%);
-      --gradient-accent: linear-gradient(120deg, #ffb3da 0%, #fff3b0 100%);
-      --gradient-card: linear-gradient(115deg, #fff 70%, #fff3b0 100%);
-      --gradient-hero: linear-gradient(120deg, #fff6fa 0%, #ffb3da 100%);
-      --gradient-btn: linear-gradient(90deg, #d72660 60%, #fff3b0 100%);
-      --light-pink-bg: #fff6fa;
+      --gradient-main: linear-gradient(120deg, #fff6fa 60%, #f9a8c5 100%);
+      --gradient-hero: linear-gradient(120deg, #fff6fa 0%, #f9a8c5 85%, #fff 100%);
+      --gradient-btn: linear-gradient(90deg, #d72660 60%, #f9a8c5 100%);
     }
 
     html, body {
       margin: 0; padding: 0;
       font-family: Calibri, Arial, Helvetica, sans-serif;
-      background: var(--light-pink-bg);
-      color: var(--black);
+      background: var(--gradient-main);
+      color: var(--cherry-dark);
       min-height: 100vh;
       position: relative;
       overflow-x: hidden;
     }
-    body {
-      background: var(--light-pink-bg);
-      box-sizing: border-box;
-    }
 
-    .hero-blob {
+    /* Cherry blossom petals floating animation */
+    .petal {
       position: absolute;
-      left: -140px;
-      top: -100px;
-      width: 480px;
-      height: 380px;
+      width: 32px;
+      height: 32px;
       z-index: 0;
-      background: radial-gradient(circle at 65% 45%, #fff3b088 0%, #ffb3da11 100%);
-      border-radius: 55% 45% 65% 35%/60% 40% 60% 40%;
-      filter: blur(3px);
-      opacity: 0.7;
       pointer-events: none;
-      animation: blobmove 9s ease-in-out infinite alternate;
+      opacity: 0.7;
+      animation: petalfall linear infinite;
     }
-    @keyframes blobmove {
-      0% { transform: scale(1) translateY(0);}
-      100% { transform: scale(1.07) translateY(40px);}
+    .petal svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+    /* 5 petals, staggered animation */
+    .petal.p1 { left: 10vw; top: -40px; animation-duration: 13s; animation-delay: 0s;}
+    .petal.p2 { left: 35vw; top: -60px; animation-duration: 17s; animation-delay: 2s;}
+    .petal.p3 { left: 60vw; top: -20px; animation-duration: 16s; animation-delay: 4s;}
+    .petal.p4 { left: 80vw; top: -80px; animation-duration: 20s; animation-delay: 1s;}
+    .petal.p5 { left: 90vw; top: -55px; animation-duration: 14s; animation-delay: 3s;}
+    @keyframes petalfall {
+      0% { transform: translateY(0) rotate(-8deg);}
+      20% { opacity: 0.7;}
+      45% { transform: translateY(45vh) rotate(16deg);}
+      70% { opacity: 0.6;}
+      100% { transform: translateY(97vh) rotate(-12deg);}
     }
 
     .topnav {
@@ -80,7 +83,7 @@
       margin: 0 auto;
     }
     .topnav a {
-      color: var(--black);
+      color: var(--cherry-dark);
       background: var(--white);
       text-decoration: none;
       font-family: Quicksand, Calibri, Arial, sans-serif;
@@ -90,7 +93,7 @@
       padding: 0.65rem 1.5rem;
       border-radius: 1.5rem;
       border: 1.5px solid var(--gray);
-      box-shadow: 0 1px 8px #ffb3da11;
+      box-shadow: 0 1px 8px var(--petal-shadow);
       transition: background 0.21s, color 0.21s, border 0.15s, transform 0.11s, box-shadow 0.2s;
       margin: 0 0.18rem;
       display: inline-block;
@@ -98,17 +101,17 @@
       position: relative;
     }
     .topnav a:hover, .topnav a.active {
-      background: var(--yellow);
-      color: var(--pink-dark);
-      border-color: var(--pink);
+      background: var(--cherry-pink);
+      color: var(--white);
+      border-color: var(--cherry-dark);
       transform: scale(1.07);
-      box-shadow: 0 6px 18px #ffb3da33;
+      box-shadow: 0 6px 18px var(--petal-shadow);
     }
 
     .pop-hero {
       margin: 3.2rem auto 3.2rem auto;
       background: var(--gradient-hero);
-      border-radius: 2.7rem;
+      border-radius: var(--border-radius);
       box-shadow: var(--shadow);
       padding: 3.1rem 6vw 3.1rem 6vw;
       max-width: var(--max-width-main);
@@ -119,22 +122,21 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      border: 2.5px solid #fff3b0;
+      border: 2.5px solid #f9a8c5;
       position: relative;
       z-index: 2;
       overflow: hidden;
     }
     .pop-hero-title {
       font-family: Quicksand, Calibri, Arial, sans-serif;
-      font-size: 2.6rem;
+      font-size: 2.8rem;
       font-weight: 900;
-      letter-spacing: 2px;
       margin-bottom: 1.2rem;
       margin-top: 0.5rem;
-      color: var(--pink-dark);
+      color: var(--cherry-dark);
       word-spacing: 0.18em;
       line-height: 1.09;
-      text-shadow: 0 3px 15px var(--white), 0 1px 4px var(--yellow-dark);
+      text-shadow: 0 3px 15px var(--white), 0 1px 4px var(--cherry-pink);
       background: none;
       display: flex;
       align-items: center;
@@ -142,24 +144,22 @@
       gap: 0.8rem;
       position: relative;
       border-radius: 1.2rem;
-      /* Make it stand out more */
-      background: none;
       text-transform: uppercase;
-      letter-spacing: 0.12em;
-      /* Optional underline effect for extra emphasis */
-      border-bottom: 3px solid var(--pink-dark);
+      letter-spacing: 0.14em;
+      border-bottom: 3px solid var(--cherry-dark);
       padding-bottom: 0.5rem;
-      box-shadow: 0 4px 24px #f662aa33;
+      box-shadow: 0 4px 24px var(--petal-shadow);
+      background: none;
     }
     .pop-hero-title::before,
     .pop-hero-title::after {
-      content: "✨";
-      font-size: 2.1rem;
-      color: var(--yellow-dark);
-      opacity: 0.7;
+      content: "🌸";
+      font-size: 2rem;
+      color: var(--cherry-pink);
+      opacity: 0.9;
       margin: 0 0.3rem;
       animation: sparkle 2s infinite alternate;
-      filter: drop-shadow(0 0 6px var(--pink));
+      filter: drop-shadow(0 0 6px var(--cherry-pink));
     }
     @keyframes sparkle {
       0% { opacity: 0.6; transform: scale(1);}
@@ -167,9 +167,9 @@
     }
     .pop-hero-desc {
       max-width: 580px;
-      margin: 0 auto 1.8rem auto;
+      margin: 0 auto 1.7rem auto;
       font-size: 1.13rem;
-      color: var(--black);
+      color: var(--cherry-dark);
       font-family: Calibri, Arial, sans-serif;
       font-weight: 500;
       line-height: 1.6;
@@ -178,7 +178,7 @@
       background: rgba(255,255,255,0.83);
       border-radius: 1.3rem;
       padding: 1rem 1rem 0.8rem 1rem;
-      box-shadow: 0 2px 18px #ffb3da11;
+      box-shadow: 0 2px 18px var(--petal-shadow);
     }
     .quiz-section-btn {
       display: inline-block;
@@ -190,19 +190,19 @@
       padding: 0.92rem 2.6rem;
       border: none;
       border-radius: 2.7rem;
-      box-shadow: 0 2px 12px var(--yellow-dark)22;
+      box-shadow: 0 2px 12px var(--cherry-dark)22;
       cursor: pointer;
       text-decoration: none;
       margin-top: 1.1rem;
       transition: background 0.2s, color 0.18s, transform 0.1s, box-shadow 0.2s;
-      border: 2px solid var(--pink-dark);
+      border: 2px solid var(--cherry-dark);
       letter-spacing: 0.05em;
     }
     .quiz-section-btn:hover {
-      background: linear-gradient(110deg, var(--yellow-dark), var(--pink));
-      color: var(--black);
-      box-shadow: 0 8px 26px #ffb3da66;
-      border-color: var(--yellow-dark);
+      background: linear-gradient(110deg, var(--cherry-dark), var(--cherry-pink));
+      color: var(--white);
+      box-shadow: 0 8px 26px var(--petal-shadow);
+      border-color: var(--cherry-dark);
       transform: scale(1.07) rotate(-2deg);
     }
 
@@ -222,10 +222,10 @@
       position: relative;
     }
     .quiz-info-section {
-      background: var(--gradient-card);
+      background: linear-gradient(115deg, #fff6fa 70%, #f9a8c5 100%);
       border-radius: 2rem;
-      border: 2px solid var(--gray-medium);
-      box-shadow: 0 2px 18px #ffb3da22;
+      border: 2px solid var(--cherry-pink);
+      box-shadow: 0 2px 18px var(--petal-shadow);
       padding: 2.3rem 2.2rem 2.3rem 2.2rem;
       max-width: 370px;
       min-width: 220px;
@@ -242,15 +242,15 @@
       backdrop-filter: blur(1px);
     }
     .quiz-info-section:hover {
-      box-shadow: 0 8px 32px #ffb3da44;
-      border-color: var(--yellow-dark);
+      box-shadow: 0 8px 32px var(--petal-shadow);
+      border-color: var(--cherry-dark);
       transform: translateY(-4px) scale(1.03);
     }
     .quiz-info-section-title {
       font-family: Quicksand, Calibri, Arial, sans-serif;
       font-size: 1.33rem;
       font-weight: 700;
-      color: var(--black);
+      color: var(--cherry-dark);
       letter-spacing: 1.1px;
       margin-bottom: 1.1rem;
       margin-top: 0.3rem;
@@ -258,19 +258,19 @@
       line-height: 1.12;
       word-spacing: 0.12em;
       background: none;
-      text-shadow: 0 2px 8px var(--yellow)22;
+      text-shadow: 0 2px 8px var(--cherry-pink)22;
       position: relative;
     }
     .quiz-info-section-title::after {
-      content: "⭐";
+      content: "🌸";
       font-size: 1.18rem;
-      color: var(--pink-dark);
+      color: var(--cherry-pink);
       margin-left: 0.3rem;
       opacity: 0.7;
     }
     .quiz-section-desc {
       font-size: 0.99rem;
-      color: var(--black);
+      color: var(--cherry-dark);
       margin-bottom: 1.1rem;
       font-family: Calibri, Arial, sans-serif;
       font-weight: 500;
@@ -282,7 +282,7 @@
       background: rgba(255,255,255,0.82);
       border-radius: 1rem;
       padding: 0.6rem;
-      box-shadow: 0 1px 6px #ffb3da11;
+      box-shadow: 0 1px 6px var(--petal-shadow);
     }
     .quiz-info-bullets {
       list-style: none;
@@ -301,7 +301,7 @@
       font-size: 0.93rem;
       padding-left: 1.7rem;
       font-family: Calibri, Arial, sans-serif;
-      color: var(--black);
+      color: var(--cherry-dark);
       font-weight: 500;
       line-height: 1.45;
       max-width: 295px;
@@ -314,12 +314,12 @@
       left: 0;
       top: 0.11em;
       font-size: 1.13em;
-      color: var(--yellow-dark);
+      color: var(--cherry-pink);
       opacity: 0.8;
       transition: color 0.3s;
     }
     .quiz-info-bullets li:hover::before {
-      color: var(--pink);
+      color: var(--cherry-dark);
       font-size: 1.2em;
     }
 
@@ -339,8 +339,8 @@
     .quiz-section {
       background: var(--white);
       border-radius: 2rem;
-      border: 2px solid var(--gray-medium);
-      box-shadow: 0 2px 18px #ffb3da22;
+      border: 2px solid var(--cherry-pink);
+      box-shadow: 0 2px 18px var(--petal-shadow);
       margin: 3.1rem auto 3.1rem auto;
       padding: 2.3rem 6vw 2.4rem 6vw;
       max-width: var(--max-width-main);
@@ -359,7 +359,7 @@
       font-family: Quicksand, Calibri, Arial, sans-serif;
       font-size: 1.38rem;
       font-weight: 700;
-      color: var(--black);
+      color: var(--cherry-dark);
       letter-spacing: 1px;
       margin-bottom: 1.1rem;
       margin-top: 0.3rem;
@@ -367,7 +367,7 @@
       line-height: 1.12;
       word-spacing: 0.12em;
       background: none;
-      text-shadow: 0 2px 8px var(--pink)33;
+      text-shadow: 0 2px 8px var(--cherry-pink)33;
     }
 
     .side-by-side-section {
@@ -383,21 +383,21 @@
       position: relative;
     }
     .side-card {
-      background: linear-gradient(120deg, #fff 80%, #ffb3da 100%);
-      border-radius: 2.3rem;
-      box-shadow: 0 8px 32px #ffb3da33, 0 1.5px 8px #ffb3da33;
+      background: linear-gradient(120deg, #fff 80%, #f9a8c5 100%);
+      border-radius: var(--border-radius);
+      box-shadow: 0 8px 32px var(--petal-shadow), 0 1.5px 8px var(--petal-shadow);
       padding: 2.1rem 3.2rem 1.6rem 3.2rem;
       text-align: center;
       min-width: 370px;
       max-width: 600px;
       width: 100%;
-      border: 2px solid var(--gray-medium);
+      border: 2px solid var(--cherry-pink);
       margin: 0 auto;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
       align-items: center;
-      color: var(--black);
+      color: var(--cherry-dark);
       position: relative;
       z-index: 1;
       box-sizing: border-box;
@@ -407,8 +407,8 @@
       backdrop-filter: blur(1px);
     }
     .side-card:hover {
-      box-shadow: 0 14px 48px #f662aa77;
-      border-color: var(--pink-dark);
+      box-shadow: 0 14px 48px var(--petal-shadow);
+      border-color: var(--cherry-dark);
       transform: translateY(-3px) scale(1.025);
     }
     .side-card h2 {
@@ -417,22 +417,22 @@
       font-size: 1.48rem;
       font-weight: 700;
       letter-spacing: 1.2px;
-      color: var(--pink-dark);
+      color: var(--cherry-dark);
       background: none;
       position: relative;
-      background: linear-gradient(90deg, var(--yellow-dark) 50%, var(--pink) 100%);
+      background: linear-gradient(90deg, var(--cherry-dark) 50%, var(--cherry-pink) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
       text-fill-color: transparent;
     }
     .side-card h2::after {
-      content: "💗";
+      content: "🌸";
       font-size: 1.3rem;
-      color: var(--pink-dark);
+      color: var(--cherry-pink);
       margin-left: 0.38rem;
       opacity: 0.8;
-      filter: drop-shadow(0 0 4px var(--yellow-dark));
+      filter: drop-shadow(0 0 4px var(--cherry-pink));
     }
     .side-bullets {
       list-style: none;
@@ -450,7 +450,7 @@
       font-size: 1.05rem;
       padding-left: 1.8rem;
       font-family: Calibri, Arial, sans-serif;
-      color: var(--black);
+      color: var(--cherry-dark);
       font-weight: 700;
       text-align: left;
       display: block;
@@ -460,17 +460,17 @@
       transition: color 0.3s;
     }
     .side-bullets li::before {
-      content: "⭐";
+      content: "🌸";
       position: absolute;
       left: 0;
       top: 0.12em;
       font-size: 1.12em;
-      color: var(--yellow-dark);
+      color: var(--cherry-pink);
       opacity: 0.7;
       transition: color 0.3s, font-size 0.3s;
     }
     .side-bullets li:hover::before {
-      color: var(--pink-dark);
+      color: var(--cherry-dark);
       font-size: 1.23em;
     }
     .squiggle {
@@ -492,7 +492,6 @@
       .side-by-side-section { flex-direction: column; gap: 1.5rem; align-items: center; }
       .side-card { max-width: 99vw; }
       .pop-hero { max-width: 99vw; padding-left: 2vw; padding-right: 2vw;}
-      .hero-blob { display: none; }
     }
     @media (max-width: 600px) {
       .quiz-info-section, .quiz-section { padding: 0.7rem 0.15rem 0.7rem 0.15rem; }
@@ -510,7 +509,7 @@
     footer {
       margin: 2rem 0 0.7rem 0;
       text-align: center;
-      color: var(--black);
+      color: var(--cherry-dark);
       font-size: 1.05rem;
       letter-spacing: 0.5px;
       padding-bottom: 1.2rem;
@@ -521,7 +520,38 @@
   </style>
 </head>
 <body>
-  <div class="hero-blob"></div>
+  <!-- Cherry blossom petals -->
+  <div class="petal p1">
+    <svg viewBox="0 0 32 32">
+      <ellipse cx="16" cy="14" rx="11" ry="16" fill="#f9a8c5"/>
+      <ellipse cx="11" cy="24" rx="4" ry="8" fill="#fff6fa" opacity="0.7"/>
+    </svg>
+  </div>
+  <div class="petal p2">
+    <svg viewBox="0 0 32 32">
+      <ellipse cx="16" cy="14" rx="11" ry="16" fill="#f9a8c5"/>
+      <ellipse cx="11" cy="24" rx="4" ry="8" fill="#fff6fa" opacity="0.7"/>
+    </svg>
+  </div>
+  <div class="petal p3">
+    <svg viewBox="0 0 32 32">
+      <ellipse cx="16" cy="14" rx="11" ry="16" fill="#f9a8c5"/>
+      <ellipse cx="11" cy="24" rx="4" ry="8" fill="#fff6fa" opacity="0.7"/>
+    </svg>
+  </div>
+  <div class="petal p4">
+    <svg viewBox="0 0 32 32">
+      <ellipse cx="16" cy="14" rx="11" ry="16" fill="#f9a8c5"/>
+      <ellipse cx="11" cy="24" rx="4" ry="8" fill="#fff6fa" opacity="0.7"/>
+    </svg>
+  </div>
+  <div class="petal p5">
+    <svg viewBox="0 0 32 32">
+      <ellipse cx="16" cy="14" rx="11" ry="16" fill="#f9a8c5"/>
+      <ellipse cx="11" cy="24" rx="4" ry="8" fill="#fff6fa" opacity="0.7"/>
+    </svg>
+  </div>
+
   <nav class="topnav">
     <a href="#" class="active">Home</a>
     <a href="#products">Product List</a>
@@ -554,11 +584,10 @@
 
     <span class="divider">
       <svg viewBox="0 0 100 10">
-        <path d="M5 5 Q25 0, 50 5 Q75 10, 95 5" stroke="#fff3b0" stroke-width="3" fill="none"/>
+        <path d="M5 5 Q25 0, 50 5 Q75 10, 95 5" stroke="#f9a8c5" stroke-width="3" fill="none"/>
       </svg>
     </span>
 
-    <!-- quiz info sections side by side -->
     <div class="quiz-info-pair-wrap">
       <section id="how-our-quiz-works" class="quiz-info-section">
         <div class="quiz-info-section-title">
@@ -590,7 +619,7 @@
 
     <span class="divider">
       <svg viewBox="0 0 100 10">
-        <path d="M5 5 Q25 0, 50 5 Q75 10, 95 5" stroke="#ffb3da" stroke-width="3" fill="none"/>
+        <path d="M5 5 Q25 0, 50 5 Q75 10, 95 5" stroke="#f9a8c5" stroke-width="3" fill="none"/>
       </svg>
     </span>
 
@@ -599,7 +628,7 @@
         <h2>What makes us different?</h2>
         <svg class="squiggle" viewBox="0 0 160 32" fill="none">
           <path d="M5 16 Q23 2, 44 16 Q65 30, 85 16 Q105 2, 125 16 Q145 30, 155 16"
-            stroke="#ffb3da"
+            stroke="#f9a8c5"
             stroke-width="4"
             fill="none"
             stroke-linecap="round"
@@ -615,7 +644,7 @@
         <h2>How it works</h2>
         <svg class="squiggle" viewBox="0 0 160 32" fill="none">
           <path d="M5 16 Q23 2, 44 16 Q65 30, 85 16 Q105 2, 125 16 Q145 30, 155 16"
-            stroke="#ffb3da"
+            stroke="#f9a8c5"
             stroke-width="4"
             fill="none"
             stroke-linecap="round"
