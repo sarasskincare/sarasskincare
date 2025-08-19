@@ -5,20 +5,56 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Find Your Skincare Match</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      font-family: 'Helvetica', sans-serif;
+      background: #fff0f6; /* soft pink */
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    h1 { color: #d6336c; }
+    #quiz-container {
+      max-width: 600px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .question h2 { font-size: 1.2rem; margin-bottom: 1rem; }
+    button {
+      display: block;
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 0.8rem;
+      border: none;
+      border-radius: 10px;
+      background: #ffd6e8;
+      color: #333;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    button:hover { background: #ffb3d9; }
+    ul { padding-left: 1.5rem; }
+    li { margin-bottom: 0.5rem; }
+  </style>
 </head>
 <body>
   <header>
-    <h1>Find your skincare match</h1>
+    <h1>🌸 Find Your Skincare Match 🌸</h1>
     <p>Answer a few questions about your skin and routine, and this quiz will give you a perfect routine!</p>
   </header>
 
   <main>
-    <div id="quiz-container">
-      <!-- Quiz will be injected here by JavaScript -->
-    </div>
+    <div id="quiz-container"></div>
   </main>
 
-  <!-- Link to your quiz logic -->
   <script src="quiz.js"></script>
 </body>
 </html>
