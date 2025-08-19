@@ -234,3 +234,6 @@ options: [
   { text: "I’m fine with anything", scores: {} }
 ]
 ],
+  window.onload = function() {
+  loadQuiz();
+};
